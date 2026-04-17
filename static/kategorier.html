@@ -21,7 +21,21 @@
             <a href="/ai-i-fastigheter" class="hover:text-sky-600">AI i fastigheter</a>
             <a href="/om-oss" class="hover:text-sky-600">Om oss</a>
         </div>
-    </nav>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+</nav>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" style="top: 80px;">
+        <div class="flex flex-col space-y-4 font-medium text-slate-600">
+            <a href="/kategorier" class="hover:text-sky-600 block">Kategorier</a>
+            <a href="/ai-i-fastigheter" class="hover:text-sky-600 block">AI i fastigheter</a>
+            <a href="/om-oss" class="hover:text-sky-600 block">Om oss</a>
+        </div>
+    </div>
+
 
     <main class="max-w-7xl mx-auto px-6 py-16 flex-grow w-full">
         <h1 class="text-4xl font-extrabold mb-4">Kategorier inom Proptech</h1>
