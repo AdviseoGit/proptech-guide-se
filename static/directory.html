@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropTech Bolagskatalog | Proptech Guide Sverige</title>
+    <meta name="description" content="Sök och filtrera bland Sveriges ledande PropTech-bolag. Hitta rätt digitala verktyg för din fastighetsförvaltning.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #0284c7, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center border-b border-slate-200 bg-white">
+        <a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+        <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+            <a href="/directory.html" class="text-sky-600 font-bold">Företagskatalog</a>
+            <a href="/kategorier" class="hover:text-sky-600">Kategorier</a>
+            <a href="/ai-i-fastigheter" class="hover:text-sky-600">AI i fastigheter</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" style="top: 80px;">
+        <div class="flex flex-col space-y-4 font-medium text-slate-600">
+            <a href="/directory.html" class="text-sky-600 block font-bold">Företagskatalog</a>
+            <a href="/kategorier" class="hover:text-sky-600 block">Kategorier</a>
+            <a href="/ai-i-fastigheter" class="hover:text-sky-600 block">AI i fastigheter</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Hitta Rätt <span class="gradient-text">PropTech</span>-Partner</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Sök, filtrera och upptäck Sveriges främsta bolag inom fastighetsteknologi.</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row gap-4 items-center">
+            <div class="w-full md:w-1/2">
+                <input type="text" id="searchInput" placeholder="Sök bolag eller nyckelord..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow">
+            </div>
+            <div class="w-full md:w-1/4">
+                <select id="categoryFilter" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none bg-white">
+                    <option value="all">Alla Kategorier</option>
+                    <option value="forvaltning">Digital Förvaltning</option>
+                    <option value="energi">Energi & AI</option>
+                    <option value="access">Smarta Lås & Access</option>
+                    <option value="uthyrning">Uthyrning & Marknad</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/4">
+                <button onclick="filterCompanies()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors">Filtrera</button>
+            </div>
+        </div>
+
+        <!-- Directory Grid -->
+        <div id="directoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Company Card 1 -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">OurLiving</h3>
+                    <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded">Förvaltning</span>
+                </div>
+                <p class="text-slate-600 mb-6">En komplett digital plattform för boendekommunikation, dokumenthantering och ärendehantering för BRF:er.</p>
+                <a href="https://ourliving.se" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+            </div>
+
+            <!-- Company Card 2 -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Vyer</h3>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded">Energi & AI</span>
+                </div>
+                <p class="text-slate-600 mb-6">AI-driven plattform för energioptimering och klimatstyrning i kommersiella fastigheter.</p>
+                <a href="https://vyer.com" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+            </div>
+
+            <!-- Company Card 3 -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="uthyrning">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">HomeQ</h3>
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Uthyrning</span>
+                </div>
+                <p class="text-slate-600 mb-6">Sveriges största B2B/B2C-plattform för automatiserad uthyrning av hyresrätter och bostadsförmedling.</p>
+                <a href="https://homeq.se" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+            </div>
+
+            <!-- Company Card 4 -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Parakey</h3>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Access</span>
+                </div>
+                <p class="text-slate-600 mb-6">Skandinaviens ledande leverantör av mobilbaserade access-system (nycklar i mobilen) för kontor och bostäder.</p>
+                <a href="https://parakey.co" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+            </div>
+
+             <!-- Company Card 5 -->
+             <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Defigo</h3>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Access</span>
+                </div>
+                <p class="text-slate-600 mb-6">Framtidens digitala porttelefon och passagesystem med högupplöst video och app-styrning.</p>
+                <a href="https://defigo.se" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+            </div>
+            
+            <!-- Company Card 6 -->
+             <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Avy-Tmpl</h3>
+                    <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded">Förvaltning</span>
+                </div>
+                <p class="text-slate-600 mb-6">Helhetsplattform för boendeappen, betalningar och e-handel i fastigheten. Förbättrar boendeupplevelsen drastiskt.</p>
+                <a href="#" target="_blank" class="text-slate-400 font-semibold hover:underline cursor-not-allowed">Länk saknas</a>
+            </div>
+        </div>
+        
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-12 text-slate-500 text-lg">
+            Inga bolag matchade din sökning. Prova ett annat sökord eller kategori.
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 bg-white text-center text-slate-500 mt-auto w-full">
+        <div class="space-x-6 mb-4 font-medium">
+            <a href="/om-oss.html" class="hover:text-sky-600">Om oss</a>
+            <a href="/privacy-policy.html" class="hover:text-sky-600">Integritetspolicy</a>
+        </div>
+        <p>© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+    </footer>
+
+    <!-- Filter Script -->
+    <script>
+        function filterCompanies() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const cards = document.querySelectorAll('.company-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const cardCategory = card.dataset.category;
+                const matchesSearch = text.includes(searchTerm);
+                const matchesCategory = category === 'all' || category === cardCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+        
+        // Add event listeners for real-time filtering
+        document.getElementById('searchInput').addEventListener('input', filterCompanies);
+        document.getElementById('categoryFilter').addEventListener('change', filterCompanies);
+    </script>
+</body>
+</html>
