@@ -48,3 +48,8 @@ Agenten ska sekventiellt beta av dessa punkter. Gå aldrig vidare till nästa fa
 - Skapa Google-godkänd Integritetspolicy, Cookie-banner och Om Oss-sida.
 - Optimera Core Web Vitals (laddningstider, Lighthouse-score över 90).
 - Förbered platser för annonser (eller affiliate-länkar) i gränssnittet utan att förstöra användarupplevelsen.
+
+**2026-04-21 (Sub-agent):**
+- **Uppgift:** Fortsatte "Fas 3 - Intäktsgenerering & AdSense-beredskap".
+- **Åtgärd:** Förberedde platser för annonser i `index.html` genom att lägga till två annons-slots med placeholders: en under "Featured Articles" och en i tabellen med PropTech-bolag.
+- **Beslut/Avvikelse:** Inga avvikelser. Arbetet följer den uppsatta planen för Fas 3.
