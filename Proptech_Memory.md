@@ -25,6 +25,12 @@
 - **Åtgärd:** Skapade `robots.txt` och `sitemap.xml`. Lade till Schema.org-taggning (Article, WebSite) i `index.html`. Verifierade att `article.html` redan hade Schema.org-taggning.
 - **Beslut/Avvikelse:** Inga avvikelser. Arbetet följer den uppsatta planen för Fas 2.
 
+**2026-04-21 (Sub-agent):**
+- **Uppgift:** Fortsatte "Fas 2 - SEO & Innehållsdominans".
+- **Åtgärd:** Skapade en ny artikel manuellt (`article4.html`) om "Digitala Tvillingar i PropTech". Länk till artikeln har lagts till på startsidan (`index.html`).
+- **Beslut/Avvikelse:** Fortsätter manuell content-hantering för att hålla projektet rullande.
+
+
 ## 🗺️ Långsiktig 3-Månaders Roadmap (Autonom Plan)
 Agenten ska sekventiellt beta av dessa punkter. Gå aldrig vidare till nästa fas innan den nuvarande är helt klar och fungerar i produktion i main-branchen. Inga genvägar.
 
