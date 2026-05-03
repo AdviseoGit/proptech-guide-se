@@ -1,24 +1,24 @@
-# AGENT_CONTEXT: PropTech Guide SE
+# Agent Mission: Proptechguiden Growth
 
-## Project Mission
-To become the leading Swedish-language resource for Property Technology (PropTech) by mapping the ecosystem, reviewing specialized tools, and providing actionable guides for real estate owners and SMEs.
+## 1. Mål (Goal)
+- Bli den primära källan i Sverige för information om "Proptech" (Property Technology).
+- Driva organisk trafik från en B2B-målgrupp (fastighetsägare, investerare, tech-bolag) och generera leads.
 
-## Target Keywords
-- Primary: **proptech** (Vol: 480, Comp: LOW)
-- Secondary: **fastighetsautomation**, **smarta byggnader**, **proptech sverige**, **digital fastighetsförvaltning**.
+## 2. Mätbara KPI:er (Key Performance Indicators)
+- Nå topp 3 på Google för "proptech sverige", "fastighetsteknik" och nischade söktermer (t.ex. "digitala tvillingar fastigheter") inom 6 månader.
+- Öka organisk B2B-trafik med 15% per månad.
+- Generera 30 kvalificerade leads per månad via kontaktformulär eller "whitepaper"-nedladdningar.
 
-## Market Gap Identified (2026-04-06)
-High interest in "PropTech" in Sweden (stable search volume, low advertising competition) combined with a lack of centralized, non-corporate guides that help smaller property owners understand integration, ROI, and sustainability compliance (ESG).
+## 3. Strategi & Taktik (Execution)
+- **Content:** Varje onsdag, publicera en djupgående analys av en ny proptech-lösning eller en marknadstrend. Intervjua startups eller experter om möjligt (via AI-assisterad research och mail-outreach).
+- **SEO:** Fokusera på B2B-sökord och "long-tail"-frågor. Bygg upp ett internt länknätverk mellan artiklar för att stärka auktoriteten.
+- **Lead Generation:** Skapa och marknadsför ett högkvalitativt "whitepaper", t.ex. "State of Proptech in Sweden 2026", som kräver e-post för nedladdning.
+- **Rapportering:** Varje fredag, sammanställ en rapport med veckans åtgärder och framsteg mot uppsatta KPI:er.
 
-## Core Features
-1. **Tool Directory:** A curated list of Swedish PropTech startups categorized by niche (Energy, Admin, UX).
-2. **Implementation Guides:** Step-by-step documentation for digitalizing existing "brown" properties.
-3. **ESG/Compliance Tracker:** Simplified explanations of new EU/Swedish regulations for property data.
+## 4. Gränser & Ramverk (Boundaries)
+- Undvik överdrivna "hype"-formuleringar. Behåll en professionell och analytisk ton.
+- All teknisk information måste vara faktagranskad.
+- Ändra inte den visuella profilen utan manuellt godkännande.
 
-## Stakeholders
-- **Owner:** Sim (adviseo)
-- **Status:** Initializing MVP (v0.1)
-
-## Knowledge Base
-- Reference search: "Sverige ledande inom PropTech, men lucka för nischade hållbarhetslösningar och regelverksefterlevnad."
-- Key entities: 150+ startups, hub in Stockholm, focus on Space-as-a-service.
+## 5. Teknisk Info
+- (Lägg till Railway-info här när det är applicerbart)
