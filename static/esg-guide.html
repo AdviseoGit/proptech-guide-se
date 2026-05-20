@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESG-rapportering för fastighetsägare | Proptech Guide Sverige</title>
+    <title>ESG Rapportering för Fastighetsägare | Proptech Guide Sverige</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,34 @@
     </style>
     <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="En komplett guide till ESG-rapportering för fastighetsägare i Sverige. Lär dig om CSRD, taxonomin och hur PropTech kan hjälpa er.">
+    <meta name="description" content="En komplett guide till ESG-rapportering för fastighetsägare i Sverige. Förstå kraven och hur PropTech kan förenkla er hållbarhetsdata.">
+    <meta property="og:title" content="ESG Rapportering för Fastighetsägare | Proptech Guide Sverige">
+    <meta property="og:description" content="Lär dig grunderna i ESG (Environmental, Social, Governance) och hur digitala verktyg kan hjälpa er att samla in data och uppfylla nya EU-krav.">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://proptechguiden.se/esg-guide.html"
+      },
+      "headline": "En praktisk guide till ESG för fastighetsägare",
+      "author": {
+        "@type": "Organization",
+        "name": "Proptech Guide Sverige"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Adviseo",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://proptech-guide.se/static/favicon.svg"
+        }
+      },
+      "datePublished": "2026-05-20"
+    }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
     <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center">
@@ -51,55 +78,58 @@
         <div class="hidden md:flex space-x-8 font-medium text-slate-600">
             <a href="/directory.html" class="hover:text-sky-600">Företagskatalog</a>
             <a href="/proptech-kalkylator.html" class="hover:text-sky-600">Kalkylator</a>
-            <a href="/kategorier" class="hover:text-sky-600">Kategorier</a>
-            <a href="/ai-i-fastigheter" class="hover:text-sky-600">AI i fastigheter</a>
-            <a href="/om-oss" class="hover:text-sky-600">Om oss</a>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" style="top: 80px;">
-        <div class="flex flex-col space-y-4 font-medium text-slate-600">
-            <a href="/directory.html" class="hover:text-sky-600 block">Företagskatalog</a>
-            <a href="/proptech-kalkylator.html" class="hover:text-sky-600 block">Kalkylator</a>
-            <a href="/kategorier" class="hover:text-sky-600 block">Kategorier</a>
-            <a href="/ai-i-fastigheter" class="hover:text-sky-600 block">AI i fastigheter</a>
-            <a href="/om-oss" class="hover:text-sky-600 block">Om oss</a>
-        </div>
-    </div>
-
     <main class="max-w-7xl mx-auto px-6 py-20 flex-grow w-full">
         <article class="prose text-slate-800">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight gradient-text">ESG-rapportering för fastighetsägare: En komplett guide</h1>
-            <p class="text-xl text-slate-600">Från och med 2024 skärps kraven på hållbarhetsrapportering för många svenska företag. EU:s nya direktiv, CSRD, och den tillhörande taxonomin ställer höga krav på transparens kring miljöpåverkan, socialt ansvar och bolagsstyrning (ESG). För fastighetsägare innebär detta en stor omställning, men också en möjlighet.</p>
-
-            <h2>Vad är ESG och varför är det viktigt för fastighetsbranschen?</h2>
-            <p>ESG står för Environmental, Social, and Governance. Det är ett ramverk som används för att bedöma ett företags hållbarhetsarbete och samhällsansvar.</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight gradient-text">ESG för Fastighetsägare: En Guide</h1>
+            <p class="text-xl text-slate-600">Hållbarhetskrav är inte längre ett framtidsscenario, utan en realitet som direkt påverkar fastigheters värde och drift. Den här guiden förklarar vad ESG innebär och hur ni kan använda PropTech för att navigera de nya kraven.</p>
+            
+            <h2>Vad är ESG?</h2>
+            <p>ESG står för Environmental, Social, and Governance. Det är ett ramverk som används för att bedöma en organisations hållbarhetsarbete och etiska påverkan.</p>
             <ul>
-                <li><strong>Environmental (Miljö):</strong> Handlar om företagets påverkan på miljön. För fastighetsbolag är detta extra viktigt, då byggnader står för en stor del av samhällets energiförbrukning och koldioxidutsläpp.</li>
-                <li><strong>Social (Socialt ansvar):</strong> Rör företagets relationer med anställda, hyresgäster, leverantörer och samhället i stort. Det kan handla om allt från arbetsvillkor och mångfald till trygghet och tillgänglighet i fastigheterna.</li>
-                <li><strong>Governance (Bolagsstyrning):</strong> Avser hur företaget styrs och kontrolleras. Det handlar om transparens, affärsetik, och hur man hanterar risker och intressekonflikter.</li>
-            </ul>
-            <p>För fastighetsbranschen är ESG inte längre en "nice-to-have", utan en "need-to-have". Investerare, banker och hyresgäster ställer allt högre krav på hållbarhet, och företag som inte kan visa upp ett trovärdigt ESG-arbete riskerar att förlora i konkurrenskraft.</p>
-
-            <h2>Hur kan PropTech hjälpa till med ESG-rapporteringen?</h2>
-            <p>Att samla in och analysera all den data som krävs för en ESG-rapport kan vara en enorm utmaning. Det är här PropTech kommer in i bilden. Med hjälp av smarta sensorer, AI och digitala plattformar kan fastighetsägare automatisera stora delar av datainsamlingen och få en mycket bättre överblick över sin hållbarhetsprestanda.</p>
-            <p>Här är några exempel på hur PropTech kan underlätta ESG-arbetet:</p>
-            <ul>
-                <li><strong>Energioptimering:</strong> Smarta system för styrning av värme, ventilation och belysning kan sänka energiförbrukningen och minska koldioxidutsläppen.</li>
-                <li><strong>Vattenförbrukning:</strong> Sensorer som upptäcker vattenläckor och system för individuell mätning och debitering (IMD) kan minska vattenförbrukningen och spara pengar.</li>
-                <li><strong>Avfallshantering:</strong> Smarta soptunnor som signalerar när de behöver tömmas och system för att spåra och sortera avfall kan minska mängden avfall som går till förbränning.</li>
-                <li><strong>Hyresgäst-engagemang:</strong> Digitala plattformar för kommunikation med hyresgäster kan användas för att informera om hållbarhetsinitiativ och uppmuntra till ett mer hållbart beteende.</li>
+                <li><strong>Environmental (Miljö):</strong> Handlar om hur företaget påverkar miljön. För fastigheter inkluderar detta energiförbrukning, vattenanvändning, avfallshantering och koldioxidutsläpp.</li>
+                <li><strong>Social (Socialt ansvar):</strong> Rör företagets relationer med anställda, hyresgäster och samhället. Det kan vara allt från tillgänglighetsanpassning och trygghet i boendemiljön till schyssta arbetsvillkor för personal.</li>
+                <li><strong>Governance (Bolagsstyrning):</strong> Avser hur företaget styrs. Det handlar om transparens, affärsetik, och hur man hanterar regelefterlevnad och risker.</li>
             </ul>
 
-            <h2>Kom igång med er ESG-rapportering</h2>
-            <p>Att komma igång med ESG-rapportering kan kännas överväldigande, men det behöver inte vara så komplicerat. Börja med att göra en nulägesanalys och identifiera era viktigaste hållbarhetsaspekter. Sätt upp tydliga mål och en handlingsplan för hur ni ska uppnå dem. Och viktigast av allt, se till att ni har rätt verktyg och system på plats för att kunna mäta och följa upp ert arbete.</p>
+            <h2>Varför är ESG viktigt för fastighetsägare?</h2>
+            <p>Från och med 2024 införde EU nya, striktare krav på hållbarhetsrapportering genom CSRD (Corporate Sustainability Reporting Directive). Detta innebär att många fastighetsbolag nu måste kunna redovisa detaljerad data om sin ESG-prestanda. Utöver regelefterlevnad ser vi två andra starka drivkrafter:</p>
+            <ul>
+                <li><strong>Finansiering:</strong> Banker och investerare använder ESG-betyg för att bedöma risk. En fastighet med låg energiförbrukning och god social standard kan få bättre lånevillkor.</li>
+                <li><strong>Marknadsvärde:</strong> Hyresgäster, både kommersiella och privata, efterfrågar hållbara och hälsosamma byggnader. En certifierad grön byggnad är mer attraktiv och kan därmed ha ett högre marknadsvärde.</li>
+            </ul>
+
+            <div class="my-8 text-center bg-slate-100 p-8 rounded-lg">
+                <p class="text-slate-500">Advertisement</p>
+            </div>
+
+            <h2>Hur kan PropTech hjälpa till?</h2>
+            <p>Att manuellt samla in och hantera ESG-data är en enorm utmaning. Det är här PropTech kommer in. Digitala verktyg kan automatisera insamlingen och ge er den data som krävs för rapportering och optimering.</p>
+            
+            <h3>Exempel på PropTech-lösningar för ESG:</h3>
+            <p><strong>Miljö (E):</strong></p>
+            <ul>
+                <li><strong>Smarta mätare:</strong> Plattformar som <a href="/directory.html#vyer" class="text-sky-600 hover:underline">Vyer</a> eller liknande samlar in realtidsdata om el-, vatten- och värmeförbrukning. Datan kan sedan användas för att identifiera energitjuvar och optimera driften.</li>
+                <li><strong>Digitala tvillingar:</strong> Genom att skapa en digital kopia av fastigheten kan man simulera olika åtgärder, som att installera solpaneler, och se deras potentiella effekt innan man investerar.</li>
+            </ul>
+
+            <p><strong>Socialt ansvar (S):</strong></p>
+            <ul>
+                <li><strong>Boendeappar:</strong> Appar som <a href="/directory.html#ourliving" class="text-sky-600 hover:underline">OurLiving</a> förenklar kommunikationen med hyresgäster, hanterar felanmälningar och kan användas för att skicka ut enkäter om trivsel och trygghet.</li>
+                <li><strong>Digital access:</strong> System som <a href="/directory.html#parakey" class="text-sky-600 hover:underline">Parakey</a> ökar säkerheten och tillgängligheten genom att ersätta fysiska nycklar med mobila lösningar.</li>
+            </ul>
+
+            <p><strong>Bolagsstyrning (G):</strong></p>
+            <ul>
+                <li><strong>Centraliserade plattformar:</strong> System för fastighetsförvaltning samlar all dokumentation och data på ett ställe, vilket skapar transparens och underlättar revisioner.</li>
+            </ul>
+
+            <h2>Kom igång med er ESG-strategi</h2>
+            <p>Börja med att identifiera var ni står idag. Vilken data har ni tillgång till? Vilka är era största utmaningar? Genom att sedan implementera rätt PropTech-verktyg kan ni inte bara uppfylla lagkraven, utan också skapa mer lönsamma och hållbara fastigheter för framtiden.</p>
+
         </article>
     </main>
-
     <footer class="py-12 border-t border-slate-200 text-center text-slate-500 mt-auto w-full">
         <div class="space-x-4">
             <a href="/om-oss.html" class="hover:text-sky-600">Om oss</a>
