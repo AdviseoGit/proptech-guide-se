@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersäkerhet i Smarta Byggnader: En Guide | Proptech Guide Sverige</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #0284c7, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .prose {
+            max-width: 65ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 800;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        .prose p {
+            font-size: 1.125rem;
+            line-height: 1.777;
+            margin-bottom: 1.25em;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+            margin-bottom: 1.25em;
+        }
+        .prose li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="En guide till cybersäkerhet för fastighetsägare med smarta byggnader. Förstå riskerna med uppkopplade system och hur ni skyddar er fastighet mot digitala hot.">
+    <meta property="og:title" content="Cybersäkerhet i Smarta Byggnader: En Guide | Proptech Guide Sverige">
+    <meta property="og:description" content="Lär dig om de unika cybersäkerhetsriskerna med IoT, fastighetsautomation och andra PropTech-lösningar, och få praktiska tips för att säkra din smarta fastighet.">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://proptech-guide.se/cybersakerhet-smarta-byggnader.html"
+      },
+      "headline": "Säkra din smarta byggnad: En guide till cybersäkerhet",
+      "author": {
+        "@type": "Organization",
+        "name": "Proptech Guide Sverige"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Adviseo",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://proptech-guide.se/static/favicon.svg"
+        }
+      },
+      "datePublished": "2026-05-27"
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center">
+        <a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+        <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+            <a href="/directory.html" class="hover:text-sky-600">Företagskatalog</a>
+            <a href="/proptech-kalkylator.html" class="hover:text-sky-600">Kalkylator</a>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-6 py-20 flex-grow w-full">
+        <article class="prose text-slate-800">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight gradient-text">Cybersäkerhet för Smarta Byggnader</h1>
+            <p class="text-xl text-slate-600">Ju mer uppkopplad en fastighet blir, desto större blir attackytan för digitala hot. Från VVS-system till passerkontroll – varje IoT-enhet är en potentiell ingång för obehöriga. Den här guiden belyser riskerna och ger konkreta råd för att säkra er fastighet.</p>
+            
+            <h2>Varför är smarta byggnader ett mål?</h2>
+            <p>Smarta byggnader innehåller en guldgruva av data och kontrollsystem. En angripare kan ha flera olika mål:</p>
+            <ul>
+                <li><strong>Datastöld:</strong> Komma över känslig information om hyresgäster eller verksamhetskritisk data.</li>
+                <li><strong>Sabotage:</strong> Manipulera VVS, el eller låssystem för att orsaka fysisk skada, avbrott i driften eller utpressa ägaren (ransomware).</li>
+                <li><strong>Spionage:</strong> Använda uppkopplade kameror eller mikrofoner för att avlyssna boende eller företag.</li>
+                <li><strong>Springbräda:</strong> Använda fastighetens nätverk för att attackera andra system, till exempel en hyresgästs företagsnätverk.</li>
+            </ul>
+
+            <h2>Vanliga sårbarheter i PropTech</h2>
+            <p>Många PropTech-lösningar utvecklas med funktion i fokus, medan säkerheten ibland blir sekundär. Några typiska svagheter inkluderar:</p>
+            <ul>
+                <li><strong>Standardlösenord:</strong> Många IoT-enheter levereras med enkla standardlösenord som sällan byts ut.</li>
+                <li><strong>Oskyddad kommunikation:</strong> Data som skickas mellan sensorer, enheter och molntjänster är inte alltid krypterad.</li>
+                <li><strong>Brist på uppdateringar:</strong> Mjukvaran i inbyggda system uppdateras sällan, vilket lämnar kända säkerhetshål öppna.</li>
+                <li><strong>Platta nätverk:</strong> När alla system (VVS, säkerhet, gäst-WiFi) delar samma nätverk kan en angripare som komprometterar en del enkelt nå alla andra.</li>
+            </ul>
+
+            <div class="my-8 text-center bg-slate-100 p-8 rounded-lg">
+                <p class="text-slate-500 ad-slot">Annonsplats</p>
+            </div>
+
+            <h2>Hur ni skyddar er fastighet: En checklista</h2>
+            <p>Att säkra en smart byggnad kräver ett strukturerat förhållningssätt. Här är några av de viktigaste stegen:</p>
+            
+            <h3>1. Nätverkssegmentering</h3>
+            <p>Dela upp fastighetens nätverk i mindre, isolerade zoner. System för fastighetsautomation (som VVS och larm) bör vara helt separerade från nätverk som används av hyresgäster eller administrativ personal. Om en del av nätverket komprometteras begränsar detta skadan.</p>
+
+            <h3>2. Säker upphandling</h3>
+            <p>Ställ krav på säkerhet när ni köper in nya PropTech-lösningar. Fråga leverantören:</p>
+            <ul>
+                <li>Hur hanterar ni mjukvaruuppdateringar?</li>
+                <li>Är all datakommunikation krypterad?</li>
+                <li>Har produkten genomgått oberoende säkerhetstester?</li>
+                <li>Används unika lösenord för varje enhet?</li>
+            </ul>
+
+            <h3>3. Regelbundna uppdateringar och starka lösenord</h3>
+            <p>Se till att all mjukvara i uppkopplade system hålls uppdaterad. Byt omedelbart ut alla standardlösenord mot starka, unika lösenord. Använd en lösenordshanterare för att hålla reda på dem.</p>
+
+            <h3>4. Fysisk säkerhet</h3>
+            <p>Glöm inte den fysiska säkerheten. Nätverksutrustning, servrar och routrar bör vara inlåsta i säkra utrymmen för att förhindra obehörig åtkomst.</p>
+
+            <h2>Framtiden är uppkopplad – och sårbar</h2>
+            <p>Digitaliseringen av fastigheter medför enorma fördelar, men det är avgörande att säkerhetsperspektivet finns med från början. Genom att bygga en säker digital grund kan ni dra nytta av teknikens fördelar utan att utsätta er fastighet och era hyresgäster för onödiga risker.</p>
+
+        </article>
+    </main>
+    <footer class="py-12 border-t border-slate-200 text-center text-slate-500 mt-auto w-full">
+        <div class="space-x-4">
+            <a href="/om-oss.html" class="hover:text-sky-600">Om oss</a>
+            <a href="/privacy-policy.html" class="hover:text-sky-600">Integritetspolicy</a>
+        </div>
+        <p class="mt-4">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+    </footer>
+</body>
+</html>
