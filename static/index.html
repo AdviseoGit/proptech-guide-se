@@ -3,79 +3,461 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proptech Guide Sverige | Framtidens Fastighetsförvaltning</title>
+    <title>Proptech Guide Sverige | Digitalisering av fastigheter 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(90deg, #0284c7, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-
-    <!-- SEO & Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Vindkollen - Din guide till ersättning för vindkraft.">
-    <!-- OpenGraph for LLM/Search results -->
-    <meta property="og:title" content="Vindkollen | Ersättningskalkylator">
-    <meta property="og:description" content="Räkna ut din ersättning för vindkraft nära din bostad.">
+    <meta name="description" content="Proptech Guide Sverige – jämför de bästa digitala verktygen för fastighetsägare, BRF och förvaltare. Energioptimering, digital förvaltning och smarta hem.">
+    <meta property="og:title" content="Proptech Guide Sverige | Digitalisering av fastigheter 2026">
+    <meta property="og:description" content="Jämför 20+ proptech-verktyg för svenska fastighetsägare. Beräkna din besparing med vår kalkylator.">
     <meta property="og:type" content="website">
-
+    <meta property="og:url" content="https://proptechguiden.se/">
+    <link rel="canonical" href="https://proptechguiden.se/">
+    <style>
+        body { font-family: "Plus Jakarta Sans", sans-serif; }
+        .gradient-text { background: linear-gradient(90deg, #0284c7, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(2,132,199,0.12); }
+        .sticky-nav { backdrop-filter: blur(12px); background: rgba(255,255,255,0.92); }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
-    <!-- Hero Section -->
-    <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></div>
-        <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-            <a href="#" class="hover:text-sky-600">Kategorier</a>
-            <a href="#" class="hover:text-sky-600">AI i fastigheter</a>
-            <a href="#" class="hover:text-sky-600">Om oss</a>
-        </div>
-    </nav>
 
-    <header class="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Digitaliseringen av <span class="gradient-text">svenska fastigheter.</span></h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Vi kartlägger de mest innovativa verktygen för fastighetsägare, förvaltare och BRF:er.</p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <input type="email" placeholder="Din e-post" class="px-6 py-4 rounded-xl border border-slate-200 shadow-sm focus:ring-2 focus:ring-sky-500 outline-none w-full md:w-80">
-            <button class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all">Få guiden (Beta)</button>
+<!-- Nav -->
+<nav class="sticky top-0 z-50 sticky-nav border-b border-slate-200/60 py-4 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+        <div class="hidden md:flex space-x-7 text-sm font-semibold text-slate-600">
+            <a href="/kategorier" class="hover:text-sky-600 transition-colors">Verktyg & Kategorier</a>
+            <a href="/ai-i-fastigheter" class="hover:text-sky-600 transition-colors">AI i fastigheter</a>
+            <a href="/kalkylator" class="hover:text-sky-600 transition-colors">Besparingskalkylator</a>
+            <a href="/om-oss" class="hover:text-sky-600 transition-colors">Om oss</a>
         </div>
-    </header>
+        <a href="/kalkylator" class="bg-sky-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-sky-700 transition-colors">Beräkna besparing →</a>
+    </div>
+</nav>
 
-    <!-- Categories Grid -->
-    <main class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Energi & Driftsnetto</h3>
-                <p class="text-slate-600">AI-styrning av uppvärmning och ventilation som sänker kostnaderna med 15-25%.</p>
+<!-- Hero -->
+<header class="py-24 px-6 max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 text-sky-700 text-sm font-semibold px-4 py-2 rounded-full mb-8">
+        <span class="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></span>
+        Uppdaterad maj 2026 · 141 proptech-bolag kartlagda i Sverige
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+        Digitaliseringen av<br><span class="gradient-text">svenska fastigheter.</span>
+    </h1>
+    <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Vi kartlägger, jämför och granskar de bästa proptech-verktygen för fastighetsägare, BRF-styrelser och förvaltare. Energibesparing, smarta hem och digital förvaltning – allt samlat.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="/kategorier" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-700 transition-all text-base shadow-lg shadow-sky-200">
+            Se alla verktyg →
+        </a>
+        <a href="/kalkylator" class="bg-white border-2 border-sky-200 text-sky-700 px-8 py-4 rounded-xl font-bold hover:border-sky-400 transition-all text-base">
+            Beräkna din besparing
+        </a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-500">
+        <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>20+ verktyg granskade</div>
+        <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Prisguide i SEK</div>
+        <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Beräkna besparing</div>
+        <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Svenska bolag prioriterat</div>
+    </div>
+</header>
+
+<!-- Stats -->
+<section class="bg-gradient-to-br from-sky-50 to-cyan-50 py-16 px-6 border-y border-sky-100">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
+        <div><div class="text-4xl font-extrabold text-sky-600 mb-2">15–25%</div><div class="text-slate-600 font-medium">Energibesparing med AI-styrning</div></div>
+        <div><div class="text-4xl font-extrabold text-emerald-600 mb-2">20–30%</div><div class="text-slate-600 font-medium">Lägre underhållskostnader</div></div>
+        <div><div class="text-4xl font-extrabold text-violet-600 mb-2">40–60%</div><div class="text-slate-600 font-medium">Minskat administrativt arbete</div></div>
+        <div><div class="text-4xl font-extrabold text-amber-600 mb-2">2–4 år</div><div class="text-slate-600 font-medium">Typisk återbetalningstid</div></div>
+    </div>
+</section>
+
+<!-- Top Tools Grid -->
+<section class="py-20 px-6 max-w-7xl mx-auto" id="verktyg">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4">Topprankade proptech-verktyg 2026</h2>
+        <p class="text-slate-600 text-lg">Utvalda och granskade för svenska fastighetsförhållanden</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Myrspoven -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center text-2xl">⚡</div>
+                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Energi</span>
             </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040L3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622l-.382-3.076z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Digital Förvaltning</h3>
-                <p class="text-slate-600">Automatisera felanmälan och hyresavisering för en sömlös upplevelse för hyresgästen.</p>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Smarta Hem & Delning</h3>
-                <p class="text-slate-600">Digitala lås, tvättstugebokning och solceller som höjer fastighetsvärdet.</p>
+            <h3 class="text-xl font-bold mb-2">Myrspoven</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Autonom AI-tjänst för energi- och driftoptimering av fastigheter. Molnbaserad med integrationer mot befintliga system. Typisk energibesparing 15–25%.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Från ca 500 kr/mån</span>
+                <span class="font-bold text-sky-600">9.2 ⭐</span>
             </div>
         </div>
-    </main>
 
-    <footer class="py-12 border-t border-slate-200 text-center text-slate-500">
-        <p>© 2026 Proptech Guide Sverige | En del av Adviseo</p>
-    </footer>
+        <!-- Nrlyze -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-2xl">🌡️</div>
+                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Energi</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Nrlyze</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Plattform för optimering av fastigheters värmesystem. Integreras med befintliga sensorer och styr radiatorer automatiskt för lägre energiförbrukning.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Kontakta för pris</span>
+                <span class="font-bold text-sky-600">8.8 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Vitec Fastighetssystem -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">🏢</div>
+                <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">Förvaltning</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Vitec Fastighetssystem</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Marknadsledande heltäckande fastighetssystem för svenska fastighetsägare. Hanterar hyreskontrakt, ekonomi, hyresgästportal och underhållsplanering.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Offertbaserat</span>
+                <span class="font-bold text-sky-600">9.0 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Planima -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-violet-100 rounded-2xl flex items-center justify-center text-2xl">🔧</div>
+                <span class="bg-violet-100 text-violet-700 text-xs font-bold px-3 py-1 rounded-full">Underhåll</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Planima</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Underhållsplanering och tillståndsanalys för fastigheter och BRF. Digitaliserar underhållsplaner och hjälper förvaltare att prioritera rätt åtgärder i rätt tid.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Från 399 kr/mån</span>
+                <span class="font-bold text-sky-600">9.1 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Raybased -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-cyan-100 rounded-2xl flex items-center justify-center text-2xl">📡</div>
+                <span class="bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full">IoT & Data</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Raybased</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">IoT-plattform som samlar data från fastighetens alla sensorer och system på ett ställe. Möjliggör kostnadseffektiv digital tvilling och realtidsövervakning.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Kontakta för pris</span>
+                <span class="font-bold text-sky-600">8.6 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Avy -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-2xl">📱</div>
+                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Hyresgäst</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Avy</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Digital hyresgästapp för felanmälan, bokning av gemensamma lokaler och kommunikation. Minskar antalet telefonsamtal till förvaltaren med upp till 60%.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Från 15 kr/lgh/mån</span>
+                <span class="font-bold text-sky-600">8.9 ⭐</span>
+            </div>
+        </div>
+
+        <!-- TenFAST -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl">📋</div>
+                <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">Förvaltning</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">TenFAST</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Webbaserat fastighetssystem anpassat för mindre och medelstora fastighetsägare. Hanterar hyreskontrakt, fakturering och felanmälningar i ett intuitivt gränssnitt.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Från 299 kr/mån</span>
+                <span class="font-bold text-sky-600">8.4 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Ngenic -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">🌿</div>
+                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Energi</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Ngenic</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Svenska smarta termostater och individuell energimätning kopplad till mobilapp. Lämpar sig för BRF som vill ge hyresgäster kontroll och synlighet över sin förbrukning.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Från 1 499 kr (hw)</span>
+                <span class="font-bold text-sky-600">8.3 ⭐</span>
+            </div>
+        </div>
+
+        <!-- Datscha -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+            <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-2xl">📊</div>
+                <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">Data & Analys</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Datscha</h3>
+            <p class="text-slate-500 text-sm mb-4 leading-relaxed">Ledande plattform för fastighetsmarknadsdata i Sverige. Transaktionshistorik, värderingsdata, ägarinformation och marknadstrender. Branschstandard för professionella aktörer.</p>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400">Offertbaserat</span>
+                <span class="font-bold text-sky-600">9.3 ⭐</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-center mt-10">
+        <a href="/kategorier" class="inline-block bg-sky-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-700 transition-all">Se alla 20+ verktyg →</a>
+    </div>
+</section>
+
+<!-- Savings Calculator Preview -->
+<section class="bg-gradient-to-br from-slate-900 to-sky-900 text-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="text-4xl mb-6">🧮</div>
+        <h2 class="text-4xl font-extrabold mb-4">Hur mycket kan du spara?</h2>
+        <p class="text-sky-200 text-lg mb-10 max-w-2xl mx-auto">Beräkna den förväntade besparingen för just din fastighetsportfölj – energi, underhåll och administration.</p>
+        <div class="bg-white/10 backdrop-blur rounded-3xl p-8 mb-8 text-left">
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div>
+                    <label class="block text-sky-200 text-sm font-semibold mb-2">Antal lägenheter</label>
+                    <input id="prev-lgh" type="number" value="50" min="1" class="w-full bg-white/20 text-white placeholder-sky-300 border border-sky-400/40 rounded-xl px-4 py-3 font-bold text-xl outline-none focus:ring-2 focus:ring-sky-400">
+                </div>
+                <div>
+                    <label class="block text-sky-200 text-sm font-semibold mb-2">Energikostnad (kr/m²/år)</label>
+                    <input id="prev-energy" type="number" value="75" min="1" class="w-full bg-white/20 text-white placeholder-sky-300 border border-sky-400/40 rounded-xl px-4 py-3 font-bold text-xl outline-none focus:ring-2 focus:ring-sky-400">
+                </div>
+                <div>
+                    <label class="block text-sky-200 text-sm font-semibold mb-2">Snitt m² per lägenhet</label>
+                    <input id="prev-sqm" type="number" value="65" min="1" class="w-full bg-white/20 text-white placeholder-sky-300 border border-sky-400/40 rounded-xl px-4 py-3 font-bold text-xl outline-none focus:ring-2 focus:ring-sky-400">
+                </div>
+            </div>
+            <button onclick="calcPreview()" class="w-full bg-sky-500 hover:bg-sky-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Beräkna besparing</button>
+            <div id="prev-result" class="hidden mt-6 grid md:grid-cols-3 gap-4 text-center">
+                <div class="bg-white/10 rounded-2xl p-4">
+                    <div class="text-sky-300 text-xs font-semibold mb-1">ENERGIBESPARING/ÅR</div>
+                    <div id="prev-energy-save" class="text-3xl font-extrabold text-white">–</div>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-4">
+                    <div class="text-sky-300 text-xs font-semibold mb-1">TOTAL BESPARING/ÅR</div>
+                    <div id="prev-total-save" class="text-3xl font-extrabold text-emerald-400">–</div>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-4">
+                    <div class="text-sky-300 text-xs font-semibold mb-1">ÅTERBETALNINGSTID</div>
+                    <div id="prev-payback" class="text-3xl font-extrabold text-amber-400">–</div>
+                </div>
+            </div>
+        </div>
+        <a href="/kalkylator" class="inline-block border-2 border-sky-400 text-sky-300 hover:bg-sky-400 hover:text-white px-8 py-4 rounded-xl font-bold transition-all">Fullständig kalkylator →</a>
+    </div>
+</section>
+
+<!-- Categories overview -->
+<section class="py-20 px-6 max-w-7xl mx-auto" id="kategorier">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4">Proptech-kategorier</h2>
+        <p class="text-slate-600 text-lg">Teknologin som förändrar fastighetsbranschen</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/kategorier#energi" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚡</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">Energi & Klimat</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">AI-styrning av uppvärmning, ventilation och el. Minska energinotan med 15–25% och nå klimatmål snabbare.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">6 verktyg →</div>
+        </a>
+        <a href="/kategorier#forvaltning" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">🏢</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">Digital Förvaltning</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Fastighetssystem för hyreskontrakt, ekonomi och underhållsplanering. Minska admintid med upp till 60%.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">5 verktyg →</div>
+        </a>
+        <a href="/kategorier#hyresgast" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">📱</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">Hyresgästupplevelse</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Digitala appar och portaler för felanmälan, bokning och kommunikation. Nöjdare hyresgäster, färre samtal.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">4 verktyg →</div>
+        </a>
+        <a href="/kategorier#iot" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-cyan-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">📡</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">IoT & Sensorer</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Trådlösa sensorer för fukt, temperatur, rörelsedetektion och luftkvalitet. Bygg din digitala tvilling.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">4 verktyg →</div>
+        </a>
+        <a href="/kategorier#brf" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-violet-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">🏘️</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">BRF & Bostadsrätt</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Digitala verktyg specifikt för bostadsrättsföreningar – stämmor, underhållsplaner och ekonomisk förvaltning.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">3 verktyg →</div>
+        </a>
+        <a href="/kategorier#data" class="block bg-white p-8 rounded-3xl border border-slate-100 shadow-sm card-hover group">
+            <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 text-2xl">📊</div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-sky-600 transition-colors">Data & Analys</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Marknadsdata, värderingsverktyg och transaktionsanalys för professionella fastighetsaktörer.</p>
+            <div class="mt-4 text-sky-600 text-sm font-semibold">3 verktyg →</div>
+        </a>
+    </div>
+</section>
+
+<!-- Articles -->
+<section class="bg-slate-100 py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold mb-4">Guider & Artiklar</h2>
+            <p class="text-slate-600 text-lg">Djupdyk i digitaliseringen av fastighetsbranschen</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/ai-i-fastigheter" class="block bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-3xl mb-4">🤖</div>
+                <h3 class="text-lg font-bold mb-2">AI i fastighetsbranschen 2026</h3>
+                <p class="text-slate-500 text-sm mb-4">Hur maskininlärning och generativ AI förändrar energioptimering, värdering och hyresgästupplevelse i svenska fastigheter.</p>
+                <span class="text-sky-600 font-semibold text-sm">Läs artikeln →</span>
+            </a>
+            <a href="/artikel/rise-of-proptech" class="block bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-3xl mb-4">🚀</div>
+                <h3 class="text-lg font-bold mb-2">Proptechs genombrott i Sverige</h3>
+                <p class="text-slate-500 text-sm mb-4">141 proptech-startups kartlagda. Vilka tar täten och hur snabbt förändras marknaden? En analys av det svenska proptech-ekosystemet.</p>
+                <span class="text-sky-600 font-semibold text-sm">Läs artikeln →</span>
+            </a>
+            <a href="/artikel/smarta-hem" class="block bg-white p-7 rounded-3xl border border-slate-100 shadow-sm card-hover">
+                <div class="text-3xl mb-4">🏠</div>
+                <h3 class="text-lg font-bold mb-2">Smarta hem för fastighetsägare</h3>
+                <p class="text-slate-500 text-sm mb-4">Digitala lås, smart energistyrning och sensornätverk – vad ger störst ROI för fastighetsägaren och hyresgästen?</p>
+                <span class="text-sky-600 font-semibold text-sm">Läs artikeln →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4">Snabbjämförelse – topp 5</h2>
+        <p class="text-slate-600 text-lg">Uppdaterad maj 2026</p>
+    </div>
+    <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead class="bg-slate-50 text-slate-500 text-xs uppercase tracking-wide">
+                    <tr>
+                        <th class="text-left p-5 font-semibold">Verktyg</th>
+                        <th class="text-left p-5 font-semibold">Kategori</th>
+                        <th class="text-left p-5 font-semibold">Besparing</th>
+                        <th class="text-left p-5 font-semibold">Pris</th>
+                        <th class="text-left p-5 font-semibold">Bäst för</th>
+                        <th class="text-left p-5 font-semibold">Betyg</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-sky-50/30 transition-colors">
+                        <td class="p-5 font-bold text-sky-700">Myrspoven</td>
+                        <td class="p-5 text-slate-600">Energi</td>
+                        <td class="p-5 text-emerald-600 font-semibold">15–25% energi</td>
+                        <td class="p-5 text-slate-600">fr. 500 kr/mån</td>
+                        <td class="p-5 text-slate-600">Alla fastighetstyper</td>
+                        <td class="p-5 font-bold text-emerald-600">9.2/10</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50/30 transition-colors">
+                        <td class="p-5 font-bold">Datscha</td>
+                        <td class="p-5 text-slate-600">Data & Analys</td>
+                        <td class="p-5 text-emerald-600 font-semibold">Bättre beslut</td>
+                        <td class="p-5 text-slate-600">Offert</td>
+                        <td class="p-5 text-slate-600">Professionella aktörer</td>
+                        <td class="p-5 font-bold text-emerald-600">9.3/10</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50/30 transition-colors">
+                        <td class="p-5 font-bold">Planima</td>
+                        <td class="p-5 text-slate-600">Underhåll</td>
+                        <td class="p-5 text-emerald-600 font-semibold">20–30% underhåll</td>
+                        <td class="p-5 text-slate-600">fr. 399 kr/mån</td>
+                        <td class="p-5 text-slate-600">BRF, fastighetsbolag</td>
+                        <td class="p-5 font-bold text-emerald-600">9.1/10</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50/30 transition-colors">
+                        <td class="p-5 font-bold">Vitec</td>
+                        <td class="p-5 text-slate-600">Förvaltning</td>
+                        <td class="p-5 text-emerald-600 font-semibold">40–60% admin</td>
+                        <td class="p-5 text-slate-600">Offert</td>
+                        <td class="p-5 text-slate-600">Stora fastighetsbolag</td>
+                        <td class="p-5 font-bold text-emerald-600">9.0/10</td>
+                    </tr>
+                    <tr class="hover:bg-sky-50/30 transition-colors">
+                        <td class="p-5 font-bold">Avy</td>
+                        <td class="p-5 text-slate-600">Hyresgäst</td>
+                        <td class="p-5 text-emerald-600 font-semibold">60% färre samtal</td>
+                        <td class="p-5 text-slate-600">fr. 15 kr/lgh</td>
+                        <td class="p-5 text-slate-600">BRF, hyresrätter</td>
+                        <td class="p-5 font-bold text-emerald-600">8.9/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-10 mb-10">
+            <div>
+                <div class="text-xl font-extrabold mb-4">PROPTECH<span class="text-sky-400">GUIDE</span></div>
+                <p class="text-slate-400 text-sm leading-relaxed">Din oberoende guide till digitalisering av svenska fastigheter. En del av Adviseo.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-slate-300">Verktyg</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/kategorier#energi" class="hover:text-white transition-colors">Energioptimering</a></li>
+                    <li><a href="/kategorier#forvaltning" class="hover:text-white transition-colors">Fastighetssystem</a></li>
+                    <li><a href="/kategorier#brf" class="hover:text-white transition-colors">BRF-verktyg</a></li>
+                    <li><a href="/kategorier#iot" class="hover:text-white transition-colors">IoT & Sensorer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-slate-300">Guider</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/ai-i-fastigheter" class="hover:text-white transition-colors">AI i fastigheter</a></li>
+                    <li><a href="/kalkylator" class="hover:text-white transition-colors">Besparingskalkylator</a></li>
+                    <li><a href="/artikel/rise-of-proptech" class="hover:text-white transition-colors">Proptechs genombrott</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-slate-300">Om sidan</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="/om-oss" class="hover:text-white transition-colors">Om Proptech Guide</a></li>
+                    <li><a href="/static/privacy-policy.html" class="hover:text-white transition-colors">Integritetspolicy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 pt-8 text-slate-500 text-sm text-center">
+            © 2026 Proptech Guide Sverige | En del av Adviseo
+        </div>
+    </div>
+</footer>
+
+<script>
+function calcPreview() {
+    var lgh = parseFloat(document.getElementById("prev-lgh").value) || 50;
+    var energy = parseFloat(document.getElementById("prev-energy").value) || 75;
+    var sqm = parseFloat(document.getElementById("prev-sqm").value) || 65;
+    var totalArea = lgh * sqm;
+    var energySave = Math.round(totalArea * energy * 0.20);
+    var maintSave = Math.round(lgh * 3000 * 0.25);
+    var adminSave = Math.round(lgh * 1200);
+    var total = energySave + maintSave + adminSave;
+    var invest = totalArea * 300;
+    var paybackMonths = Math.round((invest / total) * 12);
+    var paybackStr = paybackMonths < 24 ? paybackMonths + " mån" : Math.round(paybackMonths/12) + " år";
+    document.getElementById("prev-energy-save").textContent = energySave.toLocaleString("sv-SE") + " kr";
+    document.getElementById("prev-total-save").textContent = total.toLocaleString("sv-SE") + " kr";
+    document.getElementById("prev-payback").textContent = paybackStr;
+    document.getElementById("prev-result").classList.remove("hidden");
+}
+</script>
 </body>
 </html>
