@@ -30,6 +30,10 @@ async def om_oss():
 async def robots():
     return FileResponse("static/robots.txt")
 
+@app.get("/sitemap.xml")
+async def sitemap():
+    return FileResponse("static/sitemap.xml", media_type="application/xml")
+
 @app.get("/favicon.ico")
 async def favicon():
     return FileResponse("static/favicon.svg")
