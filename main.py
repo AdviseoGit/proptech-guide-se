@@ -1,10 +1,65 @@
 import os
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, BackgroundTasks
 from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 import uvicorn
 
 app = FastAPI(title="Proptech Guide Sverige")
+
+import psycopg2
+from pydantic import BaseModel, EmailStr
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+
+class LeadIn(BaseModel):
+    email: EmailStr
+
+
+def _save_lead_pt(email):
+    if not DATABASE_URL:
+        print(f"[pt] no DB configured, lead: {email}")
+        return
+    try:
+        conn = psycopg2.connect(DATABASE_URL)
+        cur = conn.cursor()
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS proptech_leads (
+                id SERIAL PRIMARY KEY,
+                email VARCHAR(255) UNIQUE NOT NULL,
+                source VARCHAR(64),
+                created_at TIMESTAMP DEFAULT NOW()
+            )
+        """)
+        cur.execute(
+            "INSERT INTO proptech_leads (email, source) VALUES (%s, %s) ON CONFLICT (email) DO NOTHING",
+            (email, "roi_guide"),
+        )
+        conn.commit(); cur.close(); conn.close()
+    except Exception as e:
+        print(f"[pt] DB error: {e}")
+
+
+def _deliver_pt(email):
+    import mailer
+    import report_pt
+    _save_lead_pt(email)
+    pdf = None
+    try:
+        pdf = report_pt.build_guide_pdf()
+    except Exception as e:
+        print(f"[pt] guide pdf failed: {e}")
+    atts = [("PropTech-ROI-guide.pdf", pdf, "application/pdf")] if pdf else None
+    mailer.send_email(email, "Din PropTech ROI-guide", report_pt.user_email_html(),
+                      attachments=atts, from_name="Proptech Guide Sverige")
+    mailer.notify_owner("Ny lead - Proptech Guide", f"<p>Ny lead: <b>{email}</b></p>",
+                        reply_to=email, from_name="Proptech Guide Sverige")
+
+
+@app.post("/api/lead")
+async def capture_lead(lead: LeadIn, background: BackgroundTasks):
+    background.add_task(_deliver_pt, lead.email)
+    return {"status": "success"}
 
 # Serve static assets (js, css, images) under /static
 app.mount("/static", StaticFiles(directory="static"), name="static")
