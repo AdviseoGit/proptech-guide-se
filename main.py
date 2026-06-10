@@ -96,10 +96,17 @@ async def favicon():
 # Catch-all route to serve any .html file from the static directory from the root URL
 @app.get("/{filename}", response_class=HTMLResponse)
 async def serve_html(filename: str):
+    # Append .html to the filename and check if it exists in the static directory
+    file_path = os.path.join("static", f"{filename}.html")
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+
+    # Original logic for files that might already have .html (less likely now)
     if filename.endswith(".html"):
-        file_path = os.path.join("static", filename)
-        if os.path.exists(file_path):
-            return FileResponse(file_path)
+        file_path_original = os.path.join("static", filename)
+        if os.path.exists(file_path_original):
+            return FileResponse(file_path_original)
+            
     # Let FastAPI handle 404 if it's not an existing HTML file
     from fastapi import HTTPException
     raise HTTPException(status_code=404, detail="Item not found")
