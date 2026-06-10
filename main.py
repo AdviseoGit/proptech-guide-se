@@ -94,14 +94,16 @@ async def favicon():
     return FileResponse("static/favicon.svg")
 
 # Catch-all route to serve any .html file from the static directory from the root URL
-@app.get("/{filename}", response_class=HTMLResponse)
+@app.get("/{filename:path}", response_class=HTMLResponse)
 async def serve_html(filename: str):
+    print(f"Attempting to serve: {filename}")
     # Append .html to the filename and check if it exists in the static directory
     file_path = os.path.join("static", f"{filename}.html")
+    print(f"Checking for file at: {file_path}")
     if os.path.exists(file_path):
         return FileResponse(file_path)
 
-    # Original logic for files that might already have .html (less likely now)
+    # Original logic for files that might already have .html
     if filename.endswith(".html"):
         file_path_original = os.path.join("static", filename)
         if os.path.exists(file_path_original):
