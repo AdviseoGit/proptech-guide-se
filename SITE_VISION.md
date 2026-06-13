@@ -11,5 +11,6 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-06-13: 9 företag (6→9, +Homepal/Mestro/Optidev). Fortsätt växa till 20+ för att bli nischens mest kompletta.
 - [ ] Nyhetssvep varje pass; utdaterade uppgifter rättas samma dag.
 - [ ] Navigeringsöversyn enligt design-nordstjärnan.
