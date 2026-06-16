@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://proptechguiden.se/vad-ar-proptech</loc>
@@ -84,4 +84,4 @@
     <loc>https://proptechguiden.se/om-oss</loc>
     <lastmod>2026-06-10</lastmod>
   </url>
-</urlset>
+<url><loc>https://proptech-guide.se/directory</loc><lastmod>2026-06-16</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url></urlset>
