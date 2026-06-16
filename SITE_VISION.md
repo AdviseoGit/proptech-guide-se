@@ -13,6 +13,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
   - 2026-06-13: 9 företag (6→9, +Homepal/Mestro/Optidev)
   - 2026-06-14: 13 företag (9→13, +Tactic/Mestro Energy/Rendin/Vitec Hyra).
-  - 2026-06-15: 16 företag (13→16, +Pigello/Sally R/DeDu). Fortsätt växa till 20+ för att bli nischens mest kompletta.
+  - 2026-06-15: 16 företag (13→16, +Pigello/Sally R/DeDu).
+  - 2026-06-16: 19 företag (16→19, +Accessy/Infobric/Hydda). Fortsätt växa till 20+ för att bli nischens mest kompletta.
 - [ ] Nyhetssvep varje pass; utdaterade uppgifter rättas samma dag.
 - [ ] Navigeringsöversyn enligt design-nordstjärnan.
