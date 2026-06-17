@@ -14,6 +14,6 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
   - 2026-06-13: 9 företag (6→9, +Homepal/Mestro/Optidev)
   - 2026-06-14: 13 företag (9→13, +Tactic/Mestro Energy/Rendin/Vitec Hyra).
   - 2026-06-15: 16 företag (13→16, +Pigello/Sally R/DeDu).
-  - 2026-06-16: 19 företag (16→19, +Accessy/Infobric/Hydda). Fortsätt växa till 20+ för att bli nischens mest kompletta.
+  - 2026-06-16: 22 företag (19→22, +Bostadsregistraturet/Nabo/Metry). Mål: Håll den uppdaterad och lägg till 1-2 per pass för att befästa positionen som ledande katalog.
 - [ ] Nyhetssvep varje pass; utdaterade uppgifter rättas samma dag.
 - [ ] Navigeringsöversyn enligt design-nordstjärnan.
