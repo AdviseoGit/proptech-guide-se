@@ -1,53 +1,61 @@
-import sys
 import re
 
-def add_companies():
-    filepath = "/data/workspace/projects/proptech-guide-se/static/directory.html"
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    new_companies = """
-            <!-- New Company 1 -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="uthyrning">
+with open('/data/workspace/projects/proptech-guide-se/static/directory.html', 'r') as f:
+    content = f.read()
+
+new_companies = """
+            <!-- Company Card: Iver -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Förvaltning">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-slate-900">Bostadsregistraturet</h3>
-                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Uthyrning</span>
+                    <h3 class="text-2xl font-bold text-slate-900">Iver</h3>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Förvaltning</span>
                 </div>
-                <p class="text-slate-600 mb-6">Digitaliserar uthyrningsprocessen och tillhandahåller smidiga system för bostadsförmedling, hantering av köer och matchning av sökande med lediga objekt.</p>
-                <a href="https://bostadsregistraturet.se/" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+                <p class="text-slate-600 mb-6 text-sm">Erbjuder IT-tjänster och digitala plattformar anpassade för fastighetsbranschen, med fokus på säkerhet och modern infrastruktur.</p>
+                <div class="mt-auto">
+                    <a href="https://www.iver.com/sv/" target="_blank" rel="noopener noreferrer" class="text-sky-600 font-semibold hover:text-sky-700 text-sm flex items-center">
+                        Besök webbplats
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
 
-            <!-- New Company 2 -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
+            <!-- Company Card: Vironova -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Energi">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-slate-900">Nabo</h3>
-                    <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Förvaltning</span>
+                    <h3 class="text-2xl font-bold text-slate-900">Vironova</h3>
+                    <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Energi</span>
                 </div>
-                <p class="text-slate-600 mb-6">En helhetsleverantör av förvaltning för bostadsrättsföreningar. Erbjuder en modern plattform för ekonomisk och teknisk förvaltning samt juridik och boendeapp.</p>
-                <a href="https://nabo.se/" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+                <p class="text-slate-600 mb-6 text-sm">Specialiserade på energieffektivisering och optimering av inomhusklimat för kommersiella fastigheter och flerbostadshus.</p>
+                <div class="mt-auto">
+                    <a href="https://vironova.se" target="_blank" rel="noopener noreferrer" class="text-sky-600 font-semibold hover:text-sky-700 text-sm flex items-center">
+                        Besök webbplats
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
 
-            <!-- New Company 3 -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
+            <!-- Company Card: Zesec -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Passersystem">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-slate-900">Metry</h3>
-                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Energi & Hållbarhet</span>
+                    <h3 class="text-2xl font-bold text-slate-900">Zesec</h3>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Passersystem</span>
                 </div>
-                <p class="text-slate-600 mb-6">Automatiserar insamling av miljö- och energidata. Plattformen är designad för att hjälpa fastighetsägare strukturera och följa upp sin energianvändning och hållbarhet (ESG).</p>
-                <a href="https://metry.io/sv/" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
+                <p class="text-slate-600 mb-6 text-sm">Molnbaserat passersystem som låter användare öppna dörrar och portar via mobilen, oberoende av befintlig hårdvara.</p>
+                <div class="mt-auto">
+                    <a href="https://zesec.com" target="_blank" rel="noopener noreferrer" class="text-sky-600 font-semibold hover:text-sky-700 text-sm flex items-center">
+                        Besök webbplats
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
             </div>
 """
 
-    # Find the closing tag of the grid
-    insert_pos = content.rfind("</div>\n        </main>")
-    if insert_pos == -1:
-        print("Could not find insertion point!")
-        sys.exit(1)
-        
-    updated_content = content[:insert_pos] + new_companies + content[insert_pos:]
-    
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(updated_content)
-    print("Added companies to directory.html")
+# Insert right before the end of the grid
+content = re.sub(r'(</main>)', new_companies + r'\n        </div>\n    \1', content)
+# Wait, this regex might be tricky if the grid div closing tag isn't easily targeted before </main>. Let's target the Nordomatic card instead.
 
-add_companies()
+nordomatic_pattern = r'(<!-- Company Card: Nordomatic -->.*?</div>\s*</div>)'
+content = re.sub(nordomatic_pattern, r'\1\n' + new_companies, content, flags=re.DOTALL)
+
+with open('/data/workspace/projects/proptech-guide-se/static/directory.html', 'w') as f:
+    f.write(content)

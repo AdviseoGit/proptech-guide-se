@@ -1,4 +1,5 @@
 # PROGRESS_LOG.md
+2026-06-20 | TILLVÄXT | Expandera directory till 34 bolag (+6 nya, rensat dubbletter) | directory poster | nästa: Lead capture kalkylator
 2026-06-19 | DESIGN | Infört obligatorisk AI-transparens footer och om-sajten | AI-transparens | nästa: Lead capture kalkylator
 2026-06-18 | LEADFLOW | Lagt till lead capture i toppguider | konvertering | nästa: Fler directory poster
 2026-06-17 | TILLVÄXT | Expandera directory till 22 (+Bostadsregistraturet, Nabo, Metry) | directory poster | nästa: Lead capture kalkylator
