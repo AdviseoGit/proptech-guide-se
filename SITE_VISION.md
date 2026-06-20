@@ -17,5 +17,6 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
   - 2026-06-15: 16 företag (13→16, +Pigello/Sally R/DeDu).
   - 2026-06-16: 22 företag (19→22, +Bostadsregistraturet/Nabo/Metry).
   - 2026-06-18: 28 företag (22→28, +Kiona/Egain/Nordomatic och bekräftat B/N/M)
+  - 2026-06-20: 34 företag (28→34, +Iver/Vironova/Zesec/Raybased/Amido/Ochno)
 - [ ] Nyhetssvep varje pass; utdaterade uppgifter rättas samma dag.
 - [ ] Navigeringsöversyn enligt design-nordstjärnan.
