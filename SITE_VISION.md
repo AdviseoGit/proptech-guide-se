@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-06-23: 43 företag (40→43, +Idun Real Estate, Datscha, PropStreet).
   - 2026-06-13: 9 företag (6→9, +Homepal/Mestro/Optidev)
   - 2026-06-14: 13 företag (9→13, +Tactic/Mestro Energy/Rendin/Vitec Hyra).
   - 2026-06-15: 16 företag (13→16, +Pigello/Sally R/DeDu).
