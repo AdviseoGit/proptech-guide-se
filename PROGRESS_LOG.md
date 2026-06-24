@@ -1,3 +1,4 @@
+2026-06-24 | TILLVÄXT | Expandera directory till 49 bolag (+6 nya) | directory poster | nästa: Lead capture optimering / nytt verktyg
 2026-06-23 | TILLVÄXT | Expandera directory till 43 bolag (+3 nya: Idun, Datscha, PropStreet) | directory poster | nästa: Bygg ut kalkylator/verktyg
 2026-06-22 | TILLVÄXT | Expandera directory till 40 bolag (+3 nya) | directory poster | nästa: Fler directory poster
 2026-06-21 | TILLVÄXT | Expandera directory till 37 bolag (+3 nya) | directory poster | nästa: Fler directory poster

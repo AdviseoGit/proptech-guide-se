@@ -1,16 +1,11 @@
 import re
-
-vision_file = "/data/workspace/projects/proptech-guide-se/SITE_VISION.md"
-
-with open(vision_file, "r") as f:
+with open("/data/workspace/projects/proptech-guide-se/SITE_VISION.md", "r") as f:
     content = f.read()
 
-# Update the directory count in SITE_VISION.md
-content = re.sub(r'2026-06-16: 22 företag.*', r'2026-06-16: 22 företag (19→22, +Bostadsregistraturet/Nabo/Metry).\n  - 2026-06-18: 28 företag (22→28, +Kiona/Egain/Nordomatic och bekräftat B/N/M)', content)
+new_log = "  - 2026-06-24: 49 företag (43→49, +Avtal24/Lexly, Boappa, Bemsiq, +3 previous).\n"
+target = "  - 2026-06-23: 43 företag"
 
-# Add lead capture task
-if "Lead capture" not in content:
-    content = content.replace("- [ ] Hela sajten håller design-nordstjärnan", "- [ ] Lead capture (PDF/Kalkylator) fungerar end-to-end och samlar in e-post via API.\n- [ ] Hela sajten håller design-nordstjärnan")
+content = content.replace(target, new_log + target)
 
-with open(vision_file, "w") as f:
+with open("/data/workspace/projects/proptech-guide-se/SITE_VISION.md", "w") as f:
     f.write(content)
