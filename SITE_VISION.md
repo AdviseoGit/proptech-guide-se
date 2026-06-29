@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-06-29: 58 företag (55→58, +Pigra, TenFAST, Momentum Software).
   - 2026-06-28: 55 företag (52→55, +Myrspoven, Vourity, Ngenic).
   - 2026-06-27: 52 företag (+3 nya: KONE DX, iLOQ, Spaceflow).
   - 2026-06-24: 49 företag (43→49, +Avtal24/Lexly, Boappa, Bemsiq, +3 previous).
