@@ -1,3 +1,4 @@
+2026-06-29 | TILLVÄXT | Expandera directory till 58 bolag (+Pigra, TenFAST, Momentum) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-06-28 | TILLVÄXT | Expandera directory till 55 bolag (+3 nya: Myrspoven, Vourity, Ngenic) | directory poster | nästa: Bygg ut kalkylator/verktyg eller lead capture
 2026-06-27 | TILLVÄXT | Expandera directory till 52 bolag (+3 nya: KONE DX, iLOQ, Spaceflow) | directory poster | nästa: Lead capture kalkylator API koppling eller verktyg
 2026-06-24 | TILLVÄXT | Expandera directory till 49 bolag (+6 nya) | directory poster | nästa: Lead capture optimering / nytt verktyg
