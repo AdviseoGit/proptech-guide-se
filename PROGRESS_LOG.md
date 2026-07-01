@@ -1,3 +1,4 @@
+2026-07-01 | TILLVÄXT | Expandera directory till 64 bolag (+Nodeledge, Zesec, Bygglet) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-06-30 | TILLVÄXT | Expandera directory till 62 bolag (+KTC, Incoord, Aareon) | directory poster | nästa: Fler directory poster eller uppdatera visionen
 2026-06-29 | TILLVÄXT | Expandera directory till 58 bolag (+Pigra, TenFAST, Momentum) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-06-28 | TILLVÄXT | Expandera directory till 55 bolag (+3 nya: Myrspoven, Vourity, Ngenic) | directory poster | nästa: Bygg ut kalkylator/verktyg eller lead capture
