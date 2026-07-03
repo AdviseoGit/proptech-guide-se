@@ -1,4 +1,5 @@
--e 2026-07-02 | TILLVÄXT | Expandera directory till 67 bolag (+Sensative, Flowscape, Bintel) | directory poster | nästa: Fler directory poster eller nytt verktyg
+2026-07-03 | TILLVÄXT | Expandera directory till 70 bolag (+Halmstad Stadsnät, Ecocloud, Alliera) | directory poster | nästa: Fler directory poster eller nytt verktyg
+2026-07-02 | TILLVÄXT | Expandera directory till 67 bolag (+Sensative, Flowscape, Bintel) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-01 | TILLVÄXT | Expandera directory till 64 bolag (+Nodeledge, Zesec, Bygglet) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-06-30 | TILLVÄXT | Expandera directory till 62 bolag (+KTC, Incoord, Aareon) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-06-29 | TILLVÄXT | Expandera directory till 59 bolag (+Brunata, Fidelix, Bastec) | directory poster | nästa: Fler directory poster eller nytt verktyg
