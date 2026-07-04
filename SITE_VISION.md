@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-07-04: 71 företag (fixade Halmstad Stadsnät, Ecocloud, Alliera som försvann i förra commit).
   - 2026-06-30: 62 företag (59→62, +KTC, Incoord, Aareon).
   - 2026-07-03: 70 företag (67→70, +Halmstad Stadsnät, Ecocloud, Alliera).
   - 2026-07-02: 67 företag (64→67, +Sensative, Flowscape, Bintel).

@@ -71,7 +71,7 @@ new_companies = """
         </div>
 """
 
-content = content.replace(new_companies, "")
+content = content.replace('<div id="directoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">', '<div id="directoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">\n' + new_companies)
 
 with open('/data/workspace/projects/proptech-guide-se/static/directory.html', 'w') as f:
     f.write(content)
