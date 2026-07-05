@@ -64,14 +64,16 @@
                 <input type="text" id="searchInput" placeholder="Sök bolag eller nyckelord..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow">
             </div>
             <div class="w-full md:w-1/4">
-                <select id="categoryFilter" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none bg-white">
+                <select id="categoryFilter" class="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent appearance-none">
                     <option value="all">Alla Kategorier</option>
-                    <option value="forvaltning">Digital Förvaltning</option>
-                    <option value="energi">Energi & AI</option>
-                    <option value="access">Smarta Lås & Access</option>
-                    <option value="passersystem">Passersystem</option>
-                    <option value="plattform">Plattform</option>
+                    <option value="forvaltning">Digital Förvaltning & Drift</option>
+                    <option value="energi">Energi & Hållbarhet</option>
+                    <option value="iot">IoT & Hårdvara</option>
+                    <option value="access">Lås & Passagesystem</option>
                     <option value="uthyrning">Uthyrning & Marknad</option>
+                    <option value="boende">Boendeapp & Hyresgäst</option>
+                    <option value="analys">Analys & AI</option>
+                    <option value="plattform">Öppen Plattform</option>
                 </select>
             </div>
             <div class="w-full md:w-1/4">
@@ -81,6 +83,73 @@
 
         <!-- Directory Grid -->
         <div id="directoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Company Card: Plejd -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="iot">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Plejd</h3>
+                        <span class="inline-block mt-2 px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider rounded-full">IoT & Hårdvara</span>
+                    </div>
+                </div>
+                <p class="text-slate-600 mb-6 line-clamp-3">Sveriges snabbast växande system för smart belysning. Erbjuder robust, skalbar och lättinstallerad teknik för både bostäder och kommersiella lokaler via Bluetooth mesh.</p>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        Målgrupp: Fastighetsägare, Bostadsutvecklare
+                    </div>
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Modell: Hårdvaruköp
+                    </div>
+                </div>
+                <a href="https://plejd.com/sv-se" target="_blank" class="block w-full py-2 px-4 bg-slate-50 text-slate-900 text-center font-bold rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök hemsida</a>
+            </div>
+
+            <!-- Company Card: RCO Security -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">RCO Security</h3>
+                        <span class="inline-block mt-2 px-3 py-1 bg-teal-100 text-teal-700 text-xs font-bold uppercase tracking-wider rounded-full">Passage & Access</span>
+                    </div>
+                </div>
+                <p class="text-slate-600 mb-6 line-clamp-3">Ledande leverantör av elektroniska passagesystem, inbrottslarm och integrerade säkerhetssystem för fastigheter, från enstaka dörrar till stora fastighetsbestånd.</p>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        Målgrupp: Kommersiella, BRF:er
+                    </div>
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Modell: Hårdvara / Licens
+                    </div>
+                </div>
+                <a href="https://www.rco.se/" target="_blank" class="block w-full py-2 px-4 bg-slate-50 text-slate-900 text-center font-bold rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök hemsida</a>
+            </div>
+
+            <!-- Company Card: Swegon -->
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Swegon</h3>
+                        <span class="inline-block mt-2 px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded-full">Energi & Klimat</span>
+                    </div>
+                </div>
+                <p class="text-slate-600 mb-6 line-clamp-3">Erbjuder integrerade lösningar och uppkopplade system (Proptech) för ventilation, kyla och klimatkontroll som maximerar energieffektivitet och komfort i byggnader.</p>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        Målgrupp: Kommersiella fastigheter
+                    </div>
+                    <div class="flex items-center text-sm text-slate-500">
+                        <svg class="w-5 h-5 mr-3 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Modell: System & Tjänst
+                    </div>
+                </div>
+                <a href="https://www.swegon.com/sv/" target="_blank" class="block w-full py-2 px-4 bg-slate-50 text-slate-900 text-center font-bold rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök hemsida</a>
+            </div>
+
 
         <!-- New Company: Halmstad Stadsnät -->
         <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="iot">
@@ -105,7 +174,7 @@
         </div>
 
         <!-- New Company: Ecocloud -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energy">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Ecocloud</h3>
@@ -127,7 +196,7 @@
         </div>
 
         <!-- New Company: Alliera -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="management">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Alliera</h3>
@@ -173,7 +242,7 @@
             </div>
 
         <!-- New Company 2: Flowscape -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="experience">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="boende">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Flowscape</h3>
@@ -217,7 +286,7 @@
             </div>
 
         <!-- New Company 1 -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energy">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Nodeledge</h3>
@@ -239,7 +308,7 @@
             </div>
 
         <!-- New Company 2 -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="operations">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Zesec</h3>
@@ -261,7 +330,7 @@
             </div>
 
         <!-- New Company 3 -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="operations">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Bygglet</h3>
@@ -283,7 +352,7 @@
             </div>
 
         <!-- New Company 1 -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energy">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">KTC</h3>
@@ -305,7 +374,7 @@
             </div>
 
         <!-- New Company 2 -->
-        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="operations">
+        <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Incoord</h3>
@@ -350,7 +419,7 @@
 
 
             <!-- Pigra -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energy">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Pigra</h3>
@@ -376,7 +445,7 @@
             </div>
 
             <!-- TenFAST -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="management">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">TenFAST</h3>
@@ -402,7 +471,7 @@
             </div>
 
             <!-- Momentum -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="management">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Momentum Software</h3>
@@ -440,7 +509,7 @@
             </div>
 
             <!-- Boappa -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="hyresgast">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="boende">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Boappa</h3>
@@ -465,7 +534,7 @@
 
 
             <!-- HomeMaker -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="hyresgast">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="boende">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">HomeMaker</h3>
@@ -505,7 +574,7 @@
 
 
             <!-- HomeMaker -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="hyresgast">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="boende">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">HomeMaker</h3>
@@ -694,7 +763,7 @@
 
 
             <!-- Company Card 16 -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="passersystem">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold text-slate-900">Accessy</h3>
                     <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Passersystem</span>
@@ -931,7 +1000,7 @@
             
         
             <!-- Company Card: Kiona -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Energi">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold text-slate-900">Kiona</h3>
                     <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Energi</span>
@@ -946,7 +1015,7 @@
             </div>
         
             <!-- Company Card: Egain -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Energi">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="energi">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold text-slate-900">Egain</h3>
                     <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Energi</span>
@@ -961,7 +1030,7 @@
             </div>
         
             <!-- Company Card: Nordomatic -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="Drift">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="forvaltning">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold text-slate-900">Nordomatic</h3>
                     <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Drift</span>
@@ -1002,7 +1071,7 @@
             </div>
 
             <!-- Company Card: Zesec -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="passagesystem">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Zesec</h3>
@@ -1028,7 +1097,7 @@
             </div>
 
             <!-- Company Card: Amido -->
-            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="passagesystem">
+            <div class="company-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow" data-category="access">
                 <div class="flex items-start justify-between mb-4">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900">Amido</h3>
@@ -1127,7 +1196,7 @@
     <!-- Footer -->
     <footer class="py-12 border-t border-slate-200 bg-white text-center text-slate-500 mt-auto w-full">
         <div class="space-x-6 mb-4 font-medium">
-            <a href="/om-oss" class="hover:text-sky-600">Om oss</a>
+            <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a>
             <a href="/privacy-policy" class="hover:text-sky-600">Integritetspolicy</a>
         </div>
             <!-- KONE -->
@@ -1160,7 +1229,7 @@
                 <a href="https://spaceflow.io/" target="_blank" class="text-sky-600 font-semibold hover:underline">Besök hemsida &rarr;</a>
             </div>
 
-        <p class="mt-2 text-sm text-slate-400">Denna sajt skapas och drivs helt av AI &middot; <a href="/om-oss" class="hover:text-sky-600">Om sajten</a></p><p>© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+        <p class="mt-2 text-sm text-slate-400">Denna sajt skapas och drivs helt av AI &middot; <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a></p><p>© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
     </footer>
 
     <!-- Filter Script -->
