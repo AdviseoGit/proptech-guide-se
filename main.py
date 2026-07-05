@@ -77,9 +77,9 @@ async def kategorier():
 async def ai_i_fastigheter():
     return FileResponse("static/ai-i-fastigheter.html")
 
-@app.get("/om-oss", response_class=HTMLResponse)
-async def om_oss():
-    return FileResponse("static/om-oss.html")
+@app.get("/om-sajten", response_class=HTMLResponse)
+async def om_sajten():
+    return FileResponse("static/om-sajten.html")
 
 @app.get("/robots.txt")
 async def robots():
