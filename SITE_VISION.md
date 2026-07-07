@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-07-07: 79 företag (76→79, +Fyrbåk, BIMobject, Stingray).
   - 2026-07-06: 76 företag (73→76, +HomeMaker, Mowida, Accessy).
   - 2026-07-05: 73 företag (70→73, +Plejd, RCO Security, Swegon).
   - 2026-07-04: 71 företag (fixade Halmstad Stadsnät, Ecocloud, Alliera som försvann i förra commit).
