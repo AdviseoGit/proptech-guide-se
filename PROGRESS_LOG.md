@@ -1,3 +1,4 @@
+2026-07-08 | TILLVÄXT | Expandera directory till 82 bolag (+ChargeNode, Regin, Hogia) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-07 | TILLVÄXT | Expandera directory till 79 bolag (+Fyrbåk, BIMobject, Stingray) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-06 | TILLVÄXT | Expandera directory till 76 bolag (+HomeMaker, Mowida, Accessy) | directory poster | nästa: Fler directory poster eller nytt verktyg
 -e 2026-07-05 | TILLVÄXT | Expandera directory till 73 bolag, om-sajten AI transparens, filter-fix | directory poster & transparens | nästa: Fler directory poster eller nytt verktyg
