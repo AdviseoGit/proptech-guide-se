@@ -1,3 +1,4 @@
+2026-07-10 | TILLVÄXT | Expandera directory till 90 bolag (+Infobric, Iqnect, Evishine, Hydda, Boid) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-09 | TILLVÄXT | Expandera directory till 85 bolag (+Parakey, Basefarm, SWG) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-08 | TILLVÄXT | Expandera directory till 82 bolag (+ChargeNode, Regin, Hogia) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-07 | TILLVÄXT | Expandera directory till 79 bolag (+Fyrbåk, BIMobject, Stingray) | directory poster | nästa: Fler directory poster eller nytt verktyg
