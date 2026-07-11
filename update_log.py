@@ -1,17 +1,17 @@
-import sys
+import datetime
 
-def main():
-    file_path = "/data/workspace/projects/proptech-guide-se/PROGRESS_LOG.md"
-    
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
+log_path = "/data/workspace/projects/proptech-guide-se/PROGRESS_LOG.md"
 
-    new_line = "2026-07-01 | TILLVÄXT | Expandera directory till 64 bolag (+Nodeledge, Zesec, Bygglet) | directory poster | nästa: Fler directory poster eller nytt verktyg\n"
-    
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(new_line + content)
-        
-    print("Updated PROGRESS_LOG.md")
+with open(log_path, "r", encoding="utf-8") as f:
+    content = f.read()
 
-if __name__ == "__main__":
-    main()
+date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+new_log = f"{date_str} | TILLVÄXT | Expandera directory till 95 bolag (+Mestro, Sengera, Enjay, m.fl) | directory poster | nästa: Fler directory poster eller nytt verktyg\n"
+
+# Lägg till högst upp
+content = new_log + content
+
+with open(log_path, "w", encoding="utf-8") as f:
+    f.write(content)
+
+print("Progress log updated.")
