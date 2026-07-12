@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-07-12: 100 företag (95→100, +Spotscale, OurGreenCar, Pythagoras, Hyber, Planima).
   - 2026-07-11: 95 företag (90→95, +Mestro, Sengera, Enjay, Bostadsregistraturet, Pico).
   - 2026-07-10: 90 företag (85→90, +Infobric, Iqnect, Evishine, Hydda, Boid).
   - 2026-07-09: 85 företag (82→85, +Parakey, Basefarm, SWG).

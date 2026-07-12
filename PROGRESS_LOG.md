@@ -1,3 +1,4 @@
+2026-07-12 | TILLVÄXT | Expandera directory till 100 bolag (+Spotscale, OurGreenCar, Pythagoras, Hyber, Planima) | directory poster | nästa: Bygg nytt interaktivt verktyg eller data-capture
 2026-07-11 | TILLVÄXT | Expandera directory till 95 bolag (+Mestro, Sengera, Enjay, m.fl) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-10 | TILLVÄXT | Expandera directory till 90 bolag (+Infobric, Iqnect, Evishine, Hydda, Boid) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-09 | TILLVÄXT | Expandera directory till 85 bolag (+Parakey, Basefarm, SWG) | directory poster | nästa: Fler directory poster eller nytt verktyg
