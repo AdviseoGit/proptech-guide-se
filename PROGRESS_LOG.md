@@ -1,3 +1,4 @@
+2026-07-13 | TILLVÄXT | Expandera directory till 105 bolag (+Nenda, Ambiductor, Eways, Avidly, Olsbergs) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-12 | TILLVÄXT | Expandera directory till 100 bolag (+Spotscale, OurGreenCar, Pythagoras, Hyber, Planima) | directory poster | nästa: Bygg nytt interaktivt verktyg eller data-capture
 2026-07-11 | TILLVÄXT | Expandera directory till 95 bolag (+Mestro, Sengera, Enjay, m.fl) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-10 | TILLVÄXT | Expandera directory till 90 bolag (+Infobric, Iqnect, Evishine, Hydda, Boid) | directory poster | nästa: Fler directory poster eller nytt verktyg
@@ -5,7 +6,7 @@
 2026-07-08 | TILLVÄXT | Expandera directory till 82 bolag (+ChargeNode, Regin, Hogia) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-07 | TILLVÄXT | Expandera directory till 79 bolag (+Fyrbåk, BIMobject, Stingray) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-06 | TILLVÄXT | Expandera directory till 76 bolag (+HomeMaker, Mowida, Accessy) | directory poster | nästa: Fler directory poster eller nytt verktyg
--e 2026-07-05 | TILLVÄXT | Expandera directory till 73 bolag, om-sajten AI transparens, filter-fix | directory poster & transparens | nästa: Fler directory poster eller nytt verktyg
+2026-07-05 | TILLVÄXT | Expandera directory till 73 bolag, om-sajten AI transparens, filter-fix | directory poster & transparens | nästa: Fler directory poster eller nytt verktyg
 2026-07-04 | TILLVÄXT | Expandera directory till 70 bolag (+Halmstad Stadsnät, Ecocloud, Alliera) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-03 | TILLVÄXT | Expandera directory till 70 bolag (+Halmstad Stadsnät, Ecocloud, Alliera) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-02 | TILLVÄXT | Expandera directory till 67 bolag (+Sensative, Flowscape, Bintel) | directory poster | nästa: Fler directory poster eller nytt verktyg
