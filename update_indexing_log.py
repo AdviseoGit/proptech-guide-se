@@ -1,21 +1,5 @@
-import datetime
-import re
+log_entry = "https://proptechguiden.se/roi-kalkylator | URL is unknown to Google | 2026-07-15 | Länkad i nav + sitemap tillagd"
 
-log_path = "/data/workspace/projects/proptech-guide-se/INDEXING_LOG.md"
-
-with open(log_path, "r", encoding="utf-8") as f:
-    content = f.read()
-
-# Hitta raden för directory
-date_str = datetime.datetime.now().strftime("%Y-%m-%d")
-
-if "https://proptechguiden.se/directory" in content:
-    # Uppdatera befintlig
-    content = re.sub(r'https://proptechguiden.se/directory \| .*', 
-                     f'https://proptechguiden.se/directory | Discovered - currently not indexed | {date_str} | Fortsatt tillväxt av unikt värde (+5 bolag idag), sitemap uppdaterad', 
-                     content)
-else:
-    content += f"\nhttps://proptechguiden.se/directory | Discovered - currently not indexed | {date_str} | Fortsatt tillväxt av unikt värde (+5 bolag idag), sitemap uppdaterad"
-
-with open(log_path, "w", encoding="utf-8") as f:
-    f.write(content)
+with open("/data/workspace/projects/proptech-guide-se/INDEXING_LOG.md", "a") as f:
+    f.write(log_entry + "\n")
+print("Added to indexing log.")
