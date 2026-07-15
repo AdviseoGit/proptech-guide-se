@@ -6,7 +6,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 ## Milstolpar
 - [ ] Verktygssidan är nischens mest kompletta katalog (växer varje pass)
 - [ ] Daglig nyhetsbevakning av svensk + internationell proptech
-- [ ] Lead capture (PDF/Kalkylator) fungerar end-to-end och samlar in e-post via API.
+- [x] Lead capture (PDF/Kalkylator) fungerar end-to-end och samlar in e-post via API. (Klart 2026-07-15)
 - [ ] Hela sajten håller design-nordstjärnan
 - [ ] #1 på Google för "proptech"
 
