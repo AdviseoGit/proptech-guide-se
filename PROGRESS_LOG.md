@@ -1,3 +1,4 @@
+2026-07-15 | LEADFLOW | Skapa ROI-kalkylator som fångar leads + data | konvertering & eget data-ägande | nästa: Fler directory poster eller nytt verktyg
 2026-07-14 | TILLVÄXT | Expandera directory till 110 bolag (+Boverio, SFF, Fastighetsägarna, Greenely, Propely) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-13 | TILLVÄXT | Expandera directory till 105 bolag (+Nenda, Ambiductor, Eways, Avidly, Olsbergs) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-12 | TILLVÄXT | Expandera directory till 100 bolag (+Spotscale, OurGreenCar, Pythagoras, Hyber, Planima) | directory poster | nästa: Bygg nytt interaktivt verktyg eller data-capture

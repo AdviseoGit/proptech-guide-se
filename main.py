@@ -113,6 +113,48 @@ async def serve_html(filename: str):
     from fastapi import HTTPException
     raise HTTPException(status_code=404, detail="Item not found")
 
+
+@app.post("/api/roi-lead")
+async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Body(...)):
+    email = payload.get("email")
+    data = payload.get("data", {})
+    source = payload.get("source", "roi-kalkylator")
+    
+    if not email:
+        raise HTTPException(status_code=400, detail="Email is required")
+        
+    # Process lead asynchronously (send email, save to db, etc)
+    # For now, we simulate processing
+    print(f"New ROI lead received: {email}")
+    print(f"Data: {data}")
+    
+    # Store lead data locally (append to a JSON lines file for data accumulation)
+    import json
+    from datetime import datetime
+    
+    lead_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "email": email,
+        "source": source,
+        "data": data
+    }
+    
+    # Save to data directory to accumulate own data
+    data_dir = Path("data")
+    data_dir.mkdir(exist_ok=True)
+    with open(data_dir / "leads.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(lead_entry) + "\n")
+        
+    # Forward to the site owner
+    try:
+        from mailer import send_email
+        email_body = f"Nytt lead från ROI-kalkylatorn!\n\nE-post: {email}\nKälla: {source}\nData: {json.dumps(data, indent=2)}"
+        background_tasks.add_task(send_email, "simon@adviseo.se", "Nytt lead: Proptech ROI Kalkylator", email_body)
+    except Exception as e:
+        print(f"Failed to queue email task: {e}")
+        
+    return {"status": "success", "message": "Lead received"}
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
