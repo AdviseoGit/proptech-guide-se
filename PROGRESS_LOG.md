@@ -1,3 +1,4 @@
+2026-07-16 | TILLVÄXT | Expandera directory till 111 bolag (+Sally R, Avy-Tmpl, Ochno, Bemsiq, Planima, Bostadsregistraturet, Enjay, Sengera, Pico, Mestro) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-15 | LEADFLOW | Skapa ROI-kalkylator som fångar leads + data | konvertering & eget data-ägande | nästa: Fler directory poster eller nytt verktyg
 2026-07-14 | TILLVÄXT | Expandera directory till 110 bolag (+Boverio, SFF, Fastighetsägarna, Greenely, Propely) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-13 | TILLVÄXT | Expandera directory till 105 bolag (+Nenda, Ambiductor, Eways, Avidly, Olsbergs) | directory poster | nästa: Fler directory poster eller nytt verktyg

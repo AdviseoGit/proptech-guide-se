@@ -12,6 +12,7 @@ Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verkty
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-07-16: 111 företag (105→111, +Sally R, Avy-Tmpl, Ochno, Bemsiq, Planima, Bostadsregistraturet, Enjay, Sengera, Pico, Mestro).
   - 2026-07-14: 110 företag (105→110, +Boverio, Svensk Fastighetsfinansiering, Fastighetsägarna Service, Greenely, Propely).
   - 2026-07-13: 105 företag (100→105, +Nenda, Ambiductor, Eways, Avidly, Olsbergs).
   - 2026-07-12: 100 företag (95→100, +Spotscale, OurGreenCar, Pythagoras, Hyber, Planima).
