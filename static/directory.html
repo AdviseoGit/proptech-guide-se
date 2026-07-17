@@ -32,16 +32,18 @@
 <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center border-b border-slate-200 bg-white">
 <a class="text-2xl font-extrabold tracking-tight" href="/">PROPTECH<span class="text-sky-600">GUIDE</span></a>
 <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-<a class="text-sky-600 font-bold" href="/directory">Företagskatalog</a>
-<a class="hover:text-sky-600" href="/proptech-kalkylator">Kalkylator</a><a class="hover:text-sky-600" href="/kategorier">Kategorier</a>
-<a class="hover:text-sky-600" href="/ai-i-fastigheter">AI i fastigheter</a>
-</div>
-<!-- Mobile Menu Button -->
-<button aria-label="Toggle menu" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" id="mobile-menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-                <a href="/roi-kalkylator" class="text-gray-600 hover:text-blue-600 transition">ROI-Kalkylator</a>
-</nav>
+            <a href="/directory" class="hover:text-sky-600">Företagskatalog</a>
+            <a href="/roi-kalkylator" class="hover:text-sky-600">ROI-Kalkylator</a>
+            <a href="/kategorier" class="hover:text-sky-600">Kategorier</a>
+            <a href="/ai-i-fastigheter" class="hover:text-sky-600">AI i fastigheter</a>
+            <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
 <!-- Mobile Menu -->
 <div class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" id="mobile-menu" style="top: 80px;">
 <div class="flex flex-col space-y-4 font-medium text-slate-600">
@@ -80,6 +82,63 @@
 </div>
 <!-- Directory Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="directoryGrid">
+
+<!-- Zeno -->
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-all flex flex-col" data-category="Energi" data-target="Fastighetsägare">
+    <div class="flex-grow">
+        <div class="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">Energi & Hållbarhet</div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Zeno</h3>
+        <p class="text-slate-600 mb-6">Zeno levererar AI-driven energioptimering för kommersiella fastigheter. Systemet analyserar realtidsdata för att minska energiförbrukningen utan att kompromissa med inneklimatet.</p>
+        <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">För vem:</span><span class="text-slate-700 font-medium">Fastighetsägare, Drift</span></div>
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">Prismodell:</span><span class="text-slate-700 font-medium">SaaS / Abonnemang</span></div>
+        </div>
+    </div>
+    <a href="https://zeno.eco" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full text-center bg-slate-50 text-slate-900 font-semibold py-3 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök webbplats</a>
+</div>
+
+<!-- Vyer -->
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-all flex flex-col" data-category="Förvaltning" data-target="Fastighetsägare">
+    <div class="flex-grow">
+        <div class="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">Digitala Tvillingar</div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Vyer</h3>
+        <p class="text-slate-600 mb-6">Vyer skapar digitala tvillingar av fastigheter, vilket gör det enkelt för fastighetsägare att visualisera, hantera och dela byggnadsinformation i en interaktiv 3D-miljö.</p>
+        <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">För vem:</span><span class="text-slate-700 font-medium">Fastighetsägare, Förvaltare</span></div>
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">Prismodell:</span><span class="text-slate-700 font-medium">SaaS</span></div>
+        </div>
+    </div>
+    <a href="https://vyer.com" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full text-center bg-slate-50 text-slate-900 font-semibold py-3 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök webbplats</a>
+</div>
+
+<!-- Tmpl (by Avy) -->
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-all flex flex-col" data-category="Boendeapp" data-target="BRF:er">
+    <div class="flex-grow">
+        <div class="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">Boendeapp</div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Avy-Tmpl</h3>
+        <p class="text-slate-600 mb-6">En boendeapp som förenklar kommunikationen och boendeupplevelsen. Hantera felanmälningar, boka gemensamma utrymmen och dela information direkt i mobilen.</p>
+        <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">För vem:</span><span class="text-slate-700 font-medium">BRF:er, Fastighetsägare</span></div>
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">Prismodell:</span><span class="text-slate-700 font-medium">Per lägenhet / månad</span></div>
+        </div>
+    </div>
+    <a href="https://avy.se" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full text-center bg-slate-50 text-slate-900 font-semibold py-3 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök webbplats</a>
+</div>
+
+<!-- IamHome -->
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-all flex flex-col" data-category="Projektutveckling" data-target="Utvecklare">
+    <div class="flex-grow">
+        <div class="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">Projektutveckling</div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">IamHome</h3>
+        <p class="text-slate-600 mb-6">IamHome digitaliserar stadsbyggnadsprocessen och projektutvecklingen. Plattformen hjälper utvecklare och kommuner att visualisera och effektivisera bostadsutveckling.</p>
+        <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">För vem:</span><span class="text-slate-700 font-medium">Projektutvecklare, Kommuner</span></div>
+            <div class="flex items-start"><span class="text-slate-400 w-24 flex-shrink-0">Prismodell:</span><span class="text-slate-700 font-medium">Licens / Projekt</span></div>
+        </div>
+    </div>
+    <a href="https://iamhome.se" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full text-center bg-slate-50 text-slate-900 font-semibold py-3 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">Besök webbplats</a>
+</div>
+
 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-shadow">
 <div class="flex justify-between items-start mb-4">
 <div>

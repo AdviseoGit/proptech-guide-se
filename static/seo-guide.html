@@ -32,12 +32,18 @@
     <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center border-b border-slate-200 bg-white">
         <a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
         <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-            <a href="/proptech-kalkylator" class="hover:text-sky-600">Kalkylator</a><a href="/kategorier" class="hover:text-sky-600">Kategorier</a>
+            <a href="/directory" class="hover:text-sky-600">Företagskatalog</a>
+            <a href="/roi-kalkylator" class="hover:text-sky-600">ROI-Kalkylator</a>
+            <a href="/kategorier" class="hover:text-sky-600">Kategorier</a>
             <a href="/ai-i-fastigheter" class="hover:text-sky-600">AI i fastigheter</a>
             <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a>
         </div>
-                    <a href="/roi-kalkylator" class="text-gray-600 hover:text-blue-600 transition">ROI-Kalkylator</a>
-</nav>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
 
     <!-- Main Content -->
     <main class="container mx-auto p-4 max-w-4xl py-12 flex-grow">
