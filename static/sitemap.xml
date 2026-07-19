@@ -1,6 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://proptechguiden.se/ai-i-fastigheter</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://proptechguiden.se/kategorier</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://proptechguiden.se/brf-digitalisering</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
     <loc>https://proptechguiden.se/vad-ar-proptech</loc>
     <lastmod>2026-06-10</lastmod>
   </url>
@@ -84,4 +96,7 @@
     <loc>https://proptechguiden.se/directory</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
-<url><loc>https://proptechguiden.se/roi-kalkylator</loc><lastmod>2026-07-15</lastmod></url></urlset>
+<url><loc>https://proptechguiden.se/roi-kalkylator</loc><lastmod>2026-07-15</lastmod></url>
+  <url><loc>https://proptechguiden.se/ai-i-fastigheter</loc><lastmod>2026-07-19</lastmod></url>
+  <url><loc>https://proptechguiden.se/kategorier</loc><lastmod>2026-07-19</lastmod></url>
+  <url><loc>https://proptechguiden.se/brf-digitalisering</loc><lastmod>2026-07-19</lastmod></url></urlset>

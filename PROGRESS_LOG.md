@@ -1,3 +1,4 @@
+2026-07-19 | TILLVÄXT | Ny AI-för-fastigheter intent-sida med uppdaterad design | konvertering & SEO | nästa: Fler directory poster eller nytt verktyg
 2026-07-18 | TILLVÄXT | Expandera directory till 125 bolag (+Nivika, Hyresvärd.se, Smartvatten, HomeRun, Paligo, Iqnect, InviSense, Sally R, Noda, RCO, Hydda, Infobric, Flowbird, Amido, Propely) | directory poster | nästa: Bygg innehåll/sida för sökordet 'smarta byggnader' (klättrar)
 2026-07-17 | TILLVÄXT | Expandera directory till 115 bolag, fixade global navigerings-meny saknad länk | directory poster & nav UX | nästa: Fler directory poster eller publicera datadriven artikel
 2026-07-16 | TILLVÄXT | Expandera directory till 111 bolag (+Sally R, Avy-Tmpl, Ochno, Bemsiq, Planima, Bostadsregistraturet, Enjay, Sengera, Pico, Mestro) | directory poster | nästa: Fler directory poster eller nytt verktyg
