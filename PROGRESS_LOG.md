@@ -1,3 +1,4 @@
+2026-07-23 | TILLVÄXT | Expandera directory till 130 bolag (+Vitec, HomeQ, Nabo, Real, StepLock) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-22 | DATA | Publicera originaldata-artikel om klimatdeklarationer baserat på aggregerad data | SEO & expertis | nästa: Bygg ut directory med 5 nya aktörer
 2026-07-21 | TILLVÄXT | Bygg besparingskalkylator för digitala trapphustavlor | leadflow & konvertering | nästa: originaldata artikel baserad på kalkylator-leads
 2026-07-20 | TILLVÄXT | Expandera directory till 135 bolag (+Schneider Electric, Siemens, Caverion, Bravida, Assemblin, Kiona, Myrspoven, Pigello, DeDu, Tmpl) | directory poster | nästa: Publicera original-data-artikel eller optimera startsidan för SEO
