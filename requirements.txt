@@ -4,3 +4,6 @@ python-dotenv
 psycopg2-binary
 fpdf2
 pydantic[email]
+# Används av byggskripten (build.py, sync_nav.py, extract_companies.py),
+# inte av webbappen vid runtime.
+beautifulsoup4
