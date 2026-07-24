@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "pico",
+    "name": "Pico",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Boendeapp som förenklar kommunikationen mellan hyresvärd och boende. Erbjuder felanmälan, nyheter och möjlighet att boka gemensamma resurser som tvättstuga.",
+    "url": "",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "sengera",
+    "name": "Sengera",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "AI-baserad energioptimering för fastigheter. Använder maskininlärning för att styra värmesystem dynamiskt och minska energikostnader med bibehållen komfort.",
+    "url": "",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  }
+]
