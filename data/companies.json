@@ -222,6 +222,24 @@
     "receives_leads": false
   },
   {
+    "slug": "boid",
+    "name": "Boid",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Forskning- och designbyrå inriktad på proptech som utvecklar användarcentrerade smarta boendelösningar och upplevelser.",
+    "url": "https://boid.se",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
     "slug": "bostadsregistraturet",
     "name": "Bostadsregistraturet",
     "category": "uthyrning",
@@ -438,6 +456,25 @@
     "segments": [
       "fastighetsagare",
       "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "evishine",
+    "name": "Evishine",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Plattform för övervakning och visualisering av solcellsanläggningar, energilagring och elbilsladdning för fastighetsägare.",
+    "url": "https://evishine.dk",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
     ],
     "usp": [],
     "cases": [],

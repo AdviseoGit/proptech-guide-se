@@ -30,6 +30,12 @@ CATEGORY_ALIASES = {
     "drönare": "iot",
     "kundresa-uthyrning": "uthyrning",
     "fastighetssystem": "forvaltning",
+    # En äldre korttyp använde en helt egen taxonomi.
+    "energi-miljo": "energi",
+    "smart-hem-boende": "boende",
+    "drift-underhall": "forvaltning",
+    "bygg-anlaggning": "forvaltning",
+    "plattform-integration": "plattform",
 }
 
 CATEGORY_LABELS = {
@@ -59,13 +65,26 @@ def main():
 
     companies = []
     seen = set()
-    for card in soup.select(".company-card"):
-        name_el = card.find("h3")
+    skipped = []
+    duplicates = []
+    # Katalogen innehåller två korttyper: en nyare med <h3> och en äldre med <h2>.
+    # Letas bara efter h3 försvinner den äldre typen tyst ur katalogen. Krockar
+    # namnen vinner det nyare kortet, som är det mer aktuellt kurerade.
+    cards = soup.select(".company-card")
+    ordered = [c for c in cards if c.find("h3")] + [c for c in cards if not c.find("h3")]
+
+    for card in ordered:
+        name_el = card.find(["h3", "h2"])
         if not name_el:
+            skipped.append(card.get_text(" ", strip=True)[:60])
             continue
         name = name_el.get_text(strip=True)
         slug = slugify(name)
-        if not slug or slug in seen:
+        if not slug:
+            skipped.append(name)
+            continue
+        if slug in seen:
+            duplicates.append(name)
             continue
         seen.add(slug)
 
@@ -98,6 +117,10 @@ def main():
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps(companies, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Skrev {len(companies)} bolag till {out}")
+    print(f"Dubbletter som slogs ihop: {len(duplicates)}")
+    if skipped:
+        # Ska aldrig hända tyst — ett kort utan läsbart namn är data vi tappar.
+        print(f"VARNING: {len(skipped)} kort kunde inte tolkas: {skipped}")
 
 
 if __name__ == "__main__":
