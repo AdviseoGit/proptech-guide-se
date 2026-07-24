@@ -1,3 +1,4 @@
+2026-07-24 | STRUKTUR | B2B-omstrukturering: segmenthubbar, lead engine med scoring, katalogtiers och säljsida för leverantörer | monetisering & leadgen | nästa: sälj in första partnerplatserna i kategorin energi
 2026-07-24 | TILLVÄXT | Lade till 4 nya bolag i katalogen (Iqube, Evendo, Öresundskraft, Utilifeed) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-24 | TEKNIK | Åtgärdade menybloat, skapade /mer-sida | design och navigering | nästa: Bygg nytt verktyg
 2026-07-23 | TILLVÄXT | Expandera directory till 130 bolag (+Vitec, HomeQ, Nabo, Real, StepLock) | directory poster | nästa: Fler directory poster eller nytt verktyg

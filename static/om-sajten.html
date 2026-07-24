@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om sajten | Proptech Guide Sverige</title>
-    <meta name="description" content="Ett experiment i autonom AI-drift. Läs om hur Proptechguiden skapas och underhålls av AI inom mänskliga guardrails.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7028BLJBRF"></script>
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Om sajten | Proptech Guide Sverige</title>
+<meta content="Ett experiment i autonom AI-drift. Läs om hur Proptechguiden skapas och underhålls av AI inom mänskliga guardrails." name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7028BLJBRF"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-7028BLJBRF');
     </script>
-    <style>
+<style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .gradient-text {
             background: linear-gradient(90deg, #0284c7, #06b6d4);
@@ -32,57 +33,88 @@
         .prose li { margin-bottom: 0.5em; }
         .prose a { color: #0284c7; text-decoration: underline; }
     </style>
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+<link href="/static/favicon.svg" rel="icon" type="image/svg+xml"/>
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="p-5 max-w-7xl mx-auto w-full flex justify-between items-center">
+<a class="text-2xl font-extrabold tracking-tight" href="/">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+<div class="hidden lg:flex items-center space-x-7 font-medium text-slate-600">
+<div class="relative group">
+<button class="flex items-center gap-1 py-2 hover:text-sky-600">För dig som är
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+<a class="block px-4 py-2.5 hover:bg-slate-50" href="/fastighetsagare"><span class="font-semibold block">Fastighetsägare</span><span class="text-xs text-slate-500">Sänk driftnettots kostnadssida och höj fastighetsvärdet.</span></a><a class="block px-4 py-2.5 hover:bg-slate-50" href="/forvaltare"><span class="font-semibold block">Kommersiella förvaltare</span><span class="text-xs text-slate-500">Fler kvadratmeter per förvaltare, utan att servicenivån faller.</span></a><a class="block px-4 py-2.5 hover:bg-slate-50" href="/brf"><span class="font-semibold block">BRF-styrelser</span><span class="text-xs text-slate-500">Lägre månadsavgift och mindre styrelsearbete.</span></a>
+</div>
+</div>
+<a class="hover:text-sky-600" href="/directory">Leverantörer</a>
+<a class="hover:text-sky-600" href="/verktyg">Verktyg</a>
+<a class="hover:text-sky-600" href="/guider">Guider</a>
+<a class="bg-slate-900 text-white px-4 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition" href="/for-leverantorer">För leverantörer</a>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Meny" class="lg:hidden text-slate-600" onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden');this.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="hidden lg:hidden border-t border-slate-200 px-6 py-4" id="mobile-menu">
+<div class="flex flex-col space-y-3 font-medium text-slate-600">
+<span class="text-xs uppercase tracking-wide text-slate-400 font-bold">För dig som är</span>
+<a class="block pl-4 text-sm hover:text-sky-600" href="/fastighetsagare">Fastighetsägare</a><a class="block pl-4 text-sm hover:text-sky-600" href="/forvaltare">Kommersiella förvaltare</a><a class="block pl-4 text-sm hover:text-sky-600" href="/brf">BRF-styrelser</a>
+<a class="block pt-2 border-t border-slate-100 hover:text-sky-600" href="/directory">Leverantörer</a>
+<a class="block hover:text-sky-600" href="/verktyg">Verktyg</a>
+<a class="block hover:text-sky-600" href="/guider">Guider</a>
+<a class="block hover:text-sky-600" href="/for-leverantorer">För leverantörer</a>
+</div>
+</div>
+</nav>
 
-    <nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center">
-        <a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
-        <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-            <a href="/directory" class="hover:text-sky-600">Företagskatalog</a>
-            <a href="/roi-kalkylator" class="hover:text-sky-600">ROI-Kalkylator</a>
-            <a href="/digital-trapphustavla-kalkylator" class="hover:text-sky-600">Trapphustavla-kalkylator</a>
-        </div>
-        <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" style="top: 80px;">
-        <div class="flex flex-col space-y-4 font-medium text-slate-600">
-             <a href="/directory" class="hover:text-sky-600 block">Företagskatalog</a>
-            <a href="/roi-kalkylator" class="hover:text-sky-600 block">ROI-Kalkylator</a>
-            <a href="/digital-trapphustavla-kalkylator" class="hover:text-sky-600 block">Trapphustavla-kalkylator</a>
-        </div>
-    </div>
-
-    <main class="max-w-7xl mx-auto px-6 py-20 flex-grow w-full">
-        <article class="prose text-slate-800">
-            <h1>Ett experiment i autonom AI-drift</h1>
-            
-            <p>Välkommen till Proptechguiden. Det är viktigt att veta att <strong>denna sajt skapas och drivs helt av AI-agenter</strong>.</p>
-            
-            <h2>Vad betyder detta?</h2>
-            <p>Det finns inga mänskliga ämnesexperter, journalister eller redaktörer bakom innehållet. Allt du ser här – från design och kod till artiklar, verktygskatalog och kalkylatorer – har genererats och underhållits av artificiell intelligens som opererar inom förutbestämda, mänskliga guardrails (ramar).</p>
-            
-            <h2>Varför gör vi detta?</h2>
-            <p>Sajten är ett experiment för att undersöka hur väl AI självständigt kan bygga, driva och uppdatera en informationsportal i en nischad bransch som PropTech (fastighetsteknik). Målet är att tillhandahålla en strukturerad och ständigt växande resurs för branschen.</p>
-            
-            <h2>Ingen professionell rådgivning</h2>
-            <p>Även om AI:n är instruerad att basera innehållet på välresearchad och aktuell data, så <strong>kan innehållet innehålla felaktigheter eller utdaterad information</strong>. Ingenting på denna sajt ska betraktas som professionell teknisk, juridisk eller ekonomisk rådgivning.</p>
-            
-            <p>Om du ska fatta viktiga beslut kring investeringar i fastighetsteknik (PropTech), rekommenderar vi starkt att du <strong>konsulterar en kvalificerad mänsklig expert</strong>.</p>
-            
-            <p class="mt-8 text-slate-500 italic">Detta initiativ är skapat och överses av Adviseo.</p>
-        </article>
-    </main>
-
-    <footer class="py-12 border-t border-slate-200 text-center text-slate-500 mt-auto w-full">
-        <div class="space-x-4">
-            <a href="/privacy-policy" class="hover:text-sky-600">Integritetspolicy</a>
-        </div>
-        <p class="mt-4">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
-    </footer>
+<main class="max-w-7xl mx-auto px-6 py-20 flex-grow w-full">
+<article class="prose text-slate-800">
+<h1>Ett experiment i autonom AI-drift</h1>
+<p>Välkommen till Proptechguiden. Det är viktigt att veta att <strong>denna sajt skapas och drivs helt av AI-agenter</strong>.</p>
+<h2>Vad betyder detta?</h2>
+<p>Det finns inga mänskliga ämnesexperter, journalister eller redaktörer bakom innehållet. Allt du ser här – från design och kod till artiklar, verktygskatalog och kalkylatorer – har genererats och underhållits av artificiell intelligens som opererar inom förutbestämda, mänskliga guardrails (ramar).</p>
+<h2>Varför gör vi detta?</h2>
+<p>Sajten är ett experiment för att undersöka hur väl AI självständigt kan bygga, driva och uppdatera en informationsportal i en nischad bransch som PropTech (fastighetsteknik). Målet är att tillhandahålla en strukturerad och ständigt växande resurs för branschen.</p>
+<h2>Ingen professionell rådgivning</h2>
+<p>Även om AI:n är instruerad att basera innehållet på välresearchad och aktuell data, så <strong>kan innehållet innehålla felaktigheter eller utdaterad information</strong>. Ingenting på denna sajt ska betraktas som professionell teknisk, juridisk eller ekonomisk rådgivning.</p>
+<p>Om du ska fatta viktiga beslut kring investeringar i fastighetsteknik (PropTech), rekommenderar vi starkt att du <strong>konsulterar en kvalificerad mänsklig expert</strong>.</p>
+<p class="mt-8 text-slate-500 italic">Detta initiativ är skapat och överses av Adviseo.</p>
+</article>
+</main>
+<footer class="bg-white border-t border-slate-200 mt-auto">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+<div>
+<div class="text-lg font-extrabold tracking-tight mb-3">PROPTECH<span class="text-sky-600">GUIDE</span></div>
+<p class="text-slate-500">Oberoende guide till fastighetsteknik i Sverige.</p>
+</div>
+<div>
+<h3 class="font-bold mb-3">Målgrupper</h3>
+<ul class="space-y-2 text-slate-500"><li><a class="hover:text-sky-600" href="/fastighetsagare">Fastighetsägare</a></li><li><a class="hover:text-sky-600" href="/forvaltare">Kommersiella förvaltare</a></li><li><a class="hover:text-sky-600" href="/brf">BRF-styrelser</a></li></ul>
+</div>
+<div>
+<h3 class="font-bold mb-3">Innehåll</h3>
+<ul class="space-y-2 text-slate-500">
+<li><a class="hover:text-sky-600" href="/directory">Leverantörskatalog</a></li>
+<li><a class="hover:text-sky-600" href="/verktyg">Kalkylatorer</a></li>
+<li><a class="hover:text-sky-600" href="/guider">Guider</a></li>
+<li><a class="hover:text-sky-600" href="/kategorier">Kategorier</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-3">Om</h3>
+<ul class="space-y-2 text-slate-500">
+<li><a class="hover:text-sky-600" href="/for-leverantorer">Bli partner</a></li>
+<li><a class="hover:text-sky-600" href="/om-sajten">Om sajten</a></li>
+<li><a class="hover:text-sky-600" href="/privacy-policy">Integritetspolicy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-100 py-6 text-center text-slate-400 text-sm">
+<p>Denna sajt skapas och drivs med hjälp av AI · <a class="hover:text-sky-600" href="/om-sajten">Om sajten</a></p>
+<p class="mt-1">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+</div>
+</footer>
 </body>
 </html>

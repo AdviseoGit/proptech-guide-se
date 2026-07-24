@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="sv"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+
+<html lang="sv"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI i Fastigheter – Guide och Konkreta Verktyg | Proptech Guide Sverige</title>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7028BLJBRF"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7028BLJBRF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,15 +12,15 @@
   gtag('config', 'G-7028BLJBRF');
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .gradient-text { background: linear-gradient(90deg, #0284c7, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 </style>
-<link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
-<meta name="description" content="En praktisk guide till AI i fastigheter. Upptäck hur artificiell intelligens sänker energikostnader, effektiviserar förvaltning och driver utvecklingen inom Proptech.">
+<link href="/static/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="En praktisk guide till AI i fastigheter. Upptäck hur artificiell intelligens sänker energikostnader, effektiviserar förvaltning och driver utvecklingen inom Proptech." name="description"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,76 +48,104 @@
 </script>
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
-
-<nav class="p-6 max-w-7xl mx-auto w-full flex justify-between items-center border-b border-slate-200">
-    <a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
-    <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-        <a href="/directory" class="hover:text-sky-600">Företagskatalog</a>
-        <a href="/roi-kalkylator" class="hover:text-sky-600">ROI-Kalkylator</a>
-            <a href="/digital-trapphustavla-kalkylator" class="hover:text-sky-600">Trapphustavla-kalkylator</a>
-    </div>
-    <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-auto" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-    </button>
-</nav>
-<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 w-full px-6 py-4 absolute left-0 z-40 shadow-sm" style="top: 80px;">
-    <div class="flex flex-col space-y-4 font-medium text-slate-600">
-        <a href="/directory" class="hover:text-sky-600 block">Företagskatalog</a>
-        <a href="/roi-kalkylator" class="hover:text-sky-600 block">ROI-Kalkylator</a>
-            <a href="/digital-trapphustavla-kalkylator" class="hover:text-sky-600 block">Trapphustavla-kalkylator</a>
-    </div>
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="p-5 max-w-7xl mx-auto w-full flex justify-between items-center">
+<a class="text-2xl font-extrabold tracking-tight" href="/">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+<div class="hidden lg:flex items-center space-x-7 font-medium text-slate-600">
+<div class="relative group">
+<button class="flex items-center gap-1 py-2 hover:text-sky-600">För dig som är
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+<a class="block px-4 py-2.5 hover:bg-slate-50" href="/fastighetsagare"><span class="font-semibold block">Fastighetsägare</span><span class="text-xs text-slate-500">Sänk driftnettots kostnadssida och höj fastighetsvärdet.</span></a><a class="block px-4 py-2.5 hover:bg-slate-50" href="/forvaltare"><span class="font-semibold block">Kommersiella förvaltare</span><span class="text-xs text-slate-500">Fler kvadratmeter per förvaltare, utan att servicenivån faller.</span></a><a class="block px-4 py-2.5 hover:bg-slate-50" href="/brf"><span class="font-semibold block">BRF-styrelser</span><span class="text-xs text-slate-500">Lägre månadsavgift och mindre styrelsearbete.</span></a>
 </div>
+</div>
+<a class="hover:text-sky-600" href="/directory">Leverantörer</a>
+<a class="hover:text-sky-600" href="/verktyg">Verktyg</a>
+<a class="hover:text-sky-600" href="/guider">Guider</a>
+<a class="bg-slate-900 text-white px-4 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition" href="/for-leverantorer">För leverantörer</a>
+</div>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Meny" class="lg:hidden text-slate-600" onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden');this.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="hidden lg:hidden border-t border-slate-200 px-6 py-4" id="mobile-menu">
+<div class="flex flex-col space-y-3 font-medium text-slate-600">
+<span class="text-xs uppercase tracking-wide text-slate-400 font-bold">För dig som är</span>
+<a class="block pl-4 text-sm hover:text-sky-600" href="/fastighetsagare">Fastighetsägare</a><a class="block pl-4 text-sm hover:text-sky-600" href="/forvaltare">Kommersiella förvaltare</a><a class="block pl-4 text-sm hover:text-sky-600" href="/brf">BRF-styrelser</a>
+<a class="block pt-2 border-t border-slate-100 hover:text-sky-600" href="/directory">Leverantörer</a>
+<a class="block hover:text-sky-600" href="/verktyg">Verktyg</a>
+<a class="block hover:text-sky-600" href="/guider">Guider</a>
+<a class="block hover:text-sky-600" href="/for-leverantorer">För leverantörer</a>
+</div>
+</div>
+</nav>
 
 <main class="max-w-4xl mx-auto px-6 py-16 flex-grow w-full">
-    
-    <div class="mb-12">
-        <div class="inline-block px-3 py-1 bg-sky-100 text-sky-700 font-semibold rounded-full text-sm mb-4">Guide</div>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">AI i fastigheter: <br><span class="gradient-text">Så fungerar det i praktiken</span></h1>
-        <p class="text-xl text-slate-600 leading-relaxed">Artificiell intelligens går från att vara ett "buzzword" till att bli ett av de viktigaste verktygen för fastighetsförvaltare och ägare. Här går vi igenom hur AI faktiskt används idag och varför det är avgörande för framtidens proptech.</p>
-    </div>
-
-    <article class="prose prose-lg prose-slate max-w-none text-slate-700">
-        
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-10">
-            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><svg class="w-6 h-6 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Snabb sammanfattning</h3>
-            <ul class="space-y-3 mb-0">
-                <li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Sänker energikostnader genom väder- och närvarostyrd uppvärmning.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Minskar onödiga utryckningar genom prediktivt underhåll.</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Automatiserar inkommande ärenden och hyresfrågor (kundtjänst-AI).</span></li>
-                <li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Underlättar ESG-rapportering och hållbarhetskrav.</span></li>
-            </ul>
-        </div>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">1. Energioptimering i realtid</h2>
-        <p class="mb-6">Traditionella styrsystem baseras ofta på en enkel utomhusgivare. AI-baserade styrsystem (som t.ex. <a href="/directory" class="text-sky-600 font-medium hover:underline">Myrspoven eller Kiona</a>) kopplar istället ihop uppvärmningen med väderprognoser, spotpriser på el och den termiska trögheten i själva byggnaden. En smart byggnad med AI "vet" i förväg när solen kommer värma byggnaden om fyra timmar, och kan då stänga av värmen i förväg innan det blir för varmt. Detta sparar massor av energi och kapar effekttoppar utan att komforten försämras.</p>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">2. Prediktivt underhåll</h2>
-        <p class="mb-6">Istället för att åtgärda fel när något väl går sönder – eller utföra service på schemalagd tid även när det inte behövs – använder moderna system IoT-sensorer och maskininlärning för att identifiera små avvikelser. Systemet kan larma: <em>"Cirkulationspump A visar tecken på ökat motstånd, planera service inom 2 veckor"</em>. Genom att agera på dessa insikter undviks dyra akututryckningar och stillestånd, vilket förlänger livslängden på den tekniska utrustningen markant.</p>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">3. AI som första linjens support och administration</h2>
-        <p class="mb-6">Många felanmälningar är rutinfrågor. Med integrering av LLM (Large Language Models) kan fastighetsbolag integrera smarta AI-assistenter i sina hyresgästappar och chattar. AI:n kan ge direkta instruktioner till hyresgästen (t.ex. hur man luftar element, var grovsoprummet är) eller klassificera ärendet och skicka en färdig arbetsorder direkt till rätt tekniker. Detta frigör enormt mycket tid för förvaltarna.</p>
-
-        <h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">4. Avancerad dataanalys och Digitala Tvillingar</h2>
-        <p class="mb-6">När vi talar om <a href="/digitala-tvillingar-proptech" class="text-sky-600 font-medium hover:underline">digitala tvillingar</a> spelar AI en central roll. Genom att mata en virtuell 3D-modell av fastigheten med realtidsdata kan AI-algoritmer simulera olika scenarier. Vad händer med energianvändningen om vi byter fönster? Hur påverkas inomhusklimatet om vi ändrar ventilationstiderna? AI gör det möjligt att testa dessa hypoteser digitalt innan stora investeringar görs fysiskt.</p>
-        
-        <div class="mt-16 bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white">
-            <h3 class="text-3xl font-bold mb-4">Redo att räkna på vinsten?</h3>
-            <p class="text-slate-300 mb-8 max-w-2xl mx-auto text-lg">Ta reda på exakt hur snabbt en investering i smart AI-optimering och proptech kan betala sig för just era fastigheter.</p>
-            <a href="/roi-kalkylator" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-slate-900 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-colors shadow-lg shadow-emerald-500/30">
+<div class="mb-12">
+<div class="inline-block px-3 py-1 bg-sky-100 text-sky-700 font-semibold rounded-full text-sm mb-4">Guide</div>
+<h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">AI i fastigheter: <br/><span class="gradient-text">Så fungerar det i praktiken</span></h1>
+<p class="text-xl text-slate-600 leading-relaxed">Artificiell intelligens går från att vara ett "buzzword" till att bli ett av de viktigaste verktygen för fastighetsförvaltare och ägare. Här går vi igenom hur AI faktiskt används idag och varför det är avgörande för framtidens proptech.</p>
+</div>
+<article class="prose prose-lg prose-slate max-w-none text-slate-700">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-10">
+<h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center"><svg class="w-6 h-6 text-sky-500 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> Snabb sammanfattning</h3>
+<ul class="space-y-3 mb-0">
+<li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span>Sänker energikostnader genom väder- och närvarostyrd uppvärmning.</span></li>
+<li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span>Minskar onödiga utryckningar genom prediktivt underhåll.</span></li>
+<li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span>Automatiserar inkommande ärenden och hyresfrågor (kundtjänst-AI).</span></li>
+<li class="flex items-start"><svg class="w-5 h-5 text-emerald-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span>Underlättar ESG-rapportering och hållbarhetskrav.</span></li>
+</ul>
+</div>
+<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">1. Energioptimering i realtid</h2>
+<p class="mb-6">Traditionella styrsystem baseras ofta på en enkel utomhusgivare. AI-baserade styrsystem (som t.ex. <a class="text-sky-600 font-medium hover:underline" href="/directory">Myrspoven eller Kiona</a>) kopplar istället ihop uppvärmningen med väderprognoser, spotpriser på el och den termiska trögheten i själva byggnaden. En smart byggnad med AI "vet" i förväg när solen kommer värma byggnaden om fyra timmar, och kan då stänga av värmen i förväg innan det blir för varmt. Detta sparar massor av energi och kapar effekttoppar utan att komforten försämras.</p>
+<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">2. Prediktivt underhåll</h2>
+<p class="mb-6">Istället för att åtgärda fel när något väl går sönder – eller utföra service på schemalagd tid även när det inte behövs – använder moderna system IoT-sensorer och maskininlärning för att identifiera små avvikelser. Systemet kan larma: <em>"Cirkulationspump A visar tecken på ökat motstånd, planera service inom 2 veckor"</em>. Genom att agera på dessa insikter undviks dyra akututryckningar och stillestånd, vilket förlänger livslängden på den tekniska utrustningen markant.</p>
+<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">3. AI som första linjens support och administration</h2>
+<p class="mb-6">Många felanmälningar är rutinfrågor. Med integrering av LLM (Large Language Models) kan fastighetsbolag integrera smarta AI-assistenter i sina hyresgästappar och chattar. AI:n kan ge direkta instruktioner till hyresgästen (t.ex. hur man luftar element, var grovsoprummet är) eller klassificera ärendet och skicka en färdig arbetsorder direkt till rätt tekniker. Detta frigör enormt mycket tid för förvaltarna.</p>
+<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">4. Avancerad dataanalys och Digitala Tvillingar</h2>
+<p class="mb-6">När vi talar om <a class="text-sky-600 font-medium hover:underline" href="/digitala-tvillingar-proptech">digitala tvillingar</a> spelar AI en central roll. Genom att mata en virtuell 3D-modell av fastigheten med realtidsdata kan AI-algoritmer simulera olika scenarier. Vad händer med energianvändningen om vi byter fönster? Hur påverkas inomhusklimatet om vi ändrar ventilationstiderna? AI gör det möjligt att testa dessa hypoteser digitalt innan stora investeringar görs fysiskt.</p>
+<div class="mt-16 bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white">
+<h3 class="text-3xl font-bold mb-4">Redo att räkna på vinsten?</h3>
+<p class="text-slate-300 mb-8 max-w-2xl mx-auto text-lg">Ta reda på exakt hur snabbt en investering i smart AI-optimering och proptech kan betala sig för just era fastigheter.</p>
+<a class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-slate-900 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-colors shadow-lg shadow-emerald-500/30" href="/roi-kalkylator">
                 Testa ROI-kalkylatorn
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-        </div>
-
-    </article>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</article>
 </main>
-
-<footer class="py-12 border-t border-slate-200 text-center text-slate-500 mt-auto w-full">
-    <div class="space-x-4">
-        <a href="/privacy-policy" class="hover:text-sky-600">Integritetspolicy</a>
-    </div>
-    <p class="mt-4">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+<footer class="bg-white border-t border-slate-200 mt-auto">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+<div>
+<div class="text-lg font-extrabold tracking-tight mb-3">PROPTECH<span class="text-sky-600">GUIDE</span></div>
+<p class="text-slate-500">Oberoende guide till fastighetsteknik i Sverige.</p>
+</div>
+<div>
+<h3 class="font-bold mb-3">Målgrupper</h3>
+<ul class="space-y-2 text-slate-500"><li><a class="hover:text-sky-600" href="/fastighetsagare">Fastighetsägare</a></li><li><a class="hover:text-sky-600" href="/forvaltare">Kommersiella förvaltare</a></li><li><a class="hover:text-sky-600" href="/brf">BRF-styrelser</a></li></ul>
+</div>
+<div>
+<h3 class="font-bold mb-3">Innehåll</h3>
+<ul class="space-y-2 text-slate-500">
+<li><a class="hover:text-sky-600" href="/directory">Leverantörskatalog</a></li>
+<li><a class="hover:text-sky-600" href="/verktyg">Kalkylatorer</a></li>
+<li><a class="hover:text-sky-600" href="/guider">Guider</a></li>
+<li><a class="hover:text-sky-600" href="/kategorier">Kategorier</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold mb-3">Om</h3>
+<ul class="space-y-2 text-slate-500">
+<li><a class="hover:text-sky-600" href="/for-leverantorer">Bli partner</a></li>
+<li><a class="hover:text-sky-600" href="/om-sajten">Om sajten</a></li>
+<li><a class="hover:text-sky-600" href="/privacy-policy">Integritetspolicy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-100 py-6 text-center text-slate-400 text-sm">
+<p>Denna sajt skapas och drivs med hjälp av AI · <a class="hover:text-sky-600" href="/om-sajten">Om sajten</a></p>
+<p class="mt-1">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+</div>
 </footer>
 </body></html>

@@ -1,0 +1,1990 @@
+[
+  {
+    "slug": "aareon",
+    "name": "Aareon",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Ledande leverantör av affärssystem och digitala lösningar för fastighetsbranschen i Europa. Erbjuder kompletta ERP-system, appar för hyresgäster och besiktningsverktyg.",
+    "url": "https://www.aareon.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "accessy",
+    "name": "Accessy",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Låser upp dörrar med mobilen. Öppen molntjänst för digital nyckelhantering över olika passersystem.",
+    "url": "https://accessy.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "alliera",
+    "name": "Alliera",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "En plattform för identitets- och behörighetshantering (IAM) speciellt anpassad för fastighetsbranschen och fysisk accesskontroll.",
+    "url": "https://alliera.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "amido",
+    "name": "Amido",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Samlar olika passersystem i ett och samma gränssnitt. Gör det enkelt att hantera nycklar och behörigheter över hela fastighetsbeståndet.",
+    "url": "https://amido.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "assemblin",
+    "name": "Assemblin",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Komplett installations- och servicepartner med fokus på el, VS och ventilation, samt integrerade fastighetssystem för smartare drift.",
+    "url": "https://www.assemblin.com/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "avtal24-lexly",
+    "name": "Avtal24 / Lexly",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Digital avtalsplattform som används av många fastighetsägare och brf:er för att enkelt hantera hyresavtal och juridiska dokument online.",
+    "url": "https://lexly.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "avy",
+    "name": "Avy",
+    "category": "uthyrning",
+    "category_label": "Uthyrning & Marknad",
+    "description": "Boendeapp och portal för BRF:er och hyresvärdar. Erbjuder allt från felanmälan till digital boendepärm och betalningslösningar i en enda app.",
+    "url": "https://avy.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "basefarm-orange-business",
+    "name": "Basefarm (Orange Business)",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Erbjuder robusta IoT-plattformar och data management-lösningar för storskaliga fastighetsbestånd, med starkt fokus på säkerhet och upptid.",
+    "url": "https://www.orange-business.com/en",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bemsiq",
+    "name": "Bemsiq",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "En svensk företagsgrupp inom byggnadsautomation och fastighets-IT. De erbjuder hårdvara och sensorer som utgör fundamentet i många smarta byggnader.",
+    "url": "https://bemsiq.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bimobject",
+    "name": "BIMobject",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Världens ledande plattform för BIM-objekt. Möjliggör digitala tvillingar och effektivare projektering av smarta byggnader.",
+    "url": "https://bimobject.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bintel",
+    "name": "Bintel",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Digitaliserar avfallshantering genom uppkopplade sensorer i soptunnor och kärl. Möjliggör behovsstyrd tömning vilket minskar transporter och sänker kostnader.",
+    "url": "https://bintel.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "boappa",
+    "name": "Boappa",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "En av Sveriges mest populära boendeappar för bostadsrättsföreningar och grannskap. Skapar trygghet och underlättar styrelsens kommunikation.",
+    "url": "https://boappa.com",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bostadsregistraturet",
+    "name": "Bostadsregistraturet",
+    "category": "uthyrning",
+    "category_label": "Uthyrning & Marknad",
+    "description": "Digitaliserar uthyrningsprocessen och tillhandahåller smidiga system för bostadsförmedling, hantering av köer och matchning av sökande med lediga objekt.",
+    "url": "https://bostadsregistraturet.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bravida",
+    "name": "Bravida",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Nordens ledande leverantör av end-to-end-lösningar för fastigheters service och installation, med fokus på energieffektiva helhetslösningar.",
+    "url": "https://www.bravida.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "bygglet",
+    "name": "Bygglet",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Projektverktyg för bygg- och entreprenadföretag. Digitaliserar hela flödet från offert till faktura, inklusive tidrapportering och hantering av ÄTA, vilket underlättar vid ombyggnationer av fastigheter.",
+    "url": "https://bygglet.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "caverion",
+    "name": "Caverion",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Levererar smarta tekniska lösningar och tjänster för byggnader, industriinfrastruktur och industriella processer under hela livscykeln.",
+    "url": "https://www.caverion.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "chargenode",
+    "name": "ChargeNode",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Skalbara lösningar för elbilsladdning i större fastigheter och bostadsrättsföreningar.",
+    "url": "https://chargenode.eu",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "datscha",
+    "name": "Datscha",
+    "category": "analys",
+    "category_label": "Analys & AI",
+    "description": "Sveriges ledande tjänst för information och analys av kommersiella fastigheter. Ger tillgång till data om ägare, transaktioner, värderingar och marknad.",
+    "url": "https://www.datscha.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "dedu",
+    "name": "DeDu",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Ett komplett och användarvänligt system för hantering av felanmälan, rondering och drift och underhåll. Utvecklat i nära samarbete med fastighetsbranschen.",
+    "url": "https://dedu.se/",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "defigo",
+    "name": "Defigo",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Framtidens digitala porttelefon och passagesystem med högupplöst video och app-styrning.",
+    "url": "https://defigo.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ecocloud",
+    "name": "Ecocloud",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Mjukvara för energi- och miljöuppföljning som hjälper fastighetsägare att visualisera förbrukning och automatisera rapportering för hållbarhetsmål.",
+    "url": "https://ecocloud.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "egain",
+    "name": "Egain",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "AI-baserad mjukvara för energioptimering och klimatstyrning av fastigheter med fokus på minskade kostnader och utsläpp.",
+    "url": "https://egain.io",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "enjay",
+    "name": "Enjay",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Svensk greentech-lösning för återvinning av energi i tuffa miljöer. Deras Lepido-system återvinner värme från exempelvis restaurangventilation, vilket radikalt sänker byggnadens energibehov.",
+    "url": "",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "evendo",
+    "name": "Evendo",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Plattform för energioptimering och driftövervakning med integration mot befintliga styrsystem.",
+    "url": "https://www.evendo.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "eways",
+    "name": "Eways",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Oberoende laddoperatör som erbjuder smarta laddlösningar för elbilar åt fastighetsägare, företag och bostadsrättsföreningar.",
+    "url": "https://eways.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "fastout",
+    "name": "FastOut",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Plattform för 360-graders drönarvyer och fastighetsvisualisering. Hjälper fastighetsbolag att skapa interaktiva upplevelser av utemiljöer och omgivningar.",
+    "url": "https://fastout.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ferroamp",
+    "name": "Ferroamp",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Smart system för energioptimering i fastigheter. Deras EnergyHub integrerar solceller, energilagring och elbilsladdning i ett gemensamt likströmsnät för minskade effekttoppar.",
+    "url": "https://ferroamp.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "flowbird",
+    "name": "Flowbird",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Levererar smarta lösningar för parkering och mobilitet som integreras med fastigheter för optimerad parkeringsförvaltning.",
+    "url": "https://flowbird.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "flowscape",
+    "name": "Flowscape",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Ledande inom smarta kontorslösningar. Optimerar arbetsplatser genom bokningssystem för skrivbord/mötesrum, närvarosensorer och interaktiva 3D-kartor.",
+    "url": "https://flowscapesolutions.com",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "fyrbak",
+    "name": "Fyrbåk",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Erbjuder en modern boendeapp och plattform för kommunikation mellan fastighetsägare och hyresgäster.",
+    "url": "https://www.fyrbak.se/",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "greenely",
+    "name": "Greenely",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Smart energiplattform som hjälper både företag och privatpersoner att optimera sin elförbrukning med hjälp av AI och timprisavtal.",
+    "url": "https://greenely.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "halmstad-stadsnat",
+    "name": "Halmstad Stadsnät",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Erbjuder IoT-nät (LoRaWAN) för kommuner och fastighetsägare som möjliggör kostnadseffektiv insamling av sensordata för optimering och drift.",
+    "url": "https://halmstadstadsnat.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "hogia-fastighet",
+    "name": "Hogia Fastighet",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Komplett systemstöd för fastighetsägare och förvaltare, från hyresavisering till ekonomistyrning.",
+    "url": "https://www.hogia.se/fastighet",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "homemaker",
+    "name": "HomeMaker",
+    "category": "uthyrning",
+    "category_label": "Uthyrning & Marknad",
+    "description": "System för tillval, kundärenden, felanmälan och garantihantering i bostadsutveckling och förvaltning.",
+    "url": "https://www.homemaker.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "homepal",
+    "name": "Homepal",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Marknadsledande plattform för digital ärendehantering och kommunikation i BRF:er och fastighetsförvaltning. Används av hundratals svenska föreningar.",
+    "url": "https://homepal.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "homeq",
+    "name": "HomeQ",
+    "category": "uthyrning",
+    "category_label": "Uthyrning & Marknad",
+    "description": "Sveriges största B2B/B2C-plattform för automatiserad uthyrning av hyresrätter och bostadsförmedling.",
+    "url": "https://homeq.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "homerun",
+    "name": "HomeRun",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Plattform för bostadsutvecklare och entreprenörer som hanterar tillval, kommunikation och ärenden under och efter byggprocessen.",
+    "url": "https://www.homerun.net/sv",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "hyber",
+    "name": "Hyber",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Innovativ tjänst för uthyrning av barnartiklar och gemensamma resurser i bostadsområden. Främjar cirkulär ekonomi för hyresgäster.",
+    "url": "https://hyber.com",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "hydda",
+    "name": "Hydda",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Ett PropTech-kluster och plattform som samlar och integrerar ledande fastighetsteknologier (exempelvis Parkando, Spaceflow) till en sammanhållen lösning.",
+    "url": "https://www.hydda.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "hyresvard-se",
+    "name": "Hyresvärd.se",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Digital plattform som förenklar och effektiviserar uthyrningsprocessen för både privata och kommersiella hyresvärdar.",
+    "url": "https://hyresvard.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "idun-real-estate",
+    "name": "Idun Real Estate",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Erbjuder ProptechOS, ett operativsystem för fastigheter som samlar in, standardiserar (RealEstateCore) och delar fastighetsdata för att möjliggöra smarta tjänster.",
+    "url": "https://idunrealestate.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "iloq",
+    "name": "iLOQ",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Batterifria digitala låssystem och accesshantering som genererar sin egen energi, optimerade för fastighetsägare.",
+    "url": "https://www.iloq.com/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "incoord",
+    "name": "Incoord",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Tekniska konsulter och innovatörer inom installationsteknik, energi och hållbarhet. Skapar digitala tvillingar och simulerar fastigheters framtida prestanda och klimatpåverkan.",
+    "url": "https://incoord.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "infobric",
+    "name": "Infobric",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Digitala lösningar för smartare och säkrare byggarbetsplatser, inkluderar system för passage, utrustning och maskinkontroll samt energiuppföljning.",
+    "url": "https://infobric.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "invisense",
+    "name": "InviSense",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Utvecklar mikrotunna fuktsensorer som mäts trådlöst och möjliggör tidig upptäckt av fukt i byggnadskonstruktioner.",
+    "url": "https://invisense.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "iqnect",
+    "name": "Iqnect",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Proptech-plattform som samlar data från olika system i fastigheter för att ge en enhetlig vy och möjlighet till datadriven optimering.",
+    "url": "https://iqnect.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "iqube",
+    "name": "Iqube",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Datadriven plattform för att minimera energianvändning och effekttoppar i fastigheter med AI.",
+    "url": "https://www.iqube.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "iver",
+    "name": "Iver",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Erbjuder IT-tjänster och digitala plattformar anpassade för fastighetsbranschen, med fokus på säkerhet och modern infrastruktur.",
+    "url": "https://www.iver.com/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "kiona",
+    "name": "Kiona",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Erbjuder en öppen och oberoende proptech-plattform som integrerar all teknik i byggnader, från värme och kyla till energisystem och sensorer. Deras plattform Edge ansluter, övervakar och optimerar hela fastighetsbeståndet.",
+    "url": "https://kiona.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "kone-dx",
+    "name": "KONE DX",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Uppkopplade hissar med öppna API:er som möjliggör integration med hela ekosystemet i smarta byggnader.",
+    "url": "https://www.kone.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ktc",
+    "name": "KTC",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Specialister på energioptimering och fastighetsautomation. KTC erbjuder helhetslösningar för att digitalisera och energieffektivisera fastigheter, med stort fokus på öppna system och hållbarhet.",
+    "url": "https://ktc.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "mestro",
+    "name": "Mestro",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Digital plattform för fastighetsdrift och underhåll med mobil arbetsorder, schemaläggning och rapportering för tekniker.",
+    "url": "https://mestro.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "mestro-energy",
+    "name": "Mestro Energy",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Molnbaserad energiövervakning och rapportering för fastigheter. Samlar energidata från elnät, värme och vatten för ESG-rapportering och besparingar.",
+    "url": "https://mestroenergy.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "metry",
+    "name": "Metry",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Forskning- och designbyrå inriktad på proptech som utvecklar användarcentrerade smarta boendelösningar och upplevelser.",
+    "url": "https://metry.io/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "momentum-software",
+    "name": "Momentum Software",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Löser problemet med informationssilos inom fastighetsförvaltning. Momentum levererar ett molnbaserat helhetssystem (Property Management och Energy Management) som effektiviserar uthyrning, teknisk förvaltning och energiuppföljning i samma plattform.",
+    "url": "https://momentum.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "mowida",
+    "name": "Mowida",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Moderna och användarvänliga fastighetssystem för det digitala fastighetsbolaget. Täcker hela hyresprocessen.",
+    "url": "https://www.mowida.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "myrspoven",
+    "name": "Myrspoven",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "AI-driven mjukvara som optimerar byggnaders energianvändning i realtid baserat på väder, termisk tröghet och användande, vilket sänker driftnetto och koldioxidutsläpp.",
+    "url": "https://myrspoven.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "nabo",
+    "name": "Nabo",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "En helhetsleverantör av förvaltning för bostadsrättsföreningar. Erbjuder en modern plattform för ekonomisk och teknisk förvaltning samt juridik och boendeapp.",
+    "url": "https://nabo.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ngenic",
+    "name": "Ngenic",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Digitaliserar energisystem för ett jämnare och mer kostnadseffektivt inomhusklimat. Ngenic erbjuder smarta termostater och styrning av värmesystem för både villor, flerbostadshus och kommersiella fastigheter, integrerat med elpriser.",
+    "url": "https://ngenic.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "nivika",
+    "name": "Nivika",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Proptech-drivet fastighetsbolag som använder digitala verktyg för effektiv förvaltning, hyresgästkommunikation och energioptimering.",
+    "url": "https://nivika.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "noda-intelligent-systems",
+    "name": "Noda Intelligent Systems",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Levererar AI-baserade lösningar för optimering av fjärrvärme och kylsystem i fastigheter och hela nätverk.",
+    "url": "https://noda.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "nodeledge",
+    "name": "Nodeledge",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Specialiserade på energiuppföljning och analys. Nodeledge tillhandahåller system som hjälper fastighetsägare att visualisera, förstå och minska sin energianvändning.",
+    "url": "https://nodeledge.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "nordomatic",
+    "name": "Nordomatic",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Ledande integratör av Smart Buildings med lösningar för BMS (Building Management Systems) och energioptimering.",
+    "url": "https://nordomatic.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ochno",
+    "name": "Ochno",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Innovativ plattform som kombinerar smart belysning, sensorer och uttagsstyrning via USB-C, perfekt för det moderna, flexibla kontoret.",
+    "url": "https://ochno.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "optidev",
+    "name": "Optidev",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "IoT-baserad energioptimering för fastigheter med AI-styrda värmesystem som sänker energiförbrukning med 10-30%.",
+    "url": "https://optidev.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ourgreencar",
+    "name": "OurGreenCar",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Sveriges grönaste fordonspool för bostadsrättsföreningar och fastighetsägare. Erbjuder en komplett lösning för delad mobilitet.",
+    "url": "https://ourgreencar.se",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "ourliving",
+    "name": "OurLiving",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "En komplett digital plattform för boendekommunikation, dokumenthantering och ärendehantering för BRF:er.",
+    "url": "https://ourliving.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "paligo",
+    "name": "Paligo",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Även om det främst är ett CCMS, används det inom proptech för att hantera komplex teknisk dokumentation och manualer för smarta byggnader och system.",
+    "url": "https://paligo.net/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "parakey",
+    "name": "Parakey",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Molnbaserat passerkontrollsystem som använder smartphones istället för nycklar och taggar, perfekt för både bostäder och kommersiella fastigheter.",
+    "url": "https://parakey.co",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "pico",
+    "name": "Pico",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Boendeapp som förenklar kommunikationen mellan hyresvärd och boende. Erbjuder felanmälan, nyheter och möjlighet att boka gemensamma resurser som tvättstuga.",
+    "url": "",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "pigello",
+    "name": "Pigello",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Ett modernt, molnbaserat fastighetssystem med öppna API:er som gör det enkelt att hantera avtal, ärenden, ekonomi och kommunikation för fastighetsägare.",
+    "url": "https://pigello.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "pigra",
+    "name": "Pigra",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Löser problemet med komplex värmestyrning i stora fastighetsbestånd. Pigra erbjuder en mjukvarubaserad plattform som analyserar termisk tröghet och väderprognoser för att jämna ut effekttoppar och minska uppvärmningskostnaderna i realtid.",
+    "url": "https://pigra.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "planima",
+    "name": "Planima",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Modernt verktyg för underhållsplanering för fastighetsägare och brf:er. Hjälper till att strukturera och långtidsplanera underhållsåtgärder.",
+    "url": "https://planima.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "plejd",
+    "name": "Plejd",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Sveriges snabbast växande system för smart belysning. Erbjuder robust, skalbar och lättinstallerad teknik för både bostäder och kommersiella lokaler via Bluetooth mesh.",
+    "url": "https://plejd.com/sv-se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "propely",
+    "name": "Propely",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Plattform för teknisk fastighetsförvaltning och drift som automatiserar och förenklar underhållsplanering, rondering och felanmälan.",
+    "url": "https://propely.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "propstreet",
+    "name": "PropStreet",
+    "category": "analys",
+    "category_label": "Analys & AI",
+    "description": "En marknadsplats för kommersiella fastighetstransaktioner. Plattformen matchar säljare med verifierade köpare för att effektivisera processen.",
+    "url": "https://www.propstreet.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "pythagoras",
+    "name": "Pythagoras",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Ledande system för Strategic Facility Management med moduler för lokalplanering, avtal, städning och underhåll.",
+    "url": "https://pythagoras.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "raybased",
+    "name": "Raybased",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Trådlöst system för styrning och övervakning av fastighetstekniska system med minimal kabeldragning, idealiskt för befintliga byggnader.",
+    "url": "https://raybased.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "rco-security",
+    "name": "RCO Security",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Ledande leverantör av elektroniska passagesystem, inbrottslarm och integrerade säkerhetssystem för fastigheter, från enstaka dörrar till stora fastighetsbestånd.",
+    "url": "https://www.rco.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "real-fastighetssystem",
+    "name": "Real Fastighetssystem",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Ett komplett och webbaserat fastighetssystem utvecklat för att förenkla den ekonomiska och tekniska förvaltningen för fastighetsbolag i alla storlekar.",
+    "url": "https://real.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "regin",
+    "name": "Regin",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Helhetsleverantör av produkter och system för fastighetsautomation och energibesparing.",
+    "url": "https://www.regincontrols.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "rendin",
+    "name": "Rendin",
+    "category": "uthyrning",
+    "category_label": "Uthyrning & Marknad",
+    "description": "Digital plattform för privata hyresvärdar som förenklar uthyrning, hyresavtal, betalningar och kommunikation med hyresgäster. Fri grundversion.",
+    "url": "https://rendin.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "sally-r",
+    "name": "Sally R",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Optimerar ventilation i kommersiella fastigheter genom AI. Minskar energiförbrukningen och säkerställer ett hälsosamt inomhusklimat.",
+    "url": "https://sally-r.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "schneider-electric",
+    "name": "Schneider Electric",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Global ledare inom energihantering och automation. Deras EcoStruxure-plattform kopplar samman mjukvara, hårdvara och tjänster för smarta byggnader och industrier.",
+    "url": "https://www.se.com/se/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "sengera",
+    "name": "Sengera",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "AI-baserad energioptimering för fastigheter. Använder maskininlärning för att styra värmesystem dynamiskt och minska energikostnader med bibehållen komfort.",
+    "url": "",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "sensative",
+    "name": "Sensative",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Erbjuder IoT-lösningar och plattformen Yggio som knyter samman fastighetens olika sensorer och system för att skapa smarta städer och byggnader.",
+    "url": "https://sensative.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "service-works-global",
+    "name": "Service Works Global",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Leverantör av BIM och CAFM-programvara (QFM) som hjälper fastighetsförvaltare att optimera utrymmeshantering, schemaläggning och underhåll.",
+    "url": "https://www.swg.com/se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "siemens",
+    "name": "Siemens",
+    "category": "iot",
+    "category_label": "IoT & Hårdvara",
+    "description": "Erbjuder omfattande lösningar för fastighetsautomation, brandsäkerhet och säkerhetssystem. Building X är deras smarta plattform för byggnadsdrift.",
+    "url": "https://new.siemens.com/se/sv/produkter/byggnadsteknik.html",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "smartfront",
+    "name": "Smartfront",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Patenterad fasadlösning med integrerad ventilation för flerbostadshus. Minskar energiförbrukningen radikalt samtidigt som fasaden renoveras och inomhusklimatet förbättras.",
+    "url": "https://smartfront.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "smartvatten",
+    "name": "Smartvatten",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Kamerabaserad och AI-driven vattenövervakning som automatiskt läser av vattenmätare, upptäcker läckage och hjälper fastighetsägare att minska vattenförbrukningen.",
+    "url": "https://smartvatten.com/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "spaceflow",
+    "name": "Spaceflow",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Plattform och app för att förbättra hyresgästupplevelsen, digitalisera tjänster och bygga community i kommersiella fastigheter.",
+    "url": "https://spaceflow.io/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "spotscale",
+    "name": "Spotscale",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Skapar högupplösta digitala 3D-modeller och tvillingar av befintliga byggnader med hjälp av drönardata och AI, underlättar besiktning och renovering.",
+    "url": "https://spotscale.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "steplock",
+    "name": "StepLock",
+    "category": "access",
+    "category_label": "Lås & Passagesystem",
+    "description": "Svenskutvecklade elektromekaniska lås som integreras i moderna passersystem och digitala access-lösningar för ökad säkerhet i fastigheter.",
+    "url": "https://steplock.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "stingray",
+    "name": "Stingray",
+    "category": "plattform",
+    "category_label": "Öppen Plattform",
+    "description": "Öppen plattform för fastighetsautomation. Kopplar ihop fastighetssystem för att möjliggöra datadriven styrning och effektivare förvaltning.",
+    "url": "https://www.stingray.io/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "swegon",
+    "name": "Swegon",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Erbjuder integrerade lösningar och uppkopplade system (Proptech) för ventilation, kyla och klimatkontroll som maximerar energieffektivitet och komfort i byggnader.",
+    "url": "https://www.swegon.com/sv/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "tactic",
+    "name": "Tactic",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Svenskutvecklad plattform för fastighetsförvaltning som integrerar ekonomi, objekt, hyresgäster och underhåll i ett system. SaaS-baserad lösning för förvaltare.",
+    "url": "https://tactic.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "tenfast",
+    "name": "TenFAST",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Löser problemet med spretiga administrativa verktyg för mindre fastighetsägare. TenFAST är ett modernt molnbaserat fastighetssystem som samlar hyresavisering, bokföringsintegration och avtalshantering i ett enkelt gränssnitt.",
+    "url": "https://tenfast.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "tmpl-avy",
+    "name": "Tmpl (Avy)",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Boendeapp och plattform som förenklar kommunikationen mellan hyresvärd och boende, erbjuder digital bopärm, felanmälan, bokningar och kringtjänster.",
+    "url": "https://avy.se/",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "utilifeed",
+    "name": "Utilifeed",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Systemstöd för energibolag och fastighetsägare för att optimera fjärrvärme- och fjärrkylasystem.",
+    "url": "https://www.utilifeed.com/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "vironova",
+    "name": "Vironova",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Specialiserade på energieffektivisering och optimering av inomhusklimat för kommersiella fastigheter och flerbostadshus.",
+    "url": "https://vironova.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "vitec-fastighet",
+    "name": "Vitec Fastighet",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Ett av Nordens mest använda affärssystem för fastighetsbolag, som hanterar allt från uthyrning och ekonomi till teknisk förvaltning och energiuppföljning.",
+    "url": "https://www.vitecsoftware.com/sv/branscher/fastighet/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "vitec-hyra",
+    "name": "Vitec Hyra",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Marknadsledande affärssystem för fastighetsförvaltning i Sverige. Omfattar ekonomi, kundportal, felanmälan och fullständig objektförvaltning.",
+    "url": "https://vitec.se/hyra",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "vourity",
+    "name": "Vourity",
+    "category": "boende",
+    "category_label": "Boendeapp & Hyresgäst",
+    "description": "Gör det enkelt att ta betalt och hantera access till delade resurser. Vourity erbjuder en molnbaserad plattform och hårdvaruterminaler för elbilsladdning, tvättstugor, konferensrum och obemannad försäljning med direkt betalning via Swish eller kort.",
+    "url": "https://vourity.com/sv/",
+    "tier": "free",
+    "segments": [
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "vyer",
+    "name": "Vyer",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "AI-driven plattform för energioptimering och klimatstyrning i kommersiella fastigheter.",
+    "url": "https://vyer.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "zesec",
+    "name": "Zesec",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Utvecklar molnbaserad mobil access. Zesecs lösning gör att dörrar, portar och grindar kan öppnas med mobilen, vilket förenklar leveranser och vardagen för boende.",
+    "url": "https://zesec.com",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "zynka-bim",
+    "name": "Zynka BIM",
+    "category": "forvaltning",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Specialister på BIM och digitalisering av fastigheter. Deras plattform hjälper fastighetsägare att skapa och förvalta digitala tvillingar för effektivare drift och beslutsfattande.",
+    "url": "https://zynkagroup.se",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "oresundskraft",
+    "name": "Öresundskraft",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Energibolag med starka proptech-lösningar för energiuppföljning och optimering för företag och BRF:er.",
+    "url": "https://www.oresundskraft.se/",
+    "tier": "free",
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
+    "usp": [],
+    "cases": [],
+    "logo": "",
+    "contact_email": "",
+    "receives_leads": false
+  }
+]
