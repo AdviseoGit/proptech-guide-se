@@ -115,11 +115,11 @@
   },
   {
     "slug": "avy",
-    "name": "Avy",
-    "category": "uthyrning",
+    "name": "Avy-Tmpl",
+    "category": "boende",
     "category_label": "Uthyrning & Marknad",
-    "description": "Boendeapp och portal för BRF:er och hyresvärdar. Erbjuder allt från felanmälan till digital boendepärm och betalningslösningar i en enda app.",
-    "url": "https://avy.se",
+    "description": "Boendeapp och plattform för hyresvärdar och BRF:er. Samlar felanmälan, digital boendepärm, bokning av gemensamma resurser och kommunikation med de boende. Bildades när Avy och Tmpl gick ihop 2022.",
+    "url": "https://www.avy.se",
     "tier": "free",
     "segments": [
       "fastighetsagare",
@@ -432,7 +432,7 @@
     "category": "energi",
     "category_label": "Energi & Hållbarhet",
     "description": "Svensk greentech-lösning för återvinning av energi i tuffa miljöer. Deras Lepido-system återvinner värme från exempelvis restaurangventilation, vilket radikalt sänker byggnadens energibehov.",
-    "url": "",
+    "url": "https://www.enjaysystems.com",
     "tier": "free",
     "segments": [
       "fastighetsagare",
@@ -983,29 +983,10 @@
   {
     "slug": "mestro",
     "name": "Mestro",
-    "category": "forvaltning",
-    "category_label": "Digital Förvaltning & Drift",
-    "description": "Digital plattform för fastighetsdrift och underhåll med mobil arbetsorder, schemaläggning och rapportering för tekniker.",
-    "url": "https://mestro.com",
-    "tier": "free",
-    "segments": [
-      "fastighetsagare",
-      "forvaltare",
-      "brf"
-    ],
-    "usp": [],
-    "cases": [],
-    "logo": "",
-    "contact_email": "",
-    "receives_leads": false
-  },
-  {
-    "slug": "mestro-energy",
-    "name": "Mestro Energy",
     "category": "energi",
-    "category_label": "Energi & Hållbarhet",
-    "description": "Molnbaserad energiövervakning och rapportering för fastigheter. Samlar energidata från elnät, värme och vatten för ESG-rapportering och besparingar.",
-    "url": "https://mestroenergy.com",
+    "category_label": "Digital Förvaltning & Drift",
+    "description": "Molnbaserad plattform för automatiserad energiuppföljning. Samlar in och visualiserar energidata från el, värme och vatten i realtid, med moduler för hållbarhetsrapportering och kostnadskontroll.",
+    "url": "https://mestro.com",
     "tier": "free",
     "segments": [
       "fastighetsagare",
@@ -1318,24 +1299,6 @@
     "receives_leads": false
   },
   {
-    "slug": "pico",
-    "name": "Pico",
-    "category": "boende",
-    "category_label": "Boendeapp & Hyresgäst",
-    "description": "Boendeapp som förenklar kommunikationen mellan hyresvärd och boende. Erbjuder felanmälan, nyheter och möjlighet att boka gemensamma resurser som tvättstuga.",
-    "url": "",
-    "tier": "free",
-    "segments": [
-      "forvaltare",
-      "brf"
-    ],
-    "usp": [],
-    "cases": [],
-    "logo": "",
-    "contact_email": "",
-    "receives_leads": false
-  },
-  {
     "slug": "pigello",
     "name": "Pigello",
     "category": "plattform",
@@ -1595,25 +1558,6 @@
     "receives_leads": false
   },
   {
-    "slug": "sengera",
-    "name": "Sengera",
-    "category": "energi",
-    "category_label": "Energi & Hållbarhet",
-    "description": "AI-baserad energioptimering för fastigheter. Använder maskininlärning för att styra värmesystem dynamiskt och minska energikostnader med bibehållen komfort.",
-    "url": "",
-    "tier": "free",
-    "segments": [
-      "fastighetsagare",
-      "forvaltare",
-      "brf"
-    ],
-    "usp": [],
-    "cases": [],
-    "logo": "",
-    "contact_email": "",
-    "receives_leads": false
-  },
-  {
     "slug": "sensative",
     "name": "Sensative",
     "category": "iot",
@@ -1827,24 +1771,6 @@
     "tier": "free",
     "segments": [
       "fastighetsagare",
-      "forvaltare",
-      "brf"
-    ],
-    "usp": [],
-    "cases": [],
-    "logo": "",
-    "contact_email": "",
-    "receives_leads": false
-  },
-  {
-    "slug": "tmpl-avy",
-    "name": "Tmpl (Avy)",
-    "category": "boende",
-    "category_label": "Boendeapp & Hyresgäst",
-    "description": "Boendeapp och plattform som förenklar kommunikationen mellan hyresvärd och boende, erbjuder digital bopärm, felanmälan, bokningar och kringtjänster.",
-    "url": "https://avy.se/",
-    "tier": "free",
-    "segments": [
       "forvaltare",
       "brf"
     ],
