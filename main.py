@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, Request, BackgroundTasks, Body
+from fastapi import FastAPI, Request, BackgroundTasks, Body, HTTPException
 from pathlib import Path
 from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -8,7 +8,9 @@ import uvicorn
 app = FastAPI(title="Proptech Guide Sverige")
 
 import psycopg2
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, ValidationError
+
+import lead_engine
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
@@ -57,10 +59,50 @@ def _deliver_pt(email):
                         reply_to=email, from_name="Proptech Guide Sverige")
 
 
-@app.post("/api/lead")
-async def capture_lead(lead: LeadIn, background: BackgroundTasks):
+@app.post("/api/lead-pdf")
+async def capture_lead_pdf(lead: LeadIn, background: BackgroundTasks):
+    """Enkel e-postfångst för PDF-utskick (äldre formulär)."""
     background.add_task(_deliver_pt, lead.email)
     return {"status": "success"}
+
+
+@app.post("/api/lead")
+async def capture_lead(background: BackgroundTasks, payload: dict = Body(...)):
+    """Enhetlig ingång för alla kvalificerade leads på sajten.
+
+    Bakåtkompatibel: en payload med enbart {"email": ...} behandlas som tidigare
+    PDF-fångst, allt annat går genom kvalificering och scoring.
+
+    Scoring körs synkront så svaret kan bekräfta matchningen för användaren,
+    medan lagring och utskick läggs i bakgrunden och aldrig blockar requesten.
+    """
+    if set(payload.keys()) <= {"email"} and payload.get("email"):
+        background.add_task(_deliver_pt, payload["email"])
+        return {"status": "success"}
+
+    try:
+        lead = lead_engine.Lead(**payload)
+    except ValidationError as exc:
+        raise HTTPException(status_code=400, detail=exc.errors(include_url=False))
+    scoring = lead_engine.score_lead(lead)
+    partners = lead_engine.match_partners(lead)
+    background.add_task(lead_engine.process_lead, lead)
+    return {
+        "status": "success",
+        "grade": scoring["grade"],
+        "partners": [{"name": p["name"], "slug": p["slug"]} for p in partners],
+    }
+
+
+@app.post("/api/partner-ansokan")
+async def partner_application(background: BackgroundTasks, payload: dict = Body(...)):
+    """Intresseanmälan från leverantörer som vill köpa placering, leads eller sponsring."""
+    try:
+        app_in = lead_engine.PartnerApplication(**payload)
+    except ValidationError as exc:
+        raise HTTPException(status_code=400, detail=exc.errors(include_url=False))
+    background.add_task(lead_engine.process_partner_application, app_in)
+    return {"status": "received"}
 
 # Serve static assets (js, css, images) under /static
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -104,57 +146,32 @@ async def serve_html(filename: str):
     if os.path.exists(file_path):
         return FileResponse(file_path)
 
-    # Original logic for files that might already have .html
-    if filename.endswith(".html"):
-        file_path_original = os.path.join("static", filename)
-        if os.path.exists(file_path_original):
-            return FileResponse(file_path_original)
-            
+    # Filer som redan har ändelse, t.ex. /cookie-banner.min.js och /lead-engine.js.
+    # Sidorna länkar dem från roten, så de måste kunna serveras utan /static-prefix.
+    direct = os.path.normpath(os.path.join("static", filename))
+    if direct.startswith("static" + os.sep) and os.path.isfile(direct):
+        return FileResponse(direct)
+
     # Let FastAPI handle 404 if it's not an existing HTML file
-    from fastapi import HTTPException
     raise HTTPException(status_code=404, detail="Item not found")
 
 
 @app.post("/api/roi-lead")
 async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Body(...)):
+    """Äldre kalkylator-endpoint. Behålls som alias och matas in i lead engine
+    så att allt hamnar i samma funnel och scoring."""
     email = payload.get("email")
-    data = payload.get("data", {})
-    source = payload.get("source", "roi-kalkylator")
-    
     if not email:
         raise HTTPException(status_code=400, detail="Email is required")
-        
-    # Process lead asynchronously (send email, save to db, etc)
-    # For now, we simulate processing
-    print(f"New ROI lead received: {email}")
-    print(f"Data: {data}")
-    
-    # Store lead data locally (append to a JSON lines file for data accumulation)
-    import json
-    from datetime import datetime
-    
-    lead_entry = {
-        "timestamp": datetime.now().isoformat(),
-        "email": email,
-        "source": source,
-        "data": data
-    }
-    
-    # Save to data directory to accumulate own data
-    data_dir = Path("data")
-    data_dir.mkdir(exist_ok=True)
-    with open(data_dir / "leads.jsonl", "a", encoding="utf-8") as f:
-        f.write(json.dumps(lead_entry) + "\n")
-        
-    # Forward to the site owner
-    try:
-        from mailer import send_email
-        email_body = f"Nytt lead från ROI-kalkylatorn!\n\nE-post: {email}\nKälla: {source}\nData: {json.dumps(data, indent=2)}"
-        background_tasks.add_task(send_email, "simon@adviseo.se", "Nytt lead: Proptech ROI Kalkylator", email_body)
-    except Exception as e:
-        print(f"Failed to queue email task: {e}")
-        
+
+    lead = lead_engine.Lead(
+        email=email,
+        source=payload.get("source", "roi-kalkylator"),
+        calc_data=payload.get("data", {}) or {},
+    )
+    background_tasks.add_task(lead_engine.process_lead, lead)
     return {"status": "success", "message": "Lead received"}
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))

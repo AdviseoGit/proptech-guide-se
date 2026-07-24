@@ -3,10 +3,18 @@
 ## Vision
 Den ledande svenska proptech-guiden: nischens mest kompletta och AKTUELLA verktygskatalog + nyhetsbevakning, med en design som inger förtroende.
 
+Sajten är en renodlad B2B-portal mot fastighetsmarknaden. Intäkterna kommer från
+partnerskap, kvalificerade upphandlingsleads och sponsrade guider — inte volymleads.
+Se STRUKTUR.md för sidkarta, tier-modell och leadscoring.
+
 ## Milstolpar
 - [ ] Verktygssidan är nischens mest kompletta katalog (växer varje pass)
 - [ ] Daglig nyhetsbevakning av svensk + internationell proptech
 - [x] Lead capture (PDF/Kalkylator) fungerar end-to-end och samlar in e-post via API. (Klart 2026-07-15)
+- [x] Målgruppsindelad struktur: segmenthubbar för fastighetsägare, förvaltare och BRF. (Klart 2026-07-24)
+- [x] Kvalificerad leadgen med scoring A/B/C och partnermatchning. (Klart 2026-07-24)
+- [x] Monetiseringsstruktur på plats: katalogtiers, leadprissättning, guide-sponsring. (Klart 2026-07-24)
+- [ ] Första betalande partnern signerad
 - [ ] Hela sajten håller design-nordstjärnan
 - [ ] #1 på Google för "proptech"
 

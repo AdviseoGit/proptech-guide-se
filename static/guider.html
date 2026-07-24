@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guider om proptech, ESG och fastighetsteknik | Proptechguiden</title>
+<meta name="description" content="Oberoende guider om ESG-rapportering, smarta byggnader, cybersäkerhet och ROI för fastighetsägare, förvaltare och BRF:er.">
+<link rel="canonical" href="https://proptechguiden.se/guider">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Guider om proptech, ESG och fastighetsteknik | Proptechguiden">
+<meta property="og:description" content="Oberoende guider om ESG-rapportering, smarta byggnader, cybersäkerhet och ROI för fastighetsägare, förvaltare och BRF:er.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://proptechguiden.se/guider">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7028BLJBRF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7028BLJBRF');
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+<style>
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .gradient-text {
+    background: linear-gradient(90deg, #0284c7, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<script src="/cookie-banner.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="p-5 max-w-7xl mx-auto w-full flex justify-between items-center">
+<a href="/" class="text-2xl font-extrabold tracking-tight">PROPTECH<span class="text-sky-600">GUIDE</span></a>
+<div class="hidden lg:flex items-center space-x-7 font-medium text-slate-600">
+  <div class="relative group">
+    <button class="flex items-center gap-1 py-2 hover:text-sky-600">För dig som är
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="absolute left-0 top-full w-72 bg-white border border-slate-200 rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+      <a href="/fastighetsagare" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">Fastighetsägare</span><span class="text-xs text-slate-500">Sänk driftnettots kostnadssida och höj fastighetsvärdet.</span></a><a href="/forvaltare" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">Kommersiella förvaltare</span><span class="text-xs text-slate-500">Fler kvadratmeter per förvaltare, utan att servicenivån faller.</span></a><a href="/brf" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">BRF-styrelser</span><span class="text-xs text-slate-500">Lägre månadsavgift och mindre styrelsearbete.</span></a>
+    </div>
+  </div>
+  <a href="/directory" class=" hover:text-sky-600">Leverantörer</a>
+  <a href="/verktyg" class=" hover:text-sky-600">Verktyg</a>
+  <a href="/guider" class=" text-sky-600 font-bold">Guider</a>
+  <a href="/for-leverantorer" class="bg-slate-900 text-white px-4 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition">För leverantörer</a>
+</div>
+<button class="lg:hidden text-slate-600" aria-label="Meny" aria-expanded="false" aria-controls="mobile-menu"
+  onclick="var m=document.getElementById('mobile-menu');m.classList.toggle('hidden');this.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true');">
+  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+</div>
+<div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 px-6 py-4">
+<div class="flex flex-col space-y-3 font-medium text-slate-600">
+  <span class="text-xs uppercase tracking-wide text-slate-400 font-bold">För dig som är</span>
+  <a href="/fastighetsagare" class="block pl-4 text-sm hover:text-sky-600">Fastighetsägare</a><a href="/forvaltare" class="block pl-4 text-sm hover:text-sky-600">Kommersiella förvaltare</a><a href="/brf" class="block pl-4 text-sm hover:text-sky-600">BRF-styrelser</a>
+  <a href="/directory" class="block pt-2 border-t border-slate-100 hover:text-sky-600">Leverantörer</a>
+  <a href="/verktyg" class="block hover:text-sky-600">Verktyg</a>
+  <a href="/guider" class="block text-sky-600 font-bold">Guider</a>
+  <a href="/for-leverantorer" class="block hover:text-sky-600">För leverantörer</a>
+</div>
+</div>
+</nav>
+
+<main class="max-w-5xl mx-auto px-6 py-12 flex-grow w-full">
+<nav class="text-sm text-slate-500 mb-6 flex gap-2 flex-wrap"><a href="/" class="hover:text-sky-600">Hem</a><span class="text-slate-300">/</span><span class="text-slate-900 font-medium">Guider</span></nav>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Guider för fastighetsbranschen</h1>
+<p class="text-xl text-slate-600 mb-12 max-w-2xl">Oberoende genomgångar av regelverk, teknik och affärsvärde – sorterade efter vem du är.</p>
+
+<section class="mb-14">
+  <h2 class="text-2xl font-extrabold tracking-tight mb-1">För fastighetsägare</h2>
+  <p class="text-slate-500 mb-6">Sänk driftnettots kostnadssida och höj fastighetsvärdet.</p>
+  <div class="grid md:grid-cols-3 gap-6"><a href="/esg-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ESG-rapportering för fastighetsägare</h3><span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">PDF</span>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">CSRD, EU-taxonomin och energideklarationer översatt till vad ni faktiskt behöver mäta, rapportera och kunna bevisa.</p>
+</a><a href="/cybersakerhet-smarta-byggnader" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Cybersäkerhet i smarta byggnader</h3><span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">PDF</span>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Riskerna med uppkopplade fastighetssystem och en konkret checklista för upphandling och drift.</p>
+</a><a href="/iot-energieffektivisering" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">IoT för energieffektivisering</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur sensorer och styrning kapar energiförbrukningen, med rimliga förväntningar på besparing per åtgärd.</p>
+</a><a href="/smarta-byggnader-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Vad är en smart byggnad?</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Komplett genomgång av tekniken, nyttan och mognadstrappan för uppkopplade fastigheter i Sverige.</p>
+</a><a href="/proptech-roi-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ROI på proptech</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Så räknar ni hem en proptech-investering och vilka nyckeltal styrelsen faktiskt frågar efter.</p>
+</a><a href="/digitala-tvillingar-roi" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ROI för digitala tvillingar</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">När en digital tvilling betalar sig — och när den blir en dyr 3D-modell utan användare.</p>
+</a><a href="/digitala-tvillingar-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Digitala tvillingar i proptech</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Från datamodell till drift: hur digitala tvillingar används i svensk fastighetsförvaltning.</p>
+</a><a href="/dataanalys-for-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Dataanalys för fastighetsägare</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Vägen från IoT-data till beslutsunderlag, och vad ni behöver på plats innan BI-verktyget köps in.</p>
+</a><a href="/proptech-for-kommersiella-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Proptech för kommersiella fastigheter</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur teknik höjer värdet och uthyrningsgraden i kommersiella bestånd.</p>
+</a><a href="/valja-ratt-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Så väljer du rätt proptech-lösning</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Utvärderingsmodell, kravställning och de frågor ni bör ställa innan avtal skrivs.</p>
+</a><a href="/vad-ar-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Vad är proptech? Den kompletta guiden</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Definition, nyckeltekniker och trender i den svenska proptech-marknaden.</p>
+</a><a href="/proptech-losningar" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Topp proptech-lösningar i Sverige</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Jämförelse av ledande svenska system inom energioptimering, automation och hyresgästappar.</p>
+</a><a href="/ai-i-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">AI i fastigheter</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur artificiell intelligens används i svensk fastighetsdrift idag, bortom pilotprojekten.</p>
+</a><a href="/proptech-klimatdeklaration-originaldata" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Klimatdeklarationer 2026 – originaldata</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Vår egen aggregerade data om klimatdeklarationer och vad den säger om beståndet.</p>
+</a></div>
+</section>
+<section class="mb-14">
+  <h2 class="text-2xl font-extrabold tracking-tight mb-1">För kommersiella förvaltare</h2>
+  <p class="text-slate-500 mb-6">Fler kvadratmeter per förvaltare, utan att servicenivån faller.</p>
+  <div class="grid md:grid-cols-3 gap-6"><a href="/esg-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ESG-rapportering för fastighetsägare</h3><span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">PDF</span>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">CSRD, EU-taxonomin och energideklarationer översatt till vad ni faktiskt behöver mäta, rapportera och kunna bevisa.</p>
+</a><a href="/cybersakerhet-smarta-byggnader" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Cybersäkerhet i smarta byggnader</h3><span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">PDF</span>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Riskerna med uppkopplade fastighetssystem och en konkret checklista för upphandling och drift.</p>
+</a><a href="/iot-energieffektivisering" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">IoT för energieffektivisering</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur sensorer och styrning kapar energiförbrukningen, med rimliga förväntningar på besparing per åtgärd.</p>
+</a><a href="/smarta-byggnader-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Vad är en smart byggnad?</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Komplett genomgång av tekniken, nyttan och mognadstrappan för uppkopplade fastigheter i Sverige.</p>
+</a><a href="/proptech-roi-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ROI på proptech</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Så räknar ni hem en proptech-investering och vilka nyckeltal styrelsen faktiskt frågar efter.</p>
+</a><a href="/digitala-tvillingar-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Digitala tvillingar i proptech</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Från datamodell till drift: hur digitala tvillingar används i svensk fastighetsförvaltning.</p>
+</a><a href="/dataanalys-for-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Dataanalys för fastighetsägare</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Vägen från IoT-data till beslutsunderlag, och vad ni behöver på plats innan BI-verktyget köps in.</p>
+</a><a href="/proptech-for-kommersiella-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Proptech för kommersiella fastigheter</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur teknik höjer värdet och uthyrningsgraden i kommersiella bestånd.</p>
+</a><a href="/valja-ratt-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Så väljer du rätt proptech-lösning</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Utvärderingsmodell, kravställning och de frågor ni bör ställa innan avtal skrivs.</p>
+</a><a href="/vad-ar-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Vad är proptech? Den kompletta guiden</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Definition, nyckeltekniker och trender i den svenska proptech-marknaden.</p>
+</a><a href="/proptech-losningar" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Topp proptech-lösningar i Sverige</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Jämförelse av ledande svenska system inom energioptimering, automation och hyresgästappar.</p>
+</a><a href="/ai-i-fastigheter" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">AI i fastigheter</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur artificiell intelligens används i svensk fastighetsdrift idag, bortom pilotprojekten.</p>
+</a></div>
+</section>
+<section class="mb-14">
+  <h2 class="text-2xl font-extrabold tracking-tight mb-1">För brf-styrelser</h2>
+  <p class="text-slate-500 mb-6">Lägre månadsavgift och mindre styrelsearbete.</p>
+  <div class="grid md:grid-cols-3 gap-6"><a href="/brf-digitalisering-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Digitaliseringsguide för BRF-styrelser</h3><span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">PDF</span>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Vad en styrelse bör digitalisera först, vad det kostar och vilka fällor som gör att projekt spårar ur.</p>
+</a><a href="/iot-energieffektivisering" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">IoT för energieffektivisering</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Hur sensorer och styrning kapar energiförbrukningen, med rimliga förväntningar på besparing per åtgärd.</p>
+</a><a href="/proptech-roi-guide" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">ROI på proptech</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Så räknar ni hem en proptech-investering och vilka nyckeltal styrelsen faktiskt frågar efter.</p>
+</a><a href="/valja-ratt-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Så väljer du rätt proptech-lösning</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Utvärderingsmodell, kravställning och de frågor ni bör ställa innan avtal skrivs.</p>
+</a><a href="/vad-ar-proptech" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-lg font-bold group-hover:text-sky-600">Vad är proptech? Den kompletta guiden</h3>
+  </div>
+  <p class="text-slate-600 text-sm flex-grow">Definition, nyckeltekniker och trender i den svenska proptech-marknaden.</p>
+</a></div>
+</section>
+</main>
+
+<section class="max-w-5xl mx-auto px-6 pb-16">
+  <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-10">
+    <h2 class="text-2xl font-extrabold tracking-tight mb-3">Sponsra en guide</h2>
+    <p class="text-slate-300 mb-6 max-w-2xl">Våra guider laddas ner av fastighetsägare, förvaltare
+    och BRF-styrelser som står inför ett konkret beslut. Som exklusiv sponsor står ert namn på guiden,
+    ni får er logotyp i PDF:en och samtliga nedladdningsleads som samtyckt till kontakt.
+    Just nu finns 14 lediga sponsorplatser.</p>
+    <a href="/for-leverantorer#sponsring" class="inline-block bg-white text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-slate-100 transition">Se upplägg och priser</a>
+  </div>
+</section><footer class="bg-white border-t border-slate-200 mt-auto">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+  <div>
+    <div class="text-lg font-extrabold tracking-tight mb-3">PROPTECH<span class="text-sky-600">GUIDE</span></div>
+    <p class="text-slate-500">Oberoende guide till fastighetsteknik i Sverige.</p>
+  </div>
+  <div>
+    <h3 class="font-bold mb-3">Målgrupper</h3>
+    <ul class="space-y-2 text-slate-500"><li><a href="/fastighetsagare" class="hover:text-sky-600">Fastighetsägare</a></li><li><a href="/forvaltare" class="hover:text-sky-600">Kommersiella förvaltare</a></li><li><a href="/brf" class="hover:text-sky-600">BRF-styrelser</a></li></ul>
+  </div>
+  <div>
+    <h3 class="font-bold mb-3">Innehåll</h3>
+    <ul class="space-y-2 text-slate-500">
+      <li><a href="/directory" class="hover:text-sky-600">Leverantörskatalog</a></li>
+      <li><a href="/verktyg" class="hover:text-sky-600">Kalkylatorer</a></li>
+      <li><a href="/guider" class="hover:text-sky-600">Guider</a></li>
+      <li><a href="/kategorier" class="hover:text-sky-600">Kategorier</a></li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="font-bold mb-3">Om</h3>
+    <ul class="space-y-2 text-slate-500">
+      <li><a href="/for-leverantorer" class="hover:text-sky-600">Bli partner</a></li>
+      <li><a href="/om-sajten" class="hover:text-sky-600">Om sajten</a></li>
+      <li><a href="/privacy-policy" class="hover:text-sky-600">Integritetspolicy</a></li>
+    </ul>
+  </div>
+</div>
+<div class="border-t border-slate-100 py-6 text-center text-slate-400 text-sm">
+  <p>Denna sajt skapas och drivs med hjälp av AI &middot; <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a></p>
+  <p class="mt-1">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+</div>
+</footer>
+</body>
+</html>
