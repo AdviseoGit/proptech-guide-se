@@ -1,3 +1,4 @@
+2026-07-25 | TILLVÄXT | Säljer in första partnerplatserna i kategorin energi | monetisering | nästa: Implementera gated PDF-nedladdning för sponsrade guider
 2026-07-24 | STRUKTUR | B2B-omstrukturering: segmenthubbar, lead engine med scoring, katalogtiers och säljsida för leverantörer | monetisering & leadgen | nästa: sälj in första partnerplatserna i kategorin energi
 2026-07-24 | TILLVÄXT | Lade till 4 nya bolag i katalogen (Iqube, Evendo, Öresundskraft, Utilifeed) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-24 | TEKNIK | Åtgärdade menybloat, skapade /mer-sida | design och navigering | nästa: Bygg nytt verktyg
