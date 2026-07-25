@@ -43,20 +43,51 @@ def _save_lead_pt(email):
         print(f"[pt] DB error: {e}")
 
 
-def _deliver_pt(email):
+def _deliver_pt(email, guide_slug="proptech-roi-guide"):
     import mailer
     import report_pt
     _save_lead_pt(email)
-    pdf = None
+    
+    import json
     try:
-        pdf = report_pt.build_guide_pdf()
+        with open("data/guides.json", "r") as gf:
+            guides = json.load(gf)
+            guide = next((g for g in guides if g.get("slug") == guide_slug), None)
+            
+        guide_title = guide.get("title", "Guide") if guide else "Guide"
+        pdf_title = guide.get("pdf", f"{guide_title}.pdf") if guide else "PropTech-ROI-guide.pdf"
+        
+        pdf = None
+        if guide_slug == "proptech-roi-guide":
+            pdf = report_pt.build_guide_pdf()
+        else:
+            try:
+                from reportlab.pdfgen import canvas
+                import io
+                buffer = io.BytesIO()
+                p = canvas.Canvas(buffer)
+                p.drawString(100, 750, f"{guide_title}")
+                p.drawString(100, 730, "Detta är en automatiskt genererad platshållar-PDF.")
+                p.showPage()
+                p.save()
+                pdf = buffer.getvalue()
+            except ImportError:
+                print("[pt] reportlab not installed, skipping PDF generation")
+            
+        atts = [(f"{pdf_title}.pdf" if not pdf_title.endswith(".pdf") else pdf_title, pdf, "application/pdf")] if pdf else None
+        
+        if guide_slug == "proptech-roi-guide":
+            html = report_pt.user_email_html()
+        else:
+            html = f"<div style='font-family:sans-serif;max-width:600px'><h2>Tack för ditt intresse!</h2><p>Bifogat hittar du guiden <b>{guide_title}</b>.</p></div>"
+            
+        mailer.send_email(email, f"Din guide: {guide_title}", html,
+                          attachments=atts, from_name="Proptechguiden")
+        mailer.notify_owner(f"Ny lead (PDF) - {guide_title}", f"<p>Ny lead laddade ner {guide_title}: <b>{email}</b></p>",
+                            reply_to=email, from_name="Proptechguiden")
+                            
     except Exception as e:
-        print(f"[pt] guide pdf failed: {e}")
-    atts = [("PropTech-ROI-guide.pdf", pdf, "application/pdf")] if pdf else None
-    mailer.send_email(email, "Din PropTech ROI-guide", report_pt.user_email_html(),
-                      attachments=atts, from_name="Proptech Guide Sverige")
-    mailer.notify_owner("Ny lead - Proptech Guide", f"<p>Ny lead: <b>{email}</b></p>",
-                        reply_to=email, from_name="Proptech Guide Sverige")
+        print(f"[pt] delivery failed: {e}")
 
 
 @app.post("/api/lead-pdf")

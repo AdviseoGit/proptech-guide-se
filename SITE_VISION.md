@@ -14,7 +14,7 @@ Se STRUKTUR.md för sidkarta, tier-modell och leadscoring.
 - [x] Målgruppsindelad struktur: segmenthubbar för fastighetsägare, förvaltare och BRF. (Klart 2026-07-24)
 - [x] Kvalificerad leadgen med scoring A/B/C och partnermatchning. (Klart 2026-07-24)
 - [x] Monetiseringsstruktur på plats: katalogtiers, leadprissättning, guide-sponsring. (Klart 2026-07-24)
-- [ ] Första betalande partnern signerad
+- [x] Första betalande partnern signerad (Mestro, Egain, Metry) - 2026-07-25
 - [ ] Hela sajten håller design-nordstjärnan
 - [ ] #1 på Google för "proptech"
 
