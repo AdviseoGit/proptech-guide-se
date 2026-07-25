@@ -15,8 +15,10 @@ Renderar allt som ska hänga ihop med katalogdatat och målgruppsindelningen:
 Kör:  python build.py
 """
 import json
+import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 import site_template as T
 
@@ -37,6 +39,55 @@ def write(path, html):
 
 def tier_rank(company):
     return T.TIERS.get(company.get("tier", "free"), T.TIERS["free"])["rank"]
+
+
+def _domain(url):
+    return urlparse(url).netloc.lower().removeprefix("www.")
+
+
+def validate_companies(companies):
+    """Vägra bygga när en betald placering saknar underlag.
+
+    En partner- eller verifierad-märkning är ett publikt påstående om en
+    kommersiell relation, och receives_leads skickar besökarnas personuppgifter
+    till en extern mottagare. Båda har publicerats utan täckning tidigare, så
+    bygget stoppas hellre än att felet når produktion.
+    """
+    errors = []
+    for c in companies:
+        if c.get("tier", "free") == "free":
+            if c.get("receives_leads"):
+                errors.append(f"{c['name']}: receives_leads kräver tier partner/verifierad")
+            continue
+
+        name = c["name"]
+        if not c.get("url", "").startswith("http"):
+            errors.append(f"{name}: betald placering kräver en webbadress")
+
+        if not c.get("receives_leads"):
+            continue
+
+        email = c.get("contact_email", "")
+        if "@" not in email:
+            errors.append(
+                f"{name}: receives_leads är på men contact_email saknas — "
+                f"leaddata skulle skickas ingenstans")
+            continue
+
+        mail_domain = email.split("@")[-1].lower()
+        site_domain = _domain(c.get("url", ""))
+        if site_domain and mail_domain != site_domain and not c.get("contact_email_verified"):
+            errors.append(
+                f"{name}: contact_email ligger på {mail_domain} men webbplatsen på "
+                f"{site_domain}. Bekräfta att adressen stämmer och sätt "
+                f'"contact_email_verified": true på posten.')
+
+    if errors:
+        print("\nBygget stoppat — katalogen har poster utan täckning:\n", file=sys.stderr)
+        for e in errors:
+            print(f"  • {e}", file=sys.stderr)
+        print("\nRätta data/companies.json och kör om.\n", file=sys.stderr)
+        raise SystemExit(1)
 
 
 def sort_companies(companies):
@@ -225,10 +276,21 @@ def build_directory(companies):
 
 def build_company_pages(companies):
     """Profilsidor för betalande nivåer — en del av vad en partnerplats ger."""
+    paid = [c for c in companies if c.get("tier") in ("partner", "verifierad")]
+
+    # Sidor för bolag som inte längre har betald placering måste bort. Annars
+    # ligger en gammal profil kvar och visar Partner-märkning i all evighet,
+    # även efter att posten satts tillbaka till free.
+    profile_dir = STATIC / "leverantor"
+    if profile_dir.exists():
+        current = {f"{c['slug']}.html" for c in paid}
+        for stale in profile_dir.glob("*.html"):
+            if stale.name not in current:
+                stale.unlink()
+                print(f"  tog bort {stale.relative_to(ROOT)} (inte längre betald placering)")
+
     built = 0
-    for c in companies:
-        if c.get("tier") not in ("partner", "verifierad"):
-            continue
+    for c in paid:
         usp = "".join(f'<li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span> {u}</li>'
                       for u in c.get("usp", []))
         usp_block = f'<ul class="space-y-3 text-slate-600 mb-8">{usp}</ul>' if usp else ""
@@ -810,6 +872,7 @@ def build_index(companies, guides):
 def main():
     companies = load("companies.json")
     guides = load("guides.json")
+    validate_companies(companies)
     print(f"Bygger sajten från {len(companies)} bolag och {len(guides)} guider:")
     build_index(companies, guides)
     build_directory(companies)

@@ -44,6 +44,25 @@ sätt `receives_leads: true`, kör `python build.py`.
 > Alla bolag ligger på `free` idag. Sätt aldrig `partner` på ett bolag ni inte har
 > avtal med — det är ett partnerskapspåstående om ett riktigt företag.
 
+### Spärren i bygget
+
+`build.py` vägrar bygga och avslutar med felkod om en betald placering saknar
+täckning. Detta har hänt skarpt, så kontrollen är avsiktligt hård:
+
+| Kontroll | Varför |
+|---|---|
+| `tier` ≠ free kräver en webbadress | En placering utan länk är inget att sälja. |
+| `receives_leads` kräver `tier` ≠ free | Gratisposter ska aldrig ta emot leaddata. |
+| `receives_leads` kräver `contact_email` | Annars skickas leadet ingenstans. |
+| E-postens domän måste matcha webbplatsens | Fångar gissade adresser, t.ex. `partner@mestro.se` när bolaget ligger på `mestro.com`. |
+
+Har bolaget en legitim avvikande adress (säljdomän, återförsäljare) sätts
+`"contact_email_verified": true` på posten efter att adressen bekräftats med
+leverantören. Det kräver ett medvetet mänskligt beslut, vilket är hela poängen.
+
+Bygget städar också bort profilsidor för bolag som inte längre har betald
+placering — annars ligger en gammal sida kvar och visar Partner-märkning.
+
 ### 2. Kvalificerade leads
 
 Alla förfrågningar går genom `POST /api/lead` och poängsätts i `lead_engine.py`:
