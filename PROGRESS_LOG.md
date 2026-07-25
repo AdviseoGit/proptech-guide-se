@@ -1,4 +1,4 @@
-2026-07-25 | LEADFLOW | Fixade PDF-nedladdning för sponsrade guider + partnerplatser för Mestro, Egain, Metry | lead capture | nästa: Fortsätt bygga verktyg eller innehållspelare
+2026-07-25 | LEADFLOW | Fixade PDF-nedladdning för sponsrade guider + partnerplatser för Mestro, Egain, Metry | lead capture | nästa: Bygg adminvy över proptech_leads_v2
 2026-07-24 | STRUKTUR | B2B-omstrukturering: segmenthubbar, lead engine med scoring, katalogtiers och säljsida för leverantörer | monetisering & leadgen | nästa: sälj in första partnerplatserna i kategorin energi
 2026-07-24 | TILLVÄXT | Lade till 4 nya bolag i katalogen (Iqube, Evendo, Öresundskraft, Utilifeed) | directory poster | nästa: Fler directory poster eller nytt verktyg
 2026-07-24 | TEKNIK | Åtgärdade menybloat, skapade /mer-sida | design och navigering | nästa: Bygg nytt verktyg
