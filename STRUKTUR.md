@@ -88,12 +88,30 @@ Stegen är ordnade så att kvalificeringen sker först och e-postadressen begär
 när besökaren redan investerat i flödet. Kalkylatorer skickar med sina siffror genom
 att sätta `window.proptechCalcData` innan submit.
 
+## Datafiler
+
+| Fil | Innehåll |
+|---|---|
+| `data/companies.json` | Den publicerade katalogen. Enda källan för katalogsidor och partnermatchning. |
+| `data/companies_unverified.json` | Karantän: poster som inte gått att belägga i någon publik källa. Publiceras inte. Flytta tillbaka till `companies.json` om uppgifterna bekräftas. |
+| `data/guides.json` | Guider med målgrupp, sponsor och lediga sponsorplatser. |
+| `data/leads.jsonl` | Fallback för inkomna leads. Git-ignorerad, flyktig på Railway — Postgres är den riktiga lagringen. |
+
+**Innan ett nytt bolag läggs in:** kontrollera att det finns en fungerande
+webbadress och att inget befintligt bolag redan har samma domän. Katalogen har
+tidigare växt med dubbletter och med poster som inte gick att verifiera, vilket
+är dyrt för en guide som säljer oberoende.
+
 ## Bygga om sajten
 
 ```bash
 python build.py       # genererar startsida, katalog, segmenthubbar, guider, säljsida, sitemap
 python sync_nav.py    # synkar delad nav + footer på de handskrivna sidorna
 ```
+
+Engångsskript som redan körts, sparade för spårbarhet:
+`extract_companies.py` (migrerade katalogen från HTML till JSON) och
+`fix_catalog_duplicates.py` (slog ihop dubbletter, karantänsatte overifierade poster).
 
 `site_template.py` äger nav, footer och all segment-/kategorikonfiguration.
 Ändra där, kör om båda skripten — då följer hela sajten med.
