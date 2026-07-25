@@ -425,19 +425,10 @@
       "Sänker energiförbrukningen med upp till 20%.",
       "Kräver inga stora ingrepp i fastigheten."
     ],
-    "cases": [
-      {
-        "name": "Riksbyggen",
-        "url": "#"
-      },
-      {
-        "name": "HSB",
-        "url": "#"
-      }
-    ],
+    "cases": [],
     "logo": "",
-    "contact_email": "sales@egain.io",
-    "receives_leads": true
+    "contact_email": "",
+    "receives_leads": false
   },
   {
     "slug": "enjay",
@@ -1011,19 +1002,10 @@
       "Över 10 000 anslutna fastigheter.",
       "Helt automatiserad datainsamling."
     ],
-    "cases": [
-      {
-        "name": "Akelius",
-        "url": "#"
-      },
-      {
-        "name": "Hufvudstaden",
-        "url": "#"
-      }
-    ],
+    "cases": [],
     "logo": "",
-    "contact_email": "partner@mestro.se",
-    "receives_leads": true
+    "contact_email": "",
+    "receives_leads": false
   },
   {
     "slug": "metry",
@@ -1043,19 +1025,10 @@
       "Används för ESG-rapportering av ledande fastighetsbolag.",
       "Enkel integration mot andra system."
     ],
-    "cases": [
-      {
-        "name": "Vasakronan",
-        "url": "#"
-      },
-      {
-        "name": "Castellum",
-        "url": "#"
-      }
-    ],
+    "cases": [],
     "logo": "",
-    "contact_email": "hello@metry.io",
-    "receives_leads": true
+    "contact_email": "",
+    "receives_leads": false
   },
   {
     "slug": "momentum-software",

@@ -232,12 +232,24 @@ def build_company_pages(companies):
         usp = "".join(f'<li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span> {u}</li>'
                       for u in c.get("usp", []))
         usp_block = f'<ul class="space-y-3 text-slate-600 mb-8">{usp}</ul>' if usp else ""
-        cases = "".join(
-            f'<div class="bg-white rounded-2xl border border-slate-200 p-6">'
-            f'<h3 class="font-bold mb-2">{case.get("title", "")}</h3>'
-            f'<p class="text-slate-600 text-sm">{case.get("text", "")}</p></div>'
-            for case in c.get("cases", [])
-        )
+        # Accepterar både {"title","text"} och {"name","url"} — annars renderas
+        # rubriken "Kundcase" över tomma kort när nyckelnamnen inte matchar.
+        case_html = []
+        for case in c.get("cases", []):
+            heading = case.get("title") or case.get("name") or ""
+            text = case.get("text") or ""
+            if not (heading or text):
+                continue
+            link = ""
+            url = case.get("url", "")
+            if url.startswith("http"):
+                link = (f'<a href="{url}" target="_blank" rel="noopener noreferrer" '
+                        f'class="text-sm font-bold text-sky-600 hover:underline">Läs caset →</a>')
+            case_html.append(
+                f'<div class="bg-white rounded-2xl border border-slate-200 p-6">'
+                f'<h3 class="font-bold mb-2">{heading}</h3>'
+                f'<p class="text-slate-600 text-sm mb-3">{text}</p>{link}</div>')
+        cases = "".join(case_html)
         cases_block = (f'<section class="mt-12"><h2 class="text-2xl font-extrabold mb-4">Kundcase</h2>'
                        f'<div class="grid md:grid-cols-2 gap-6">{cases}</div></section>') if cases else ""
 
