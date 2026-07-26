@@ -207,3 +207,32 @@ async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Bod
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
+
+
+
+@app.get("/api/admin/leads")
+async def get_admin_leads():
+    # Enkelt mockat API för admin-vyn tills db-koppling finns
+    import os
+    import json
+    
+    leads = []
+    leads_file = "data/leads.jsonl"
+    
+    if os.path.exists(leads_file):
+        with open(leads_file, "r") as f:
+            for line in f:
+                try:
+                    leads.append(json.loads(line))
+                except json.JSONDecodeError:
+                    pass
+    
+    # Sortera nyaste först
+    leads.sort(key=lambda x: x.get("timestamp", ""), reverse=True)
+    
+    # Byt namn på fält för att matcha frontenden
+    for lead in leads:
+        if "timestamp" in lead and "created_at" not in lead:
+            lead["created_at"] = lead["timestamp"]
+    
+    return {"leads": leads}

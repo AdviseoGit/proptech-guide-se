@@ -1949,5 +1949,38 @@
     "logo": "",
     "contact_email": "",
     "receives_leads": false
+  },
+  {
+    "slug": "celsius-view",
+    "name": "Celsius View",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "System för mätvärdesinsamling och visualisering av energidata för fastighetsägare och förvaltare.",
+    "url": "https://celsiusview.se/",
+    "tier": "free",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "nordic-climate-group",
+    "name": "Nordic Climate Group",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Helhetsleverantör av kyl-, värme- och energieffektiva lösningar för kommersiella fastigheter.",
+    "url": "https://www.nordicclimategroup.se/",
+    "tier": "free",
+    "contact_email": "",
+    "receives_leads": false
+  },
+  {
+    "slug": "energy-machines",
+    "name": "Energy Machines",
+    "category": "energi",
+    "category_label": "Energi & Hållbarhet",
+    "description": "Utvecklar mjuk- och hårdvara för integrerade energisystem som minskar koldioxidavtryck och driftkostnader för fastigheter.",
+    "url": "https://www.energymachines.com/",
+    "tier": "free",
+    "contact_email": "",
+    "receives_leads": false
   }
 ]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads Admin - Proptechguiden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Leadshantering (proptech_leads_v2)</h1>
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Datum</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Lead</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Segment / Behov</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kvalificering</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Est. Värde</th>
+                    </tr>
+                </thead>
+                <tbody id="leadsTable" class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">Laddar leads...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadLeads() {
+            try {
+                const response = await fetch('/api/admin/leads');
+                const data = await response.json();
+                
+                const tbody = document.getElementById('leadsTable');
+                if (data.leads && data.leads.length > 0) {
+                    tbody.innerHTML = data.leads.map(lead => `
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                ${new Date(lead.created_at).toLocaleString('sv-SE')}
+                            </td>
+                            <td class="px-6 py-4 text-sm">
+                                <div class="font-medium text-gray-900">${lead.email}</div>
+                                <div class="text-gray-500">${lead.company || '-'}</div>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                ${lead.segment}<br>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">${lead.need}</span>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-gray-500">
+                                ${lead.role}<br>
+                                ${lead.portfolio_size}<br>
+                                ${lead.timeline}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                                    ${lead.score_grade === 'A' ? 'bg-green-100 text-green-800' : 
+                                      lead.score_grade === 'B' ? 'bg-yellow-100 text-yellow-800' : 
+                                      'bg-gray-100 text-gray-800'}">
+                                    ${lead.score_grade} (${lead.score_total})
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                ${lead.estimated_value ? new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumFractionDigits: 0 }).format(lead.estimated_value) : '-'}
+                            </td>
+                        </tr>
+                    `).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">Inga leads hittades.</td></tr>';
+                }
+            } catch (error) {
+                document.getElementById('leadsTable').innerHTML = 
+                    '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-red-500">Kunde inte ladda leads. API endpoint saknas?</td></tr>';
+            }
+        }
+        
+        loadLeads();
+    </script>
+</body>
+</html>

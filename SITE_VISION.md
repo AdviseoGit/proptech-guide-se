@@ -20,6 +20,7 @@ Se STRUKTUR.md för sidkarta, tier-modell och leadscoring.
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-07-26: 108 företag (+Celsius View, Nordic Climate Group, Energy Machines).
   - 2026-07-11: 95 företag (90→95, +Mestro, Sengera, Enjay, Bostadsregistraturet, Pico).
   - 2026-07-17: 115 företag (111→115, +Zeno, Vyer, Avy-Tmpl (uppdaterad), IamHome).
   - 2026-07-18: 125 företag (115→125, +Nivika, Hyresvärd.se, Smartvatten, HomeRun, Paligo, Iqnect, InviSense, Sally R, Noda, RCO, Hydda, Infobric, Flowbird, Amido, Propely).
