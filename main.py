@@ -61,13 +61,14 @@ def _deliver_pt(email, guide_slug="proptech-roi-guide"):
         if guide_slug == "proptech-roi-guide":
             pdf = report_pt.build_guide_pdf()
         else:
+            # Gated PDF download for sponsored guides fallback
             try:
                 from reportlab.pdfgen import canvas
                 import io
                 buffer = io.BytesIO()
                 p = canvas.Canvas(buffer)
                 p.drawString(100, 750, f"{guide_title}")
-                p.drawString(100, 730, "Detta är en automatiskt genererad platshållar-PDF.")
+                p.drawString(100, 730, "Detta är en automatiskt genererad guide (PDF).")
                 p.showPage()
                 p.save()
                 pdf = buffer.getvalue()
@@ -89,11 +90,14 @@ def _deliver_pt(email, guide_slug="proptech-roi-guide"):
     except Exception as e:
         print(f"[pt] delivery failed: {e}")
 
-
 @app.post("/api/lead-pdf")
-async def capture_lead_pdf(lead: LeadIn, background: BackgroundTasks):
-    """Enkel e-postfångst för PDF-utskick (äldre formulär)."""
-    background.add_task(_deliver_pt, lead.email)
+async def capture_lead_pdf(payload: dict = Body(...), background: BackgroundTasks = None):
+    """Enkel e-postfångst för PDF-utskick, stödjer specifik guide."""
+    email = payload.get("email")
+    guide_slug = payload.get("guide_slug", "proptech-roi-guide")
+    if not email:
+        raise HTTPException(status_code=400, detail="Email is required")
+    background.add_task(_deliver_pt, email, guide_slug)
     return {"status": "success"}
 
 
@@ -107,8 +111,9 @@ async def capture_lead(background: BackgroundTasks, payload: dict = Body(...)):
     Scoring körs synkront så svaret kan bekräfta matchningen för användaren,
     medan lagring och utskick läggs i bakgrunden och aldrig blockar requesten.
     """
-    if set(payload.keys()) <= {"email"} and payload.get("email"):
-        background.add_task(_deliver_pt, payload["email"])
+    if set(payload.keys()) <= {"email", "guide_slug"} and payload.get("email"):
+        guide_slug = payload.get("guide_slug", "proptech-roi-guide")
+        background.add_task(_deliver_pt, payload["email"], guide_slug)
         return {"status": "success"}
 
     try:

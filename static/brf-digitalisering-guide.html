@@ -179,7 +179,7 @@
                             const response = await fetch('/api/lead', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ email: email })
+                                body: JSON.stringify({ email: email, guide_slug: 'brf-digitalisering-guide' })
                             });
                             if (response.ok) {
                                 messageEl.textContent = 'Tack! Guiden har skickats till din e-post.';
