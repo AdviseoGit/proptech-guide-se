@@ -1,3 +1,5 @@
+https://proptechguiden.se/esg-guide | URL is unknown to Google | 2026-07-27 | Ny sida inspekterad
+https://proptechguiden.se/cybersakerhet-smarta-byggnader | URL is unknown to Google | 2026-07-27 | Ny sida inspekterad
 https://proptechguiden.se/brf-digitalisering-guide | URL is unknown to Google | 2026-07-24 | Lade till i sitemap, omdirigerad från gammal länk
 https://proptechguiden.se/mer | URL is unknown to Google | 2026-07-24 | Lade till i sitemap, länkade i nav/footer
 https://proptechguiden.se/proptech-klimatdeklaration-originaldata | URL is unknown to Google | 2026-07-22 | Lade till i sitemap, länkade på startsidan
