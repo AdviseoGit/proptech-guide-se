@@ -1,3 +1,6 @@
+https://proptechguiden.se/leverantor/mestro | URL is unknown to Google | 2026-07-28 | Ny sida inspekterad
+https://proptechguiden.se/leverantor/egain | URL is unknown to Google | 2026-07-28 | Ny sida inspekterad
+https://proptechguiden.se/leverantor/metry | URL is unknown to Google | 2026-07-28 | Ny sida inspekterad
 https://proptechguiden.se/esg-guide | URL is unknown to Google | 2026-07-27 | Ny sida inspekterad
 https://proptechguiden.se/cybersakerhet-smarta-byggnader | URL is unknown to Google | 2026-07-27 | Ny sida inspekterad
 https://proptechguiden.se/brf-digitalisering-guide | URL is unknown to Google | 2026-07-24 | Lade till i sitemap, omdirigerad från gammal länk
