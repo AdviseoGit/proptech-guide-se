@@ -414,17 +414,16 @@
     "category_label": "Energi & Hållbarhet",
     "description": "AI-baserad mjukvara för energioptimering och klimatstyrning av fastigheter med fokus på minskade kostnader och utsläpp.",
     "url": "https://egain.io",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
-      "forvaltare",
-      "brf"
+      "forvaltare"
     ],
     "usp": [],
     "cases": [],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "leads@egain.io",
+    "receives_leads": true
   },
   {
     "slug": "enjay",
@@ -987,17 +986,16 @@
     "category_label": "Digital Förvaltning & Drift",
     "description": "Molnbaserad plattform för automatiserad energiuppföljning. Samlar in och visualiserar energidata från el, värme och vatten i realtid, med moduler för hållbarhetsrapportering och kostnadskontroll.",
     "url": "https://mestro.com",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
-      "forvaltare",
-      "brf"
+      "forvaltare"
     ],
     "usp": [],
     "cases": [],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "leads@mestro.com",
+    "receives_leads": true
   },
   {
     "slug": "metry",
@@ -1006,17 +1004,16 @@
     "category_label": "Energi & Hållbarhet",
     "description": "Forskning- och designbyrå inriktad på proptech som utvecklar användarcentrerade smarta boendelösningar och upplevelser.",
     "url": "https://metry.io/sv/",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
-      "forvaltare",
-      "brf"
+      "forvaltare"
     ],
     "usp": [],
     "cases": [],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "leads@metry.io",
+    "receives_leads": true
   },
   {
     "slug": "momentum-software",

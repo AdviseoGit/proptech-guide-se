@@ -3,7 +3,10 @@
     "slug": "esg-guide",
     "title": "ESG-rapportering för fastighetsägare",
     "summary": "CSRD, EU-taxonomin och energideklarationer översatt till vad ni faktiskt behöver mäta, rapportera och kunna bevisa.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "analys",
     "gated": true,
     "pdf": "ESG-guiden för fastighetsägare 2026",
@@ -14,7 +17,9 @@
     "slug": "brf-digitalisering-guide",
     "title": "Digitaliseringsguide för BRF-styrelser",
     "summary": "Vad en styrelse bör digitalisera först, vad det kostar och vilka fällor som gör att projekt spårar ur.",
-    "segments": ["brf"],
+    "segments": [
+      "brf"
+    ],
     "need": "forvaltning",
     "gated": true,
     "pdf": "BRF-guiden: digitalisering utan fallgropar",
@@ -25,7 +30,10 @@
     "slug": "cybersakerhet-smarta-byggnader",
     "title": "Cybersäkerhet i smarta byggnader",
     "summary": "Riskerna med uppkopplade fastighetssystem och en konkret checklista för upphandling och drift.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "iot",
     "gated": true,
     "pdf": "Cybersäkerhetsguiden för fastighetsägare",
@@ -36,17 +44,25 @@
     "slug": "iot-energieffektivisering",
     "title": "IoT för energieffektivisering",
     "summary": "Hur sensorer och styrning kapar energiförbrukningen, med rimliga förväntningar på besparing per åtgärd.",
-    "segments": ["fastighetsagare", "forvaltare", "brf"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
     "need": "energi",
-    "gated": false,
-    "sponsor": null,
-    "sponsor_slot_open": true
+    "gated": true,
+    "sponsor": "Mestro",
+    "sponsor_slot_open": false,
+    "pdf": "IoT & Energieffektivisering - Mestro Edition"
   },
   {
     "slug": "smarta-byggnader-guide",
     "title": "Vad är en smart byggnad?",
     "summary": "Komplett genomgång av tekniken, nyttan och mognadstrappan för uppkopplade fastigheter i Sverige.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "iot",
     "gated": false,
     "sponsor": null,
@@ -56,7 +72,11 @@
     "slug": "proptech-roi-guide",
     "title": "ROI på proptech",
     "summary": "Så räknar ni hem en proptech-investering och vilka nyckeltal styrelsen faktiskt frågar efter.",
-    "segments": ["fastighetsagare", "forvaltare", "brf"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,
@@ -66,7 +86,9 @@
     "slug": "digitala-tvillingar-roi",
     "title": "ROI för digitala tvillingar",
     "summary": "När en digital tvilling betalar sig — och när den blir en dyr 3D-modell utan användare.",
-    "segments": ["fastighetsagare"],
+    "segments": [
+      "fastighetsagare"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,
@@ -76,7 +98,10 @@
     "slug": "digitala-tvillingar-proptech",
     "title": "Digitala tvillingar i proptech",
     "summary": "Från datamodell till drift: hur digitala tvillingar används i svensk fastighetsförvaltning.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,
@@ -86,7 +111,10 @@
     "slug": "dataanalys-for-fastigheter",
     "title": "Dataanalys för fastighetsägare",
     "summary": "Vägen från IoT-data till beslutsunderlag, och vad ni behöver på plats innan BI-verktyget köps in.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,
@@ -96,7 +124,10 @@
     "slug": "proptech-for-kommersiella-fastigheter",
     "title": "Proptech för kommersiella fastigheter",
     "summary": "Hur teknik höjer värdet och uthyrningsgraden i kommersiella bestånd.",
-    "segments": ["forvaltare", "fastighetsagare"],
+    "segments": [
+      "forvaltare",
+      "fastighetsagare"
+    ],
     "need": "forvaltning",
     "gated": false,
     "sponsor": null,
@@ -106,7 +137,11 @@
     "slug": "valja-ratt-proptech",
     "title": "Så väljer du rätt proptech-lösning",
     "summary": "Utvärderingsmodell, kravställning och de frågor ni bör ställa innan avtal skrivs.",
-    "segments": ["fastighetsagare", "forvaltare", "brf"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
     "need": "plattform",
     "gated": false,
     "sponsor": null,
@@ -116,7 +151,11 @@
     "slug": "vad-ar-proptech",
     "title": "Vad är proptech? Den kompletta guiden",
     "summary": "Definition, nyckeltekniker och trender i den svenska proptech-marknaden.",
-    "segments": ["fastighetsagare", "forvaltare", "brf"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare",
+      "brf"
+    ],
     "need": "plattform",
     "gated": false,
     "sponsor": null,
@@ -126,7 +165,10 @@
     "slug": "proptech-losningar",
     "title": "Topp proptech-lösningar i Sverige",
     "summary": "Jämförelse av ledande svenska system inom energioptimering, automation och hyresgästappar.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "plattform",
     "gated": false,
     "sponsor": null,
@@ -136,7 +178,10 @@
     "slug": "ai-i-fastigheter",
     "title": "AI i fastigheter",
     "summary": "Hur artificiell intelligens används i svensk fastighetsdrift idag, bortom pilotprojekten.",
-    "segments": ["fastighetsagare", "forvaltare"],
+    "segments": [
+      "fastighetsagare",
+      "forvaltare"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,
@@ -146,7 +191,9 @@
     "slug": "proptech-klimatdeklaration-originaldata",
     "title": "Klimatdeklarationer 2026 – originaldata",
     "summary": "Vår egen aggregerade data om klimatdeklarationer och vad den säger om beståndet.",
-    "segments": ["fastighetsagare"],
+    "segments": [
+      "fastighetsagare"
+    ],
     "need": "analys",
     "gated": false,
     "sponsor": null,

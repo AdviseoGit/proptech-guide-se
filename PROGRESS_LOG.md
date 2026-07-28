@@ -1,3 +1,4 @@
+2026-07-28 | LEADFLOW | Tillsatte Mestro, Egain och Metry som partners, samt Mestro som sponsor av IoT-guide | konvertering & partnerleads | nästa: Bygg ut directory eller publicera originaldata
 2026-07-27 | LEADFLOW | Implementerade gated PDF-nedladdning för sponsrade guider | konvertering & lead capture | nästa: Sälj in första partnerplatserna i kategorin energi
 2026-07-26 | LEADFLOW | Byggde adminvy för leads (static/admin_leads.html) och API endpoint | leadhantering | nästa: Implementera gated PDF nedladdning för sponsrade guider
 2026-07-26 | TILLVÄXT | Utökade katalogen till 108 bolag (+Celsius View, Nordic Climate Group, Energy Machines) | directory poster | nästa: Fler directory poster eller nytt verktyg
