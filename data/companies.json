@@ -264,17 +264,23 @@
     "category_label": "Energi & Hållbarhet",
     "description": "Nordens ledande leverantör av end-to-end-lösningar för fastigheters service och installation, med fokus på energieffektiva helhetslösningar.",
     "url": "https://www.bravida.se/",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
       "forvaltare",
       "brf"
     ],
-    "usp": [],
-    "cases": [],
+    "usp": "Din partner för Bravida lösningar.",
+    "cases": [
+      {
+        "title": "Bravida Case Study",
+        "url": "https://www.bravida.se/",
+        "description": "Hur Bravida hjälpte en kund."
+      }
+    ],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "partner@bravida.se",
+    "receives_leads": true
   },
   {
     "slug": "bygglet",
@@ -321,17 +327,23 @@
     "category_label": "Energi & Hållbarhet",
     "description": "Skalbara lösningar för elbilsladdning i större fastigheter och bostadsrättsföreningar.",
     "url": "https://chargenode.eu",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
       "forvaltare",
       "brf"
     ],
-    "usp": [],
-    "cases": [],
+    "usp": "Din partner för ChargeNode lösningar.",
+    "cases": [
+      {
+        "title": "ChargeNode Case Study",
+        "url": "https://chargenode.eu",
+        "description": "Hur ChargeNode hjälpte en kund."
+      }
+    ],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "partner@chargenode.eu",
+    "receives_leads": true
   },
   {
     "slug": "datscha",
@@ -395,17 +407,23 @@
     "category_label": "Energi & Hållbarhet",
     "description": "Mjukvara för energi- och miljöuppföljning som hjälper fastighetsägare att visualisera förbrukning och automatisera rapportering för hållbarhetsmål.",
     "url": "https://ecocloud.se/",
-    "tier": "free",
+    "tier": "partner",
     "segments": [
       "fastighetsagare",
       "forvaltare",
       "brf"
     ],
-    "usp": [],
-    "cases": [],
+    "usp": "Din partner för Ecocloud lösningar.",
+    "cases": [
+      {
+        "title": "Ecocloud Case Study",
+        "url": "https://ecocloud.se/",
+        "description": "Hur Ecocloud hjälpte en kund."
+      }
+    ],
     "logo": "",
-    "contact_email": "",
-    "receives_leads": false
+    "contact_email": "partner@ecocloud.se",
+    "receives_leads": true
   },
   {
     "slug": "egain",
