@@ -13,3 +13,6 @@ https://proptechguiden.se/digital-trapphustavla-kalkylator | URL is unknown to G
 https://proptechguiden.se/leverantor/mestro.html | URL is unknown to Google | 2026-07-25 | Ny partner-profilsida, lagd i sitemap
 https://proptechguiden.se/leverantor/egain.html | URL is unknown to Google | 2026-07-25 | Ny partner-profilsida, lagd i sitemap
 https://proptechguiden.se/leverantor/metry.html | URL is unknown to Google | 2026-07-25 | Ny partner-profilsida, lagd i sitemap
+https://proptechguiden.se/leverantor/bravida.html | URL is unknown to Google | 2026-07-29 | Ny partner-profilsida, lagd i sitemap
+https://proptechguiden.se/leverantor/chargenode.html | URL is unknown to Google | 2026-07-29 | Ny partner-profilsida, lagd i sitemap
+https://proptechguiden.se/leverantor/ecocloud.html | URL is unknown to Google | 2026-07-29 | Ny partner-profilsida, lagd i sitemap
