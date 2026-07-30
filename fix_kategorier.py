@@ -1,4 +1,50 @@
-<!DOCTYPE html>
+import json
+
+with open('/data/workspace/projects/proptech-guide-se/data/companies.json', 'r') as f:
+    companies = json.load(f)
+
+# Count companies per category
+category_counts = {}
+category_labels = {}
+for c in companies:
+    cat = c.get('category', 'okategoriserat')
+    label = c.get('category_label', cat.title())
+    category_counts[cat] = category_counts.get(cat, 0) + 1
+    category_labels[cat] = label
+
+# Sort categories by count (descending)
+sorted_cats = sorted(category_counts.keys(), key=lambda k: category_counts[k], reverse=True)
+
+# Generate HTML cards
+cards_html = ""
+for cat in sorted_cats:
+    if cat == 'okategoriserat': continue
+    label = category_labels[cat]
+    count = category_counts[cat]
+    
+    # Generate some desc based on category
+    desc = {
+        "energi": "System för energioptimering, mätning och hållbarhetsrapportering (ESG).",
+        "forvaltning": "Digitala plattformar för felanmälan, rondering, avtal och ekonomisk förvaltning.",
+        "iot": "Uppkopplade sensorer, hårdvara och infrastruktur för smarta byggnader.",
+        "boende": "Boendeappar, kommunikation med hyresgäster och felanmälan.",
+        "analys": "BI-verktyg, AI, dataanalys och beslutsstöd för fastighetsportföljer.",
+        "plattform": "Öppna plattformar, integrationer och middleware (OS för byggnader).",
+        "uthyrning": "Digital uthyrning, marknadsföring av lokaler och matchning.",
+        "access": "Digitala lås, passersystem och behörighetshantering."
+    }.get(cat, f"Proptech-bolag inom {label.lower()}.")
+
+    cards_html += f"""
+<a href="/directory?kategori={cat}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
+  <div class="flex items-start justify-between gap-2 mb-2">
+    <h3 class="text-xl font-bold group-hover:text-sky-600">{label}</h3>
+    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">{count} bolag</span>
+  </div>
+  <p class="text-slate-600 text-sm">{desc}</p>
+</a>
+"""
+
+html_template = """<!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
@@ -70,71 +116,7 @@
 <p class="text-xl text-slate-600 mb-12 max-w-2xl">Utforska det svenska proptech-landskapet uppdelat per affärsområde och teknisk nisch.</p>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<a href="/directory?kategori=energi" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Energi & Hållbarhet</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">30 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">System för energioptimering, mätning och hållbarhetsrapportering (ESG).</p>
-</a>
-
-<a href="/directory?kategori=forvaltning" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Digital Förvaltning & Drift</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">27 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Digitala plattformar för felanmälan, rondering, avtal och ekonomisk förvaltning.</p>
-</a>
-
-<a href="/directory?kategori=plattform" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Öppen Plattform</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">14 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Öppna plattformar, integrationer och middleware (OS för byggnader).</p>
-</a>
-
-<a href="/directory?kategori=iot" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">IoT & Hårdvara</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">13 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Uppkopplade sensorer, hårdvara och infrastruktur för smarta byggnader.</p>
-</a>
-
-<a href="/directory?kategori=boende" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Boendeapp & Hyresgäst</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">11 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Boendeappar, kommunikation med hyresgäster och felanmälan.</p>
-</a>
-
-<a href="/directory?kategori=access" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Lås & Passagesystem</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">7 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Digitala lås, passersystem och behörighetshantering.</p>
-</a>
-
-<a href="/directory?kategori=uthyrning" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Uthyrning & Marknad</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">4 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">Digital uthyrning, marknadsföring av lokaler och matchning.</p>
-</a>
-
-<a href="/directory?kategori=analys" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition flex flex-col">
-  <div class="flex items-start justify-between gap-2 mb-2">
-    <h3 class="text-xl font-bold group-hover:text-sky-600">Analys & AI</h3>
-    <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">2 bolag</span>
-  </div>
-  <p class="text-slate-600 text-sm">BI-verktyg, AI, dataanalys och beslutsstöd för fastighetsportföljer.</p>
-</a>
-
+""" + cards_html + """
 </div>
 
 <div class="mt-16 bg-white border border-slate-200 p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
@@ -188,4 +170,8 @@
 </div>
 </footer>
 </body>
-</html>
+</html>"""
+
+with open('/data/workspace/projects/proptech-guide-se/static/kategorier.html', 'w') as f:
+    f.write(html_template)
+
