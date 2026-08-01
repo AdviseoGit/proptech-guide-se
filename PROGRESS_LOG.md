@@ -1,3 +1,4 @@
+2026-08-01 | TILLVÄXT | Utökade katalogen med 3 proptech-bolag (+Iqnite, Nivéus, Noda) till 114 | katalogstorlek | nästa: Ny artikel eller directory poster
 2026-07-31 | TEKNIK | Raderade mer.html, lagade trasiga länkar och städade navigeringen | design-skuld och nav | nästa: Fler directory poster
 2026-07-30 | TILLVÄXT | Utökade katalogen till 111 bolag (+EcoGuard, Infracontrol, Fastout) samt fixade layout på kategorier-sidan | directory poster & nav UX | nästa: Fler directory poster eller nytt verktyg
 2026-07-29 | LEADFLOW | Sålde in 3 nya partnerplatser i kategori energi (Bravida, ChargeNode, Ecocloud) | monetisering & partnerleads | nästa: Bygg ny content-sida eller optimera title/meta

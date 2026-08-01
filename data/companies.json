@@ -2018,5 +2018,39 @@
         "description": "Skapar interaktiva 360°-drönarvyer och digitala tvillingar av områden och fastigheter. Används flitigt av mäklare och fastighetsbolag för uthyrning och marknadsföring.",
         "category": "uthyrning",
         "category_label": "Uthyrning & Marknad"
+    },
+    {
+        "name": "Iqnite",
+        "url": "https://www.iqnite.se/",
+        "description": "Molnbaserad plattform för fastighetsautomation och energioptimering. Integrerar och styr olika fastighetssystem för ökad effektivitet.",
+        "category": "energi",
+        "category_label": "Energi & Hållbarhet",
+        "segments": [
+            "fastighetsagare",
+            "forvaltare"
+        ]
+    },
+    {
+        "name": "Nivéus",
+        "url": "https://niveus.se/",
+        "description": "Digital plattform för fastighetsskötsel och drift. Förenklar felanmälan, rondering och tillsyn för fastighetstekniker.",
+        "category": "forvaltning",
+        "category_label": "Fastighetssystem",
+        "segments": [
+            "forvaltare",
+            "fastighetsagare"
+        ]
+    },
+    {
+        "name": "Noda",
+        "url": "https://noda.se/",
+        "description": "Intelligent plattform för energioptimering och styrning av fjärrvärme och kylsystem, driven av AI och data från smarta mätare.",
+        "category": "energi",
+        "category_label": "Energi & Hållbarhet",
+        "segments": [
+            "fastighetsagare",
+            "forvaltare",
+            "brf"
+        ]
     }
 ]
