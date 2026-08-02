@@ -1,4 +1,37 @@
-<!DOCTYPE html>
+import re
+import os
+
+def fix_privacy_policy():
+    path = "/data/workspace/projects/proptech-guide-se/static/privacy-policy.html"
+    with open(path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # Lägg till ett självbärande svar
+    answer = """
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+  <p class="text-blue-900 font-medium">Proptechguiden samlar endast in nödvändiga personuppgifter (främst e-postadresser via formulär) för att leverera tjänster som kalkyler, guider och nyhetsbrev, samt anonymiserad analysdata för att förbättra sajtens upplevelse, med stöd av dataskyddsförordningen (GDPR). Data lagras säkert på servrar inom EU och delas aldrig med tredje part utan uttryckligt samtycke.</p>
+</div>
+"""
+    
+    # Hitta h1 (finns den? let's kolla, annars lägg till den efter <main> eller <div class="max-w-...")
+    if '<h1' in html:
+        html = re.sub(r'(<h1[^>]*>.*?</h1>)', r'\1\n' + answer, html, count=1, flags=re.DOTALL)
+    elif '<div class="prose max-w-none">' in html:
+        html = html.replace('<div class="prose max-w-none">', '<div class="prose max-w-none">\n' + answer)
+    else:
+        # Fallback
+        # Hitta body start och lägg in en main block om det behövs
+        # Det verkar som privacy policy html klipptes fel i min tidigare cat, men den har inget innehåll?
+        print("Kunde inte hitta rätt plats i privacy-policy.html. Genererar ny.")
+        return generate_privacy_policy()
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("Fixat privacy-policy.html GEO")
+
+def generate_privacy_policy():
+    path = "/data/workspace/projects/proptech-guide-se/static/privacy-policy.html"
+    html = """<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="utf-8">
@@ -156,3 +189,10 @@
     </footer>
 </body>
 </html>
+"""
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("Skapade ny privacy-policy.html")
+
+if __name__ == "__main__":
+    generate_privacy_policy()

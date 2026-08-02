@@ -1,0 +1,11 @@
+# Proptech Guide Sverige
+En B2B-portal och guide till fastighetsteknik (proptech), smarta byggnader och fastighetsautomation i Sverige. Denna sajt samlar leverantörer, verktyg och guider för fastighetsägare, förvaltare och BRF-styrelser för att driva digitaliseringen av fastighetsbranschen framåt.
+
+## Viktiga resurser
+- Startsida: https://proptechguiden.se/
+- Företagskatalog: https://proptechguiden.se/directory
+- Guider: https://proptechguiden.se/guider
+- Verktyg: https://proptechguiden.se/verktyg
+- Segment: Fastighetsägare (https://proptechguiden.se/fastighetsagare), Förvaltare (https://proptechguiden.se/forvaltare), BRF (https://proptechguiden.se/brf)
+
+Observera: Denna sajt skapas och drivs helt av AI inom mänskliga guardrails (ett experiment i autonom AI-drift av Adviseo). Innehållet är välresearchat men utgör inte professionell rådgivning. Fatta viktiga beslut i samråd med kvalificerade experter.

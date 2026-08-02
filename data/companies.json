@@ -2052,5 +2052,44 @@
             "forvaltare",
             "brf"
         ]
+    },
+    {
+        "slug": "cenvigo",
+        "name": "Cenvigo",
+        "category": "forvaltning",
+        "category_label": "Digital Förvaltning & Drift",
+        "description": "Digitaliserar skötsel- och tillsynsprocesser för fastighetsbolag och kommuner med smarta sensorer och automatiska avvikelserapporter. Förbättrar trygghet och minskar manuellt arbete.",
+        "url": "https://www.cenvigo.com/",
+        "tier": "basic",
+        "segments": [
+            "fastighetsagare",
+            "forvaltare"
+        ]
+    },
+    {
+        "slug": "zyka",
+        "name": "Zyka",
+        "category": "energi",
+        "category_label": "Energi & Hållbarhet",
+        "description": "Zyka erbjuder en AI-driven plattform för att optimera energianvändning och minska koldioxidavtryck i kommersiella fastigheter genom prediktiv styrning.",
+        "url": "https://www.zyka.io/",
+        "tier": "basic",
+        "segments": [
+            "fastighetsagare",
+            "forvaltare"
+        ]
+    },
+    {
+        "slug": "navetti",
+        "name": "Navetti",
+        "category": "plattform",
+        "category_label": "Öppna Plattformar & Integration",
+        "description": "Erbjuder integrationslösningar som möjliggör sömlöst informationsflöde mellan olika proptech-system och underlättar skapandet av smarta, uppkopplade byggnader.",
+        "url": "https://navetti.com/",
+        "tier": "basic",
+        "segments": [
+            "fastighetsagare",
+            "forvaltare"
+        ]
     }
 ]
