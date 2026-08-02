@@ -1,4 +1,6 @@
 {
-  "hard_findings": [],
-  "count": 0
+  "hard_findings": [
+    "error-page|https://proptechguiden.se/mer|404"
+  ],
+  "count": 1
 }
