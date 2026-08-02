@@ -1,4 +1,4 @@
-2026-08-02 | TILLVÄXT | Utökade katalogen till 117 bolag (+Cenvigo, Zyka, Navetti) och lade till /llms.txt | katalogstorlek & AI-citerbarhet | nästa: Fler directory poster eller nytt verktyg
+2026-08-02 | TILLVÄXT | Utökade katalogen till 117 bolag (+Cenvigo, Zyka, Navetti), lade till /llms.txt och fixade GEO-faktorer på om-sajten/privacy-policy | katalogstorlek & AI-citerbarhet | nästa: Fler directory poster eller nytt verktyg
 2026-08-01 | TILLVÄXT | Utökade katalogen med 3 proptech-bolag (+Iqnite, Nivéus, Noda) till 114 | katalogstorlek | nästa: Ny artikel eller directory poster
 2026-07-31 | TEKNIK | Raderade mer.html, lagade trasiga länkar och städade navigeringen | design-skuld och nav | nästa: Fler directory poster
 2026-07-30 | TILLVÄXT | Utökade katalogen till 111 bolag (+EcoGuard, Infracontrol, Fastout) samt fixade layout på kategorier-sidan | directory poster & nav UX | nästa: Fler directory poster eller nytt verktyg
