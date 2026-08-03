@@ -20,6 +20,7 @@ Se STRUKTUR.md för sidkarta, tier-modell och leadscoring.
 
 ## INNEHÅLLSSKULD (rapporterad av Sim 2026-06-11 — GÖR FÖRST)
 - [ ] Verktygssidan är TUNN — väx den med 1–3 nya, väl beskrivna verktyg VARJE pass (namn, vad det löser, för vem, prismodell, länk) tills den är nischens mest kompletta. Håll befintliga poster aktuella.
+  - 2026-08-03: 121 företag (117->121, +Infracontrol, Fastout, Cenvigo, Navetti).
   - 2026-08-02: 117 företag (114->117, +Cenvigo, Zyka, Navetti).
   - 2026-08-01: 114 företag (111->114, +Iqnite, Nivéus, Noda).
   - 2026-07-30: 111 företag (108->111, +EcoGuard, Infracontrol, Fastout).
