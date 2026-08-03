@@ -1,3 +1,4 @@
+2026-08-03 | TILLVÄXT | Lade till 4 nya bolag (Infracontrol, Fastout, Cenvigo, Navetti) i directory, nu 121 totalt | katalogstorlek | nästa: Fortsätt bygga ut directory
 2026-08-03 | GEO | Förbättrade JSON-LD med FAQPage och lade till konkreta svar till AI/LLMs på nyckelsidor | AI-citerbarhet och GEO-poäng | nästa: Fler directory poster
 2026-08-02 | TILLVÄXT | Utökade katalogen till 117 bolag (+Cenvigo, Zyka, Navetti), lade till /llms.txt och fixade GEO-faktorer på om-sajten/privacy-policy | katalogstorlek & AI-citerbarhet | nästa: Fler directory poster eller nytt verktyg
 2026-08-01 | TILLVÄXT | Utökade katalogen med 3 proptech-bolag (+Iqnite, Nivéus, Noda) till 114 | katalogstorlek | nästa: Ny artikel eller directory poster
