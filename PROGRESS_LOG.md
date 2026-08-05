@@ -1,3 +1,4 @@
+2026-08-05 | GEO | Optimerade om-sajten.html, privacy-policy.html och verktyg.html för AI-citerbarhet | GEO-poäng & FAQ schema | nästa: Implementera GA4 key events för lead_submit
 2026-08-04 | GEO | GEO-förbättring på for-leverantorer.html (schema + H2) | Högre GEO-poäng | nästa: Fixa GEO för om-sajten.html
 2026-08-03 | TILLVÄXT | Lade till 4 nya bolag (Infracontrol, Fastout, Cenvigo, Navetti) i directory, nu 121 totalt | katalogstorlek | nästa: Fortsätt bygga ut directory
 2026-08-03 | GEO | Förbättrade JSON-LD med FAQPage och lade till konkreta svar till AI/LLMs på nyckelsidor | AI-citerbarhet och GEO-poäng | nästa: Fler directory poster
@@ -18,6 +19,3 @@
 2026-07-22 | DATA | Publicera originaldata-artikel om klimatdeklarationer baserat på aggregerad data | SEO & expertis | nästa: Bygg ut directory med 5 nya aktörer
 2026-07-21 | TILLVÄXT | Bygg besparingskalkylator för digitala trapphustavlor | leadflow & konvertering | nästa: originaldata artikel baserad på kalkylator-leads
 2026-07-20 | TILLVÄXT | Expandera directory till 135 bolag (+Schneider Electric, Siemens, Caverion, Bravida, Assemblin, Kiona, Myrspoven, Pigello, DeDu, Tmpl) | directory poster | nästa: Publicera original-data-artikel eller optimera startsidan för SEO
-2026-07-19 | TILLVÄXT | Ny AI-för-fastigheter intent-sida med uppdaterad design | konvertering & SEO | nästa: Fler directory poster eller nytt verktyg
-2026-07-18 | TILLVÄXT | Expandera directory till 125 bolag (+Nivika, Hyresvärd.se, Smartvatten, HomeRun, Paligo, Iqnect, InviSense, Sally R, Noda, RCO, Hydda, Infobric, Flowbird, Amido, Propely) | directory poster | nästa: Bygg innehåll/sida för sökordet 'smarta byggnader' (klättrar)
-2026-07-17 | TILLVÄXT | Expandera directory till 115 bolag, fixade global navigerings-meny saknad länk | directory poster & nav UX | nästa: Fler directory poster eller publicera datadriven artikel
