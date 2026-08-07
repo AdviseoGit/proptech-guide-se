@@ -1,3 +1,4 @@
+-e 2026-08-07 | GEO | Förbättrade AI-citerbarhet med siffror och priser på startsida, katalog, guider, kategorier och om-sajten | GEO-poäng | nästa: Fler directory poster eller nytt verktyg
 2026-08-06 | GEO | Fixade GEO issues på index, kategorier, directory, guider, privacy-policy, och om-sajten | AI-citerbarhet och GEO-poäng | nästa: Fler directory poster eller nytt verktyg
 2026-08-05 | GEO | Optimerade om-sajten.html, privacy-policy.html och verktyg.html för AI-citerbarhet | GEO-poäng & FAQ schema | nästa: Implementera GA4 key events för lead_submit
 2026-08-04 | GEO | GEO-förbättring på for-leverantorer.html (schema + H2) | Högre GEO-poäng | nästa: Fixa GEO för om-sajten.html
