@@ -1,3 +1,4 @@
+2026-08-09 | MÄTNING | Fixade leads-mätningen med /api/stats/leads (0 leads hitintills) | kampanj 1/5 | nästa: Felsök regressionen på kalkylatorn och startsidan
 2026-08-09 | GEO | Standardiserade GEO/siffror (15 procent, 25 kWh, 3 år) på startsidan och nyckelsidor för att vinna AI-svar | GEO-poäng | nästa: Fler directory poster eller UX (key events)
 2026-08-08 | DESIGN | Fixade mobilmenyns paddings, margins och textstorlekar i hela sajten (menybloat & enhetsgap) | mobil engagemangstid | nästa: Implementera GA4 key events för lead_submit
 -e 2026-08-07 | GEO | Förbättrade AI-citerbarhet med siffror och priser på startsida, katalog, guider, kategorier och om-sajten | GEO-poäng | nästa: Fler directory poster eller nytt verktyg

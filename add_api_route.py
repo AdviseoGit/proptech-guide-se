@@ -1,62 +1,68 @@
 import os
+import sys
 
-main_py_path = "/data/workspace/projects/proptech-guide-se/main.py"
-
-with open(main_py_path, 'r', encoding='utf-8') as f:
+main_file = "main.py"
+with open(main_file, "r") as f:
     content = f.read()
 
-if 'from fastapi import BackgroundTasks' not in content:
-    content = content.replace('from fastapi import FastAPI, Request, HTTPException', 'from fastapi import FastAPI, Request, HTTPException, BackgroundTasks, Body')
+if "/api/stats/leads" in content:
+    print("Route already exists.")
+    sys.exit(0)
 
-if '/api/roi-lead' not in content:
-    api_code = """
-@app.post("/api/roi-lead")
-async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Body(...)):
-    email = payload.get("email")
-    data = payload.get("data", {})
-    source = payload.get("source", "roi-kalkylator")
-    
-    if not email:
-        raise HTTPException(status_code=400, detail="Email is required")
-        
-    # Process lead asynchronously (send email, save to db, etc)
-    # For now, we simulate processing
-    print(f"New ROI lead received: {email}")
-    print(f"Data: {data}")
-    
-    # Store lead data locally (append to a JSON lines file for data accumulation)
+# Vi vill lägga till en endpoint:
+# @app.get("/api/stats/leads")
+# async def stats_leads():
+# ...
+
+new_route = """
+@app.get("/api/stats/leads")
+async def stats_leads():
+    import os
     import json
-    from datetime import datetime
+    from datetime import datetime, timedelta, timezone
+
+    leads_file = "data/leads.jsonl"
+    total = 0
+    last_7_days = 0
     
-    lead_entry = {
-        "timestamp": datetime.now().isoformat(),
-        "email": email,
-        "source": source,
-        "data": data
-    }
-    
-    # Save to data directory to accumulate own data
-    data_dir = Path("data")
-    data_dir.mkdir(exist_ok=True)
-    with open(data_dir / "leads.jsonl", "a", encoding="utf-8") as f:
-        f.write(json.dumps(lead_entry) + "\\n")
-        
-    # Forward to the site owner
-    try:
-        from mailer import send_email
-        email_body = f"Nytt lead från ROI-kalkylatorn!\\n\\nE-post: {email}\\nKälla: {source}\\nData: {json.dumps(data, indent=2)}"
-        background_tasks.add_task(send_email, "simon@adviseo.se", "Nytt lead: Proptech ROI Kalkylator", email_body)
-    except Exception as e:
-        print(f"Failed to queue email task: {e}")
-        
-    return {"status": "success", "message": "Lead received"}
+    if os.path.exists(leads_file):
+        try:
+            with open(leads_file, "r") as f:
+                lines = f.readlines()
+                total = len(lines)
+                
+                # Check last 7 days
+                now = datetime.now(timezone.utc)
+                seven_days_ago = now - timedelta(days=7)
+                
+                for line in lines:
+                    try:
+                        data = json.loads(line)
+                        # Check timestamp or created_at
+                        ts_str = data.get("created_at") or data.get("timestamp")
+                        if ts_str:
+                            try:
+                                # Try parsing ISO format
+                                # simple check:
+                                if "T" in ts_str:
+                                    ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+                                    if ts.tzinfo is None:
+                                        ts = ts.replace(tzinfo=timezone.utc)
+                                    if ts > seven_days_ago:
+                                        last_7_days += 1
+                                else:
+                                    pass # skip if cant parse easily
+                            except Exception:
+                                pass
+                    except json.JSONDecodeError:
+                        pass
+        except Exception:
+            pass
+            
+    return {"total": total, "last_7_days": last_7_days}
 """
-    
-    # Find a good place to insert (before if __name__ == "__main__":)
-    insert_pos = content.rfind('if __name__ == "__main__":')
-    if insert_pos != -1:
-        content = content[:insert_pos] + api_code + '\n' + content[insert_pos:]
-        
-        with open(main_py_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print("Added /api/roi-lead route to main.py")
+
+with open(main_file, "a") as f:
+    f.write(new_route)
+
+print("Added /api/stats/leads route to main.py")
