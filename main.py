@@ -7,7 +7,10 @@ import uvicorn
 
 app = FastAPI(title="Proptech Guide Sverige")
 
-import psycopg2
+try:
+    import psycopg2
+except ImportError:
+    pass
 from pydantic import BaseModel, EmailStr, ValidationError
 
 import lead_engine
@@ -173,25 +176,6 @@ async def favicon():
     return FileResponse("static/favicon.svg")
 
 # Catch-all route to serve any .html file from the static directory from the root URL
-@app.get("/{filename:path}", response_class=HTMLResponse)
-async def serve_html(filename: str):
-    print(f"Attempting to serve: {filename}")
-    # Append .html to the filename and check if it exists in the static directory
-    file_path = os.path.join("static", f"{filename}.html")
-    print(f"Checking for file at: {file_path}")
-    if os.path.exists(file_path):
-        return FileResponse(file_path)
-
-    # Filer som redan har ändelse, t.ex. /cookie-banner.min.js och /lead-engine.js.
-    # Sidorna länkar dem från roten, så de måste kunna serveras utan /static-prefix.
-    direct = os.path.normpath(os.path.join("static", filename))
-    if direct.startswith("static" + os.sep) and os.path.isfile(direct):
-        return FileResponse(direct)
-
-    # Let FastAPI handle 404 if it's not an existing HTML file
-    raise HTTPException(status_code=404, detail="Item not found")
-
-
 @app.post("/api/roi-lead")
 async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Body(...)):
     """Äldre kalkylator-endpoint. Behålls som alias och matas in i lead engine
@@ -209,9 +193,7 @@ async def handle_roi_lead(background_tasks: BackgroundTasks, payload: dict = Bod
     return {"status": "success", "message": "Lead received"}
 
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+
 
 
 
@@ -264,26 +246,64 @@ async def stats_leads():
                 
                 for line in lines:
                     try:
-                        data = json.loads(line)
-                        # Check timestamp or created_at
-                        ts_str = data.get("created_at") or data.get("timestamp")
-                        if ts_str:
-                            try:
-                                # Try parsing ISO format
-                                # simple check:
-                                if "T" in ts_str:
-                                    ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-                                    if ts.tzinfo is None:
-                                        ts = ts.replace(tzinfo=timezone.utc)
-                                    if ts > seven_days_ago:
-                                        last_7_days += 1
-                                else:
-                                    pass # skip if cant parse easily
-                            except Exception:
-                                pass
-                    except json.JSONDecodeError:
+                        record = json.loads(line)
+                        created_at_str = record.get("created_at") or record.get("timestamp")
+                        if created_at_str:
+                            created_at = datetime.fromisoformat(created_at_str.replace("Z", "+00:00"))
+                            if created_at.tzinfo is None:
+                                created_at = created_at.replace(tzinfo=timezone.utc)
+                            if created_at > seven_days_ago:
+                                last_7_days += 1
+                    except Exception:
                         pass
         except Exception:
             pass
             
+    # Also check DB for legacy leads
+    try:
+        if DATABASE_URL:
+            # We must import psycopg2 here, and handle ModuleNotFoundError just in case
+            try:
+                import psycopg2
+                conn = psycopg2.connect(DATABASE_URL)
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM proptech_leads")
+                db_total = cur.fetchone()[0]
+                cur.execute("SELECT COUNT(*) FROM proptech_leads WHERE created_at > NOW() - INTERVAL '7 days'")
+                db_7d = cur.fetchone()[0]
+                
+                total = max(total, db_total)
+                last_7_days = max(last_7_days, db_7d)
+                
+                cur.close()
+                conn.close()
+            except ImportError:
+                pass
+    except Exception:
+        pass
+            
     return {"total": total, "last_7_days": last_7_days}
+
+
+@app.get("/{filename:path}", response_class=HTMLResponse)
+async def serve_html(filename: str):
+    print(f"Attempting to serve: {filename}")
+    # Append .html to the filename and check if it exists in the static directory
+    file_path = os.path.join("static", f"{filename}.html")
+    print(f"Checking for file at: {file_path}")
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
+
+    # Filer som redan har ändelse, t.ex. /cookie-banner.min.js och /lead-engine.js.
+    # Sidorna länkar dem från roten, så de måste kunna serveras utan /static-prefix.
+    direct = os.path.normpath(os.path.join("static", filename))
+    if direct.startswith("static" + os.sep) and os.path.isfile(direct):
+        return FileResponse(direct)
+
+    # Let FastAPI handle 404 if it's not an existing HTML file
+    raise HTTPException(status_code=404, detail="Item not found")
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run(app, host="0.0.0.0", port=port)
