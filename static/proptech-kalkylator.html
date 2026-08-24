@@ -12,7 +12,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ROI Kalkylator för PropTech | Proptech Guide Sverige</title>
+<title>PropTech ROI-kalkylator | Räkna ut din avkastning & spara pengar</title>
 <meta content="Beräkna potentiell avkastning (ROI) för dina PropTech-investeringar. Ett verktyg för fastighetsägare." name="description"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -111,14 +111,8 @@
 </div>
 </div>
 </div>
-<div class="mt-8 pt-6 border-t border-slate-200 text-center">
-<h3 class="text-xl font-bold mb-2">Spara dina resultat</h3>
-<p class="text-slate-600 mb-4">Ange din e-post för att få en sammanfattning av dina resultat.</p>
-<form class="flex justify-center" id="lead-form">
-<input class="w-full max-w-sm px-4 py-3 rounded-l-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow" id="email" placeholder="Din e-postadress" required="" type="email"/>
-<button class="bg-sky-600 text-white font-bold px-6 py-3 rounded-r-xl hover:bg-sky-700 transition-colors" type="submit">Spara</button>
-</form>
-<p class="mt-4 text-emerald-600" id="form-message"></p>
+<div class="mt-8 pt-6 border-t border-slate-200 text-center" id="offert">
+<div data-intro="Tre snabba frågor så matchar vi er mot leverantörer som arbetar med er storlek på bestånd." data-lead-form="" data-source="proptech-kalkylator" data-title="Få offerter baserat på er kalkyl"></div>
 </div>
 </div>
 </main>
@@ -202,31 +196,11 @@
         document.getElementById('adminCost').addEventListener('input', calculateROI);
         document.getElementById('investmentCost').addEventListener('input', calculateROI);
         
-        document.getElementById('lead-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const messageEl = document.getElementById('form-message');
-            messageEl.textContent = 'Sparar...';
 
-            try {
-                const response = await fetch('/api/lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
-                });
-                if (response.ok) {
-                    messageEl.textContent = 'Tack! Dina resultat har skickats till din e-post.';
-                    document.getElementById('email').value = '';
-                } else {
-                    messageEl.textContent = 'Något gick fel. Försök igen.';
-                }
-            } catch (error) {
-                messageEl.textContent = 'Ett fel uppstod. Kontrollera din anslutning.';
-            }
-        });
 
         // Initial calculation
         calculateROI();
     </script>
+<script src="/lead-engine.js"></script>
 </body>
 </html>
