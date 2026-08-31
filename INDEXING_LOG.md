@@ -9,3 +9,5 @@ https://proptechguiden.se/leverantor/mestro | URL is unknown to Google | 2026-08
 https://proptechguiden.se/leverantor/metry | URL is unknown to Google | 2026-08-01 | Partnerprofil tillagd i sitemap + internt länkad från directory
 https://proptechguiden.se/privacy-policy | Discovered - currently not indexed | 2026-08-06 | Internt länkad
 https://proptechguiden.se/guider | Discovered - currently not indexed | 2026-08-06 | Internt länkad
+https://proptechguiden.se/digital-trapphustavla-kalkylator.html | Discovered - currently not indexed | 2026-08-31 | URL omdöpt till html extension (åtgärdat canonical)
+https://proptechguiden.se/directory.html | Discovered - currently not indexed | 2026-08-31 | Omdöpt
