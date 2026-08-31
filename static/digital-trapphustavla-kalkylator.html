@@ -26,6 +26,23 @@
             -webkit-text-fill-color: transparent;
         }
     </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Besparingskalkylator för digitala trapphustavlor",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Räkna ut exakt hur mycket din BRF kan spara genom att byta ut papperslappar och manuell administration mot en digital informationsskärm.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "dateModified": "2026-08-31"
+}
+</script>
+
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
 <!-- Navbar (Included dynamically or replicated here) -->
@@ -67,6 +84,7 @@
 <div class="text-center mb-12">
 <h1 class="text-4xl font-extrabold mb-4">Besparingskalkylator: <span class="gradient-text">Digital Trapphustavla</span></h1>
 <p class="text-xl text-slate-600">Räkna ut exakt hur mycket din BRF kan spara genom att byta ut papperslappar och manuell administration mot en digital informationsskärm.</p>
+<p class="text-sm text-slate-400 mt-2">Uppdaterad 2026-08-31</p>
 </div>
 <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
 <form class="space-y-6" id="roi-form">
@@ -85,6 +103,7 @@
 </div>
 <div>
 <label class="block text-sm font-semibold text-slate-700 mb-1" for="timkostnad">Timkostnad för fastighetsskötare/administration (kr)</label>
+<p class="text-xs text-slate-500 mb-2">Genomsnittlig timkostnad kan refereras mot <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/arbetsmarknad/loner-och-arbetskostnader/arbetskostnadsindex-aki-for-arbetare-och-tjansteman-inom-privat-sektor/" class="text-sky-600 underline" target="_blank" rel="noopener nofollow">SCB Arbetskostnadsindex</a>.</p>
 <input class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors" id="timkostnad" min="100" type="number" value="450"/>
 </div>
 </div>
