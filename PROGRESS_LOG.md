@@ -1,3 +1,4 @@
+2026-09-07 | LEADFLOW | Ändrade referensen för leads-historik så att endpointen /api/stats/leads returnerar riktig lead count-data till scoreboarden | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Optimera leadsformulär och CTA:s på startsidan och kalkylatorn
 2026-08-31 | SYNLIGHET | GEO-optimerade nyckelsidor (trapphustavla/roi kalkylatorer, directory, guider) med schema, källor och strukturerade H2:or för att vända OSYNLIG trigger | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Integrera sponsor-pitch tydligare
 2026-08-24 | LEADFLOW | Bytte ut hardkodat formulär mot delad lead-engine widget på /proptech-kalkylator | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Optimera startsidan
 2026-08-10 | FIX | Åtgärdade FastAPI /api/stats/leads endpoint så att den returnerar riktig data | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Felsök varför kalkylatorn och startsidan tappade rank
