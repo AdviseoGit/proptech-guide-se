@@ -1,9 +1,12 @@
 ## AKTIV KAMPANJ
-Hypotes: Om vi fixar leads-mätningen och optimerar den största trafikläckan (digital-trapphustavla-kalkylator) och startsidan, så återtar vi tappade visningar och börjar se leads.
-Målsiffra: klick 0 -> 5, visningar 1278 -> 1500, leads 0 -> 1
-Löptid: pass 5 av 5
-Kill-kriterium: Har vi inte fått en enda lead eller vänt visningstrenden efter 5 pass avbryts optimeringen av kalkylatorn till förmån för partner/sponsor-bearbetning.
-Steg: [x] Koppla in leads endpoint (/api/stats/leads) [x] Felsök varför / och /digital-trapphustavla-kalkylator tappade rank/visningar [x] Åtgärda regressionen [x] Förbättra kalkylatorn för leads [x] Åtgärda bugg i leads endpoint så riktig data visas i scoreboard [ ] Integrera sponsor-pitch tydligare
+Hypotes: Om vi ökar antalet leads vi genererar och kopplar dem till våra partner-leverantörer kommer vi kunna bevisa för fler leverantörer att de bör betala för partnerplaceringar (vi har stagnation på 1 klick, vi behöver flytta leads för att affären ska växa och motivera mer innehåll/länkar).
+Målsiffra: leads 0 -> 10 (över 5 pass)
+Löptid: pass 2 av 5
+Kill-kriterium: Har leads inte rört sig efter 5 pass lägger vi ner lead-fokus och går all in på PR/Länkbygge istället.
+Steg: 
+[x] Steg 1: Fixa leads-mätningen med /api/stats/leads (så vi kan mäta utfallet).
+[x] Steg 2: Sätt in lead-widget på proptech-kalkylator (och verifiera e2e).
+[ ] Steg 3: Lägg in leads-widgets på fler relevanta ställen (t.ex. nyckelsidor, fler guider) / driv mer trafik dit.
 
 ## AVSLUTADE
-(Inga än)
+2026-08-31 | Synlighet/GEO-fokus (4 pass) | utfall (klick 1 -> 0) | slutsats: AI-citerbarhet och teknisk SEO räcker inte för att bryta osynlighet; sajten behöver fler och starkare ingångar eller en produkt-pivot för att ranka (eller direkttrafik).
