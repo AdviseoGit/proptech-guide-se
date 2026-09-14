@@ -11,3 +11,4 @@ https://proptechguiden.se/privacy-policy | Discovered - currently not indexed | 
 https://proptechguiden.se/guider | Discovered - currently not indexed | 2026-08-06 | Internt länkad
 https://proptechguiden.se/digital-trapphustavla-kalkylator.html | Discovered - currently not indexed | 2026-08-31 | URL omdöpt till html extension (åtgärdat canonical)
 https://proptechguiden.se/directory.html | Discovered - currently not indexed | 2026-08-31 | Omdöpt
+2026-09-07 | https://proptechguiden.se/guider | updated sitemap
