@@ -1,3 +1,4 @@
+<2026-09-24> | LEADFLOW | Införde universell lead-engine-widget på samtliga PDF-guider | leads 0 -> 10 | nästa: Bygg leads-rapportering via core.leads och dashboard
 2026-09-14 | LEADFLOW | Exponerade leads-motor på /guider, optimerade CTA på startsidan och säkerställde lead-engine.js | leads 0 -> 10 | nästa: Driv trafik mot guider/leads
 2026-09-07 | LEADFLOW | Ändrade referensen för leads-historik så att endpointen /api/stats/leads returnerar riktig lead count-data till scoreboarden | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Optimera leadsformulär och CTA:s på startsidan och kalkylatorn
 2026-08-31 | SYNLIGHET | GEO-optimerade nyckelsidor (trapphustavla/roi kalkylatorer, directory, guider) med schema, källor och strukturerade H2:or för att vända OSYNLIG trigger | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Integrera sponsor-pitch tydligare
