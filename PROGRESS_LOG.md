@@ -1,3 +1,4 @@
+<2026-09-28> | GEO & SYNLIGHET | Frågestrukturerade H2:or (GEO-opt), fördjupat innehåll på smarta byggnader och trapphustavla | leads 0 -> 10 | nästa: Fler guider och PR (optimera leadsformulär på directoryt och andra nyckelsidor)
 <2026-09-24> | LEADFLOW | Införde universell lead-engine-widget på samtliga PDF-guider | leads 0 -> 10 | nästa: Bygg leads-rapportering via core.leads och dashboard
 2026-09-14 | LEADFLOW | Exponerade leads-motor på /guider, optimerade CTA på startsidan och säkerställde lead-engine.js | leads 0 -> 10 | nästa: Driv trafik mot guider/leads
 2026-09-07 | LEADFLOW | Ändrade referensen för leads-historik så att endpointen /api/stats/leads returnerar riktig lead count-data till scoreboarden | klick 1 -> 5, visningar 386 -> 450, leads 0 -> 1 | nästa: Optimera leadsformulär och CTA:s på startsidan och kalkylatorn
