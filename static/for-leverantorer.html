@@ -33,41 +33,6 @@
 </style>
 
 <script src="/cookie-banner.min.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Hur mycket kostar det att synas i Proptechguiden?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Grundposten är alltid gratis. För en verifierad profil med utökad synlighet och dofollow-länk kostar det från 1 900 kr/månad (bindningstid 6 månader). Partnerplacering med leads från 5 900 kr/månad (bindningstid 12 månader)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Hur fungerar kvalificerade leads hos er?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vi poängsätter leads i A, B och C utifrån mognad. A-leads (beslutsfattare, budget finns, 10 000+ kvm) kostar vanligtvis mellan 2 500–4 000 kr. C-leads ingår ofta i partnerplacering."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Säljer ni samma lead till flera leverantörer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nej. Vi säljer aldrig samma lead till fler än tre noga utvalda leverantörer, för att säkerställa hög konvertering och att användaren inte blir spammad."
-      }
-    }
-  ],
-  "dateModified": "2026-08-04"
-}
-</script>
-
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
 <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
@@ -82,9 +47,9 @@
       <a href="/fastighetsagare" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">Fastighetsägare</span><span class="text-xs text-slate-500">Sänk driftnettots kostnadssida och höj fastighetsvärdet.</span></a><a href="/forvaltare" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">Kommersiella förvaltare</span><span class="text-xs text-slate-500">Fler kvadratmeter per förvaltare, utan att servicenivån faller.</span></a><a href="/brf" class="block px-4 py-2.5 hover:bg-slate-50 "><span class="font-semibold block">BRF-styrelser</span><span class="text-xs text-slate-500">Lägre månadsavgift och mindre styrelsearbete.</span></a>
     </div>
   </div>
-  <a href="/directory" class="px-2 py-1 hover:text-sky-600">Leverantörer</a>
-  <a href="/verktyg" class="px-2 py-1 hover:text-sky-600">Verktyg</a>
-  <a href="/guider" class="px-2 py-1 hover:text-sky-600">Guider</a>
+  <a href="/directory" class=" hover:text-sky-600">Leverantörer</a>
+  <a href="/verktyg" class=" hover:text-sky-600">Verktyg</a>
+  <a href="/guider" class=" hover:text-sky-600">Guider</a>
   <a href="/for-leverantorer" class="bg-slate-900 text-white px-4 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition">För leverantörer</a>
 </div>
 <button class="lg:hidden text-slate-600" aria-label="Meny" aria-expanded="false" aria-controls="mobile-menu"
@@ -93,12 +58,12 @@
 </button>
 </div>
 <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 px-6 py-4">
-<div class="flex flex-col space-y-1 font-medium text-slate-600 pb-4">
+<div class="flex flex-col space-y-3 font-medium text-slate-600">
   <span class="text-xs uppercase tracking-wide text-slate-400 font-bold">För dig som är</span>
-  <a href="/fastighetsagare" class="block pl-4 py-2 text-base hover:text-sky-600">Fastighetsägare</a><a href="/forvaltare" class="block pl-4 py-2 text-base hover:text-sky-600">Kommersiella förvaltare</a><a href="/brf" class="block pl-4 py-2 text-base hover:text-sky-600">BRF-styrelser</a>
-  <a href="/directory" class="block pt-4 pb-2 border-t border-slate-100 text-lg hover:text-sky-600">Leverantörer</a>
-  <a href="/verktyg" class="block py-2 text-lg hover:text-sky-600">Verktyg</a>
-  <a href="/guider" class="block py-2 text-lg hover:text-sky-600">Guider</a>
+  <a href="/fastighetsagare" class="block pl-4 text-sm hover:text-sky-600">Fastighetsägare</a><a href="/forvaltare" class="block pl-4 text-sm hover:text-sky-600">Kommersiella förvaltare</a><a href="/brf" class="block pl-4 text-sm hover:text-sky-600">BRF-styrelser</a>
+  <a href="/directory" class="block pt-2 border-t border-slate-100 hover:text-sky-600">Leverantörer</a>
+  <a href="/verktyg" class="block hover:text-sky-600">Verktyg</a>
+  <a href="/guider" class="block hover:text-sky-600">Guider</a>
   <a href="/for-leverantorer" class="block text-sky-600 font-bold">För leverantörer</a>
 </div>
 </div>
@@ -108,9 +73,8 @@
 <header class="max-w-5xl mx-auto px-6 pt-12 pb-6">
   <nav class="text-sm text-slate-500 mb-6 flex gap-2 flex-wrap"><a href="/" class="hover:text-sky-600">Hem</a><span class="text-slate-300">/</span><span class="text-slate-900 font-medium">För leverantörer</span></nav>
   <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5">Nå fastighetsägare som <span class="gradient-text">redan räknar på affären</span></h1>
-  <p class="text-xl text-slate-600 max-w-2xl mb-2">Proptechguiden är den oberoende ingången när svenska fastighetsägare,
-  förvaltare och BRF:er ska välja teknikleverantör. Enligt branschdata från <a href="https://proptechsweden.org/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">PropTech Sweden</a> växer sektorn snabbt och vi har nu 121 bolag i katalogen. Energimyndigheten rapporterar dessutom att <a href="https://www.energimyndigheten.se/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">digitaliseringen av fastigheter sänker snittförbrukningen med 15 procent (ca 25 kWh per kvm), med payback under 3 år</a>. Här väljer ni hur ni syns.</p>
-  <p class="text-sm text-slate-500">Uppdaterad: 2026-08-04</p>
+  <p class="text-xl text-slate-600 max-w-2xl">Proptechguiden är den oberoende ingången när svenska fastighetsägare,
+  förvaltare och BRF:er ska välja teknikleverantör. 117 bolag finns i katalogen. Här väljer ni hur ni syns.</p>
 </header>
 
 <section class="max-w-5xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
@@ -132,8 +96,8 @@
 </section>
 
 <section class="max-w-6xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-extrabold tracking-tight mb-2">Vad kostar det att synas i Proptechguiden?</h2>
-  <p class="text-slate-600 mb-8 max-w-2xl">Alla bolag finns med gratis. Enligt vår insamling listar vi just nu 121 leverantörer. Betalande nivåer sorteras överst,
+  <h2 class="text-3xl font-extrabold tracking-tight mb-2">01. Placering i katalogen</h2>
+  <p class="text-slate-600 mb-8 max-w-2xl">Alla bolag finns med gratis. Betalande nivåer sorteras överst,
   får följbar länk och en egen profilsida som rankar på bolagsnamnet.</p>
   <div class="grid md:grid-cols-3 gap-6">
     <div class="relative bg-white rounded-2xl border border-slate-200 p-8 flex flex-col">
@@ -156,7 +120,7 @@
   
   <h3 class="text-xl font-extrabold mb-1">Partnerplacering</h3>
   <p class="text-3xl font-extrabold tracking-tight mb-1">Från 5 900 kr/mån</p>
-  <p class="text-sm text-slate-500 mb-6">Enligt svensk branschstandard säljer vi aldrig samma lead till fler än 3 leverantörer (enligt <a href="https://proptechsweden.org/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">PropTech Sweden</a>-rekommendationer).</p>
+  <p class="text-sm text-slate-500 mb-6">Bindningstid 12 mån</p>
   <ul class="space-y-3 text-slate-600 text-sm flex-grow"><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Topplacering under &quot;Utvalda partners&quot;</span></li><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Logotyp och framhävd kort-design</span></li><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Följbar länk från katalog och profilsida</span></li><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Placering på relevanta målgruppssidor</span></li><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Får matchade leads i er kategori</span></li><li class="flex gap-3"><span class="text-emerald-600 font-bold">✓</span><span>Kvartalsrapport med trafik och leads</span></li></ul>
   <a href="#ansok" class="mt-8 text-center bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-slate-800 transition">Ansök</a>
 </div>
@@ -164,7 +128,7 @@
 </section>
 
 <section class="max-w-6xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-extrabold tracking-tight mb-2">Hur fungerar kvalificerade leads hos er?</h2>
+  <h2 class="text-3xl font-extrabold tracking-tight mb-2">02. Kvalificerade leads</h2>
   <p class="text-slate-600 mb-8 max-w-2xl">Varje förfrågan på sajten går genom samma kvalificering.
   Vi poängsätter leadet innan det skickas vidare, så ni betalar efter hur nära ett avslut det faktiskt är.</p>
   <div class="bg-white rounded-2xl border border-slate-200 overflow-x-auto">
@@ -200,7 +164,7 @@
 </section>
 
 <section id="sponsring" class="max-w-6xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-extrabold tracking-tight mb-2">Hur fungerar guide-sponsring?</h2>
+  <h2 class="text-3xl font-extrabold tracking-tight mb-2">03. Sponsra en guide</h2>
   <p class="text-slate-600 mb-8 max-w-2xl">Våra nedladdningsbara guider laddas ner av personer som står inför
   ett konkret beslut. Som exklusiv sponsor står ni som avsändare tillsammans med oss.</p>
   <div class="grid md:grid-cols-2 gap-6">
@@ -226,7 +190,7 @@
 </section>
 
 <section id="ansok" class="max-w-3xl mx-auto px-6 py-16">
-  <h2 class="text-3xl font-extrabold tracking-tight mb-3">Hur anmäler vi intresse för att bli partner?</h2>
+  <h2 class="text-3xl font-extrabold tracking-tight mb-3">Intresseanmälan</h2>
   <p class="text-slate-600 mb-8">Berätta vad ni är intresserade av så återkommer vi inom två arbetsdagar
   med upplägg, priser och lediga placeringar.</p>
   <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
@@ -346,8 +310,12 @@
   </div>
 </div>
 <div class="border-t border-slate-100 py-6 text-center text-slate-400 text-sm">
-  <p>Denna sajt skapas och drivs helt av AI &middot; <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a></p>
+  <p>Denna sajt skapas och drivs med hjälp av AI &middot; <a href="/om-sajten" class="hover:text-sky-600">Om sajten</a></p>
   <p class="mt-1">© 2026 Proptech Guide Sverige | Utvecklad av Adviseo</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-4 border-t border-slate-100 text-xs text-slate-400 text-center">
+  Denna sajt skapas och drivs helt av AI &middot; <a href="/om-sajten" class="hover:text-sky-600 underline">Om sajten</a>
 </div>
 </footer>
 </body>
