@@ -50,7 +50,7 @@ SEGMENTS = {
              "varje nytt uppdrag."),
         ],
         "needs": ["forvaltning", "boende", "access", "iot"],
-        "tools": ["digital-trapphustavla-kalkylator", "roi-kalkylator"],
+        "tools": ["digital-trapphustavla", "roi-kalkylator"],
     },
     "brf": {
         "label": "BRF-styrelser",
@@ -70,7 +70,7 @@ SEGMENTS = {
              "förslagen mot."),
         ],
         "needs": ["energi", "access", "boende", "forvaltning"],
-        "tools": ["digital-trapphustavla-kalkylator"],
+        "tools": ["digital-trapphustavla"],
     },
 }
 
@@ -113,10 +113,10 @@ TOOLS = {
         "desc": "Räkna på återbetalningstid och besparing för en energi- eller "
                 "driftinvestering utifrån er yta och energikostnad.",
     },
-    "digital-trapphustavla-kalkylator": {
-        "title": "Kalkylator för digitala trapphustavlor",
-        "desc": "Jämför kostnaden för tryckt information och namntavlor mot en "
-                "digital lösning över fem år.",
+    "digital-trapphustavla": {
+        "title": "Digital trapphustavla: jämförelse och kalkylator",
+        "desc": "Jämför Notiz, Delas och Signcast SOLID och räkna på kostnaden "
+                "för tryckt information mot en digital lösning.",
     },
 }
 

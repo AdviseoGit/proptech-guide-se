@@ -14,7 +14,9 @@ Renderar allt som ska hänga ihop med katalogdatat och målgruppsindelningen:
 
 Kör:  python build.py
 """
+import html as _html
 import json
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -147,6 +149,44 @@ def company_card(company):
   <p class="text-slate-600 text-sm mb-6 flex-grow">{company['description']}</p>
   <div class="flex items-center gap-4">{company_link(company)}{profile}</div>
 </div>"""
+
+
+def paid_companies(companies):
+    """Bolag med betald nivå, alltså de som har en profilsida under /leverantor/."""
+    return [c for c in sort_companies(companies)
+            if c.get("tier") in ("partner", "verifierad") and c.get("slug")]
+
+
+def partner_strip(companies, heading, segment=None, exclude=None, limit=6, note=True):
+    """Kort med länk till partnerprofilerna.
+
+    Profilsidorna är en del av vad partnern betalar för, men de nåddes bara från
+    katalogsidan (position 60+). Länkar från startsida och målgruppshubbar ger
+    dem inlänkar från sidor som faktiskt blir crawlade. Märks som betald
+    placering, precis som i katalogen.
+    """
+    pool = [c for c in paid_companies(companies) if c["slug"] != exclude]
+    if segment:
+        pool = [c for c in pool if segment in c.get("segments", [])]
+    pool = pool[:limit]
+    if not pool:
+        return ""
+    cards = "".join(
+        f'''<a href="/leverantor/{c['slug']}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition">
+  <div class="flex items-start justify-between gap-3 mb-1">
+    <h3 class="font-bold text-lg group-hover:text-sky-600">{c['name']}</h3>{tier_badge(c)}
+  </div>
+  <p class="text-xs font-semibold text-sky-600 mb-2">{T.CATEGORY_LABELS.get(c['category'], c['category'])}</p>
+  <p class="text-slate-500 text-sm">{_html.escape(c['description'][:130].rstrip())}{'…' if len(c['description']) > 130 else ''}</p>
+</a>''' for c in pool)
+    label = '<span class="text-xs text-slate-400">Betald placering</span>' if note else ""
+    return f'''
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <div class="flex items-center gap-3 mb-6">
+    <h2 class="text-3xl font-extrabold tracking-tight">{heading}</h2>{label}
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{cards}</div>
+</section>'''
 
 
 def cta_band(source, segment="", need="", heading="", text=""):
@@ -330,13 +370,26 @@ def build_company_pages(companies):
 {cases_block}
 </main>
 
+{partner_strip(companies, "Fler partners", exclude=c['slug'], limit=3, note=False)}
+
 {cta_band('leverantor-' + c['slug'], need=c['category'],
           heading='Vill ni ha offert från ' + c['name'] + '?',
           text='Beskriv ert behov så förmedlar vi kontakten och tar samtidigt fram jämförbara alternativ.')}"""
 
+        ld = json.dumps({"@context": "https://schema.org", "@graph": [
+            {"@type": "Organization", "name": c["name"], "url": c["url"],
+             "description": c["description"]},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Hem", "item": T.BASE_URL + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Leverantörer",
+                 "item": T.BASE_URL + "/directory"},
+                {"@type": "ListItem", "position": 3, "name": c["name"],
+                 "item": f"{T.BASE_URL}/leverantor/{c['slug']}"}]},
+        ]}, ensure_ascii=False)
         html = (T.head(f"{c['name']} – proptech-leverantör | Proptechguiden",
                        c["description"][:155],
-                       f"/leverantor/{c['slug']}")
+                       f"/leverantor/{c['slug']}",
+                       extra_head=f'<script type="application/ld+json">{ld}</script>')
                 + T.nav("directory") + body + T.footer())
         write(STATIC / "leverantor" / f"{c['slug']}.html", html)
         built += 1
@@ -405,6 +458,8 @@ def build_segment_pages(companies, guides):
   <h2 class="text-3xl font-extrabold tracking-tight mb-6">Leverantörer per område</h2>
   <div class="grid md:grid-cols-2 gap-6">{cat_cards}</div>
 </section>
+
+{partner_strip(companies, "Utvalda partners för " + seg['label'].lower(), segment=slug, limit=6)}
 
 <section class="max-w-5xl mx-auto px-6 py-8">
   <h2 class="text-3xl font-extrabold tracking-tight mb-6">Räkna på investeringen</h2>
@@ -772,10 +827,27 @@ def build_partner_page(companies, guides):
 # Sitemap
 # --------------------------------------------------------------------------
 
-def build_sitemap(companies, guides):
+def _lastmod(url):
+    """Datum då sidan senast ändrades: senaste commit, eller idag om filen är
+    ändrad men inte committad. Att stämpla alla sidor med dagens datum vid varje
+    bygge lär Google att ignorera lastmod helt."""
     today = date.today().isoformat()
+    rel = "static/index.html" if url == "/" else f"static{url}.html"
+    try:
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", rel],
+                               cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+        if dirty:
+            return today
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", rel],
+                             cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+        return out or today
+    except (OSError, subprocess.CalledProcessError):
+        return today
+
+
+def build_sitemap(companies, guides):
     urls = ["/", "/directory", "/verktyg", "/guider", "/for-leverantorer",
-            "/kategorier", "/om-sajten", "/privacy-policy", "/mer"]
+            "/kategorier", "/om-sajten", "/privacy-policy"]
     urls += [f"/{s}" for s in T.SEGMENTS]
     urls += [f"/{t}" for t in T.TOOLS]
     urls += [f"/{g['slug']}" for g in guides]
@@ -788,8 +860,15 @@ def build_sitemap(companies, guides):
             seen.add(u)
             ordered.append(u)
 
+    # Varje URL i sitemap måste ha en sida bakom sig, annars ger Google 404.
+    missing = [u for u in ordered
+               if not (STATIC / ("index.html" if u == "/" else f"{u.lstrip('/')}.html")).exists()]
+    if missing:
+        print(f"Bygget stoppat — sitemap pekar på sidor som saknas: {missing}", file=sys.stderr)
+        raise SystemExit(1)
+
     entries = "".join(
-        f"  <url>\n    <loc>{T.BASE_URL}{u}</loc>\n    <lastmod>{today}</lastmod>\n  </url>\n"
+        f"  <url>\n    <loc>{T.BASE_URL}{u}</loc>\n    <lastmod>{_lastmod(u)}</lastmod>\n  </url>\n"
         for u in ordered)
     write(STATIC / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -849,6 +928,8 @@ def build_index(companies, guides):
   <h2 class="text-3xl font-extrabold tracking-tight mb-6">Räkna på investeringen</h2>
   <div class="grid md:grid-cols-2 gap-6">{tool_cards}</div>
 </section>
+
+{partner_strip(companies, "Utvalda partners")}
 
 <section class="max-w-6xl mx-auto px-6 py-10">
   <div class="flex items-end justify-between mb-6 gap-4">

@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI, Request, BackgroundTasks, Body, HTTPException
 from pathlib import Path
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 import uvicorn
 
@@ -285,13 +285,38 @@ async def stats_leads():
     return {"total": total, "last_7_days": last_7_days}
 
 
+# Gamla adresser som slagits ihop med en annan sida. En hop, även för .html-formen.
+MOVED = {
+    "digital-trapphustavla-kalkylator": "/digital-trapphustavla",
+}
+
+
 @app.get("/{filename:path}", response_class=HTMLResponse)
-async def serve_html(filename: str):
+async def serve_html(filename: str, request: Request):
+    bare = filename[:-len(".html")] if filename.endswith(".html") else filename
+    if bare in MOVED:
+        return RedirectResponse(MOVED[bare], status_code=301)
+
+    # En sida, en URL. /foo.html och /foo gav tidigare samma innehåll med 200,
+    # och sitemap, canonical och inlänkar använder den rena formen. 301 samlar
+    # signalerna på en adress i stället för att låta Google välja.
+    html_path = os.path.normpath(os.path.join("static", filename))
+    if (filename.endswith(".html") and html_path.startswith("static" + os.sep)
+            and os.path.isfile(html_path)):
+        clean = "/" + filename[:-len(".html")]
+        if clean == "/index":
+            clean = "/"
+        if request.url.query:
+            clean += "?" + request.url.query
+        return RedirectResponse(clean, status_code=301)
+
     print(f"Attempting to serve: {filename}")
     # Append .html to the filename and check if it exists in the static directory
-    file_path = os.path.join("static", f"{filename}.html")
+    # normpath + prefixkontroll: /%2e%2e/foo löste annars upp till static/../foo.html
+    # och serverade .html-filer utanför static/.
+    file_path = os.path.normpath(os.path.join("static", f"{filename}.html"))
     print(f"Checking for file at: {file_path}")
-    if os.path.exists(file_path):
+    if file_path.startswith("static" + os.sep) and os.path.isfile(file_path):
         return FileResponse(file_path)
 
     # Filer som redan har ändelse, t.ex. /cookie-banner.min.js och /lead-engine.js.

@@ -26,7 +26,7 @@ GENERATED = {
 # Vilken menypost som ska markeras aktiv per sida.
 ACTIVE = {
     "roi-kalkylator.html": "verktyg",
-    "digital-trapphustavla-kalkylator.html": "verktyg",
+    "digital-trapphustavla.html": "verktyg",
     "proptech-kalkylator.html": "verktyg",
     "kategorier.html": "directory",
 }
