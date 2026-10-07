@@ -264,23 +264,14 @@
         "category_label": "Energi & Hållbarhet",
         "description": "Nordens ledande leverantör av end-to-end-lösningar för fastigheters service och installation, med fokus på energieffektiva helhetslösningar.",
         "url": "https://www.bravida.se/",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare",
             "brf"
         ],
-        "usp": "Din partner för Bravida lösningar.",
-        "cases": [
-            {
-                "title": "Bravida Case Study",
-                "url": "https://www.bravida.se/",
-                "description": "Hur Bravida hjälpte en kund."
-            }
-        ],
         "logo": "",
-        "contact_email": "partner@bravida.se",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "bygglet",
@@ -327,23 +318,14 @@
         "category_label": "Energi & Hållbarhet",
         "description": "Skalbara lösningar för elbilsladdning i större fastigheter och bostadsrättsföreningar.",
         "url": "https://chargenode.eu",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare",
             "brf"
         ],
-        "usp": "Din partner för ChargeNode lösningar.",
-        "cases": [
-            {
-                "title": "ChargeNode Case Study",
-                "url": "https://chargenode.eu",
-                "description": "Hur ChargeNode hjälpte en kund."
-            }
-        ],
         "logo": "",
-        "contact_email": "partner@chargenode.eu",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "datscha",
@@ -407,23 +389,14 @@
         "category_label": "Energi & Hållbarhet",
         "description": "Mjukvara för energi- och miljöuppföljning som hjälper fastighetsägare att visualisera förbrukning och automatisera rapportering för hållbarhetsmål.",
         "url": "https://ecocloud.se/",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare",
             "brf"
         ],
-        "usp": "Din partner för Ecocloud lösningar.",
-        "cases": [
-            {
-                "title": "Ecocloud Case Study",
-                "url": "https://ecocloud.se/",
-                "description": "Hur Ecocloud hjälpte en kund."
-            }
-        ],
         "logo": "",
-        "contact_email": "partner@ecocloud.se",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "egain",
@@ -432,16 +405,13 @@
         "category_label": "Energi & Hållbarhet",
         "description": "AI-baserad mjukvara för energioptimering och klimatstyrning av fastigheter med fokus på minskade kostnader och utsläpp.",
         "url": "https://egain.io",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
         ],
-        "usp": [],
-        "cases": [],
         "logo": "",
-        "contact_email": "leads@egain.io",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "enjay",
@@ -1004,16 +974,13 @@
         "category_label": "Digital Förvaltning & Drift",
         "description": "Molnbaserad plattform för automatiserad energiuppföljning. Samlar in och visualiserar energidata från el, värme och vatten i realtid, med moduler för hållbarhetsrapportering och kostnadskontroll.",
         "url": "https://mestro.com",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
         ],
-        "usp": [],
-        "cases": [],
         "logo": "",
-        "contact_email": "leads@mestro.com",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "metry",
@@ -1022,16 +989,13 @@
         "category_label": "Energi & Hållbarhet",
         "description": "Forskning- och designbyrå inriktad på proptech som utvecklar användarcentrerade smarta boendelösningar och upplevelser.",
         "url": "https://metry.io/sv/",
-        "tier": "partner",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
         ],
-        "usp": [],
-        "cases": [],
         "logo": "",
-        "contact_email": "leads@metry.io",
-        "receives_leads": true
+        "receives_leads": false
     },
     {
         "slug": "momentum-software",
@@ -2060,11 +2024,12 @@
         "category_label": "Digital Förvaltning & Drift",
         "description": "Digitaliserar skötsel- och tillsynsprocesser för fastighetsbolag och kommuner med smarta sensorer och automatiska avvikelserapporter. Förbättrar trygghet och minskar manuellt arbete.",
         "url": "https://www.cenvigo.com/",
-        "tier": "basic",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
-        ]
+        ],
+        "receives_leads": false
     },
     {
         "slug": "zyka",
@@ -2073,11 +2038,12 @@
         "category_label": "Energi & Hållbarhet",
         "description": "Zyka erbjuder en AI-driven plattform för att optimera energianvändning och minska koldioxidavtryck i kommersiella fastigheter genom prediktiv styrning.",
         "url": "https://www.zyka.io/",
-        "tier": "basic",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
-        ]
+        ],
+        "receives_leads": false
     },
     {
         "slug": "navetti",
@@ -2086,10 +2052,11 @@
         "category_label": "Öppna Plattformar & Integration",
         "description": "Erbjuder integrationslösningar som möjliggör sömlöst informationsflöde mellan olika proptech-system och underlättar skapandet av smarta, uppkopplade byggnader.",
         "url": "https://navetti.com/",
-        "tier": "basic",
+        "tier": "free",
         "segments": [
             "fastighetsagare",
             "forvaltare"
-        ]
+        ],
+        "receives_leads": false
     }
 ]
