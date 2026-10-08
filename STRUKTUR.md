@@ -38,8 +38,9 @@ Styrs av fältet `tier` i `data/companies.json`:
 Att bara betalande nivåer får följbar länk är avsiktligt — delas länkvärdet ut gratis
 till alla 107 poster finns ingenting kvar att sälja.
 
-**Uppgradera ett bolag:** sätt `tier`, fyll i `usp`, `cases` och `contact_email`,
-sätt `receives_leads: true`, kör `python build.py`.
+**Uppgradera ett bolag:** först när ett signerat avtal finns. Sätt `tier` och `"agreement_signed": true`
+(bara ägaren sätter det), fyll i `usp`, `cases` och `contact_email`, sätt `receives_leads: true`,
+kör `python build.py`. Bygget stoppar om `agreement_signed` saknas.
 
 > Alla bolag ligger på `free` idag. Sätt aldrig `partner` på ett bolag ni inte har
 > avtal med — det är ett partnerskapspåstående om ett riktigt företag.
@@ -51,6 +52,7 @@ täckning. Detta har hänt skarpt, så kontrollen är avsiktligt hård:
 
 | Kontroll | Varför |
 |---|---|
+| `tier` ≠ free kräver `agreement_signed: true` | En agent satte tidigare sex bolag som partners utan avtal. Kontrolleras även vid körning i `lead_engine.match_partners`. |
 | `tier` ≠ free kräver en webbadress | En placering utan länk är inget att sälja. |
 | `receives_leads` kräver `tier` ≠ free | Gratisposter ska aldrig ta emot leaddata. |
 | `receives_leads` kräver `contact_email` | Annars skickas leadet ingenstans. |

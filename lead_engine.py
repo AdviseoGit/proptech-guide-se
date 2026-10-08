@@ -186,6 +186,10 @@ def match_partners(lead: Lead, limit: int = 3):
     for c in load_companies():
         if c.get("tier") != "partner" or not c.get("receives_leads"):
             continue
+        # Samma spärr som i build.py. Appen läser companies.json direkt vid varje
+        # lead och går alltså inte via bygget, så den måste kontrolleras här också.
+        if c.get("agreement_signed") is not True:
+            continue
         if lead.need and c.get("category") != lead.need:
             continue
         if lead.segment and lead.segment not in c.get("segments", []):

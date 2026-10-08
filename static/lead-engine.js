@@ -70,11 +70,11 @@
     var source = el.dataset.source || "okand";
     var lockedSegment = el.dataset.segment || "";
     var lockedNeed = el.dataset.need || "";
-    var title = el.dataset.title || "Få offerter från rätt leverantörer";
+    var title = el.dataset.title || "Få förslag på leverantörer";
     var intro =
       el.dataset.intro ||
-      "Svara på tre snabba frågor så matchar vi dig mot leverantörer som " +
-      "faktiskt arbetar med din typ av fastighet.";
+      "Svara på tre snabba frågor så återkommer vi med förslag på leverantörer som " +
+      "arbetar med din typ av fastighet.";
     var uid = "le" + Math.random().toString(36).slice(2, 8);
 
     var segmentField = lockedSegment

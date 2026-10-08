@@ -57,6 +57,13 @@ def validate_companies(companies):
     """
     errors = []
     for c in companies:
+        # Ingen betald nivå utan ett avtal som ägaren bekräftat. Fältet sätts bara
+        # av ägaren, aldrig av en agent. En agent lade tidigare in sex "partners"
+        # utan avtal, och märkning, profilsidor och leadutskick följde av det.
+        if c.get("tier", "free") != "free" and c.get("agreement_signed") is not True:
+            errors.append(
+                f"{c['name']}: tier '{c.get('tier')}' kräver \"agreement_signed\": true. "
+                f"Sätt det först när ett signerat avtal finns, annars tier \"free\".")
         if c.get("tier", "free") == "free":
             if c.get("receives_leads"):
                 errors.append(f"{c['name']}: receives_leads kräver tier partner/verifierad")
@@ -191,8 +198,8 @@ def partner_strip(companies, heading, segment=None, exclude=None, limit=6, note=
 
 def cta_band(source, segment="", need="", heading="", text=""):
     heading = heading or "Vet du inte vilken leverantör som passar?"
-    text = text or ("Beskriv ert behov en gång. Vi matchar mot leverantörer som "
-                    "arbetar med er typ av fastighet och storlek.")
+    text = text or ("Beskriv ert behov en gång. Vi går igenom det och återkommer med "
+                    "förslag på leverantörer som arbetar med er typ av fastighet och storlek.")
     return f"""
 <section class="max-w-4xl mx-auto px-6 py-16">
   <div class="grid md:grid-cols-2 gap-10 items-start">
@@ -308,7 +315,7 @@ def build_directory(companies):
 
     html = (T.head("Leverantörskatalog för proptech i Sverige | Proptechguiden",
                    f"Sök och filtrera bland {len(ordered)} svenska proptech-bolag. "
-                   "Filtrera på kategori och målgrupp och få offert från rätt leverantör.",
+                   "Filtrera på kategori och målgrupp och hitta rätt leverantör.",
                    "/directory")
             + T.nav("directory") + body + T.footer())
     write(STATIC / "directory.html", html)
@@ -442,9 +449,9 @@ def build_segment_pages(companies, guides):
   {T.breadcrumbs([("Hem", "/"), (seg["label"], "")])}
   <p class="text-sky-600 font-bold uppercase tracking-wide text-sm mb-3">För {seg['label'].lower()}</p>
   <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5">{seg['title']}</h1>
-  <p class="text-xl text-slate-600 max-w-2xl">{seg['tagline']} Vi kartlägger leverantörerna, räknar på affären och matchar er mot rätt partner.</p>
+  <p class="text-xl text-slate-600 max-w-2xl">{seg['tagline']} Vi kartlägger leverantörerna, räknar på affären och hjälper er hitta rätt leverantör.</p>
   <div class="flex flex-col sm:flex-row gap-4 mt-8">
-    <a href="#offert" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-700 transition shadow-lg shadow-sky-600/25 text-center">Få matchade offerter</a>
+    <a href="#offert" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-sky-700 transition shadow-lg shadow-sky-600/25 text-center">Få förslag på leverantörer</a>
     <a href="/directory?segment={slug}" class="bg-white border border-slate-300 px-8 py-4 rounded-xl font-bold hover:border-slate-400 transition text-center">Se leverantörer</a>
   </div>
 </header>
@@ -473,15 +480,15 @@ def build_segment_pages(companies, guides):
 
 <div id="offert">
 {cta_band("segment-" + slug, segment=slug,
-          heading="Beskriv ert behov – vi matchar",
-          text="Ett formulär, tre minuter. Vi går igenom vilka leverantörer som passar er "
-               "storlek och tidplan och förmedlar kontakten.")}
+          heading="Beskriv ert behov",
+          text="Ett formulär, tre minuter. Vi går igenom vilka leverantörer som kan passa er "
+               "storlek och tidplan och återkommer med förslag.")}
 </div>
 </main>"""
 
         html = (T.head(f"{seg['title']} | Proptechguiden",
-                       f"{seg['tagline']} Jämför leverantörer, räkna på ROI och få offerter "
-                       f"anpassade för {seg['label'].lower()}.",
+                       f"{seg['tagline']} Jämför leverantörer, räkna på ROI och hitta rätt "
+                       f"leverantör för {seg['label'].lower()}.",
                        f"/{slug}")
                 + T.nav(slug) + body + T.footer())
         write(STATIC / f"{slug}.html", html)
@@ -615,8 +622,11 @@ def build_partner_page(companies, guides):
 <header class="max-w-5xl mx-auto px-6 pt-12 pb-6">
   {T.breadcrumbs([("Hem", "/"), ("För leverantörer", "/for-leverantorer")])}
   <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5">Nå fastighetsägare som <span class="gradient-text">redan räknar på affären</span></h1>
-  <p class="text-xl text-slate-600 max-w-2xl">Proptechguiden är den oberoende ingången när svenska fastighetsägare,
+  <p class="text-xl text-slate-600 max-w-2xl">Proptechguiden byggs upp som en oberoende ingång när svenska fastighetsägare,
   förvaltare och BRF:er ska välja teknikleverantör. {total} bolag finns i katalogen. Här väljer ni hur ni syns.</p>
+  <p class="mt-4 max-w-2xl text-sm text-slate-500 border-l-4 border-sky-200 pl-4">Sajten är i ett tidigt skede och trafiken är
+  fortfarande liten. Vi lovar därför ingen volym av besökare eller leads, utan en tydlig placering och en rapport
+  över vad den faktiskt ger.</p>
 </header>
 
 <section class="max-w-5xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
@@ -640,7 +650,7 @@ def build_partner_page(companies, guides):
 <section class="max-w-6xl mx-auto px-6 py-12">
   <h2 class="text-3xl font-extrabold tracking-tight mb-2">01. Placering i katalogen</h2>
   <p class="text-slate-600 mb-8 max-w-2xl">Alla bolag finns med gratis. Betalande nivåer sorteras överst,
-  får följbar länk och en egen profilsida som rankar på bolagsnamnet.</p>
+  får följbar länk och en egen profilsida.</p>
   <div class="grid md:grid-cols-3 gap-6">
     {tier_card("Grundpost", "0 kr", "Alltid gratis", [
         "Namn, kategori och beskrivning",
@@ -906,7 +916,7 @@ def build_index(companies, guides):
 <header class="max-w-5xl mx-auto px-6 pt-16 pb-8 text-center">
   <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">Digitaliseringen av <span class="gradient-text">svenska fastigheter.</span></h1>
   <p class="text-xl text-slate-600 max-w-2xl mx-auto">Oberoende guide till fastighetsteknik. Vi kartlägger {len(companies)} leverantörer,
-  räknar på affären och matchar er mot rätt partner.</p>
+  räknar på affären och hjälper er hitta rätt leverantör.</p>
 </header>
 
 <section class="max-w-6xl mx-auto px-6 py-10">
@@ -918,7 +928,7 @@ def build_index(companies, guides):
   <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 grid md:grid-cols-3 gap-8 items-center">
     <div class="md:col-span-2">
       <h2 class="text-3xl font-extrabold tracking-tight mb-3">{len(companies)} leverantörer i katalogen</h2>
-      <p class="text-slate-300">Filtrera på kategori och målgrupp, jämför lösningar och begär offert från flera bolag samtidigt.</p>
+      <p class="text-slate-300">Filtrera på kategori och målgrupp, jämför lösningar och gå vidare till de bolag som passar er.</p>
     </div>
     <a href="/directory" class="bg-white text-slate-900 px-6 py-4 rounded-xl font-bold hover:bg-slate-100 transition text-center">Öppna katalogen</a>
   </div>
@@ -944,7 +954,7 @@ def build_index(companies, guides):
 
     html = (T.head("Proptechguiden | Fastighetsteknik för ägare, förvaltare och BRF:er",
                    f"Oberoende guide till proptech i Sverige. Jämför {len(companies)} leverantörer, "
-                   "räkna på ROI och få offerter anpassade efter er fastighet.",
+                   "räkna på ROI och hitta rätt leverantör för er fastighet.",
                    "/")
             + T.nav() + body + T.footer())
     write(STATIC / "index.html", html)
