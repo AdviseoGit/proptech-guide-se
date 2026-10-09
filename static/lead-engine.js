@@ -257,7 +257,7 @@
         .catch(function () {
           nextBtn.disabled = false;
           nextBtn.textContent = "Skicka förfrågan";
-          fail("Något gick fel. Försök igen eller mejla oss på simon@adviseo.se.");
+          fail("Något gick fel. Försök igen eller mejla oss på info@proptechguiden.se.");
         });
     }
 

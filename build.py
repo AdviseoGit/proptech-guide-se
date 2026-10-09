@@ -818,7 +818,7 @@ def build_partner_page(companies, guides):
     }}).catch(function () {{
       btn.disabled = false;
       btn.textContent = 'Skicka intresseanmälan';
-      err.textContent = 'Något gick fel. Mejla oss på simon@adviseo.se så löser vi det.';
+      err.textContent = 'Något gick fel. Mejla oss på info@proptechguiden.se så löser vi det.';
       err.classList.remove('hidden');
     }});
   }});

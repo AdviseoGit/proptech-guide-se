@@ -22,3 +22,6 @@ High interest in "PropTech" in Sweden (stable search volume, low advertising com
 ## Knowledge Base
 - Reference search: "Sverige ledande inom PropTech, men lucka för nischade hållbarhetslösningar och regelverksefterlevnad."
 - Key entities: 150+ startups, hub in Stockholm, focus on Space-as-a-service.
+
+## Kontaktadress
+- Publik kontaktadress på sajten är **info@proptechguiden.se** (vidarebefordras till ägaren via Cloudflare Email Routing). Skriv aldrig ut simon@adviseo.se på sidor som besökare ser; den används bara för interna notiser (t.ex. LEAD_NOTIFY_EMAIL).
