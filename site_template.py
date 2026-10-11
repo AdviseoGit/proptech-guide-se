@@ -89,7 +89,7 @@ CATEGORY_LABELS = {
 TIERS = {
     "partner": {
         "rank": 0,
-        "label": "Partner",
+        "label": "Partner (betald placering)",
         "badge": "bg-amber-100 text-amber-800 border-amber-200",
         "dofollow": True,
     },

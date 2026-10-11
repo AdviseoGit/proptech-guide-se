@@ -253,6 +253,7 @@ def build_directory(companies):
 <div class="text-center mb-10">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Hitta rätt <span class="gradient-text">proptech</span>-leverantör</h1>
   <p class="text-xl text-slate-600 max-w-2xl mx-auto">{len(ordered)} bolag inom fastighetsteknik i Sverige. Filtrera på kategori och målgrupp.</p>
+  <p class="text-sm text-slate-500 mt-3">Letar er BRF efter en <a href="/digital-trapphustavla" class="text-sky-600 hover:underline font-medium">digital trapphustavla för BRF</a>? Vi har jämfört tre lösningar med priser. &nbsp;·&nbsp; <a href="/for-leverantorer" class="text-amber-600 hover:underline font-medium">Bli partner – 990 kr/mån →</a></p>
 </div>
 
 <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 mb-8 grid md:grid-cols-4 gap-4">
@@ -611,7 +612,7 @@ def build_partner_page(companies, guides):
     product_checks = "".join(
         f"""<label class="flex items-center gap-2 text-sm"><input type="checkbox" name="products" value="{k}"
         class="h-4 w-4 rounded border-slate-300"> {v}</label>"""
-        for k, v in {"verifierad": "Verifierad profil", "partner": "Partnerplacering",
+        for k, v in {"partner_990": "Partnerplats 990 kr/mån", "verifierad": "Verifierad profil",
                      "leads": "Kvalificerade leads", "guide_sponsor": "Guide-sponsring"}.items())
 
     inp = ("w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 "
@@ -622,12 +623,34 @@ def build_partner_page(companies, guides):
 <header class="max-w-5xl mx-auto px-6 pt-12 pb-6">
   {T.breadcrumbs([("Hem", "/"), ("För leverantörer", "/for-leverantorer")])}
   <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5">Nå fastighetsägare som <span class="gradient-text">redan räknar på affären</span></h1>
-  <p class="text-xl text-slate-600 max-w-2xl">Proptechguiden byggs upp som en oberoende ingång när svenska fastighetsägare,
-  förvaltare och BRF:er ska välja teknikleverantör. {total} bolag finns i katalogen. Här väljer ni hur ni syns.</p>
+  <p class="text-xl text-slate-600 max-w-2xl">Proptechguiden ägs och drivs av <strong>Adviseo</strong> och byggs upp som en oberoende ingång när svenska fastighetsägare,
+  förvaltare och BRF:er ska välja teknikleverantör. {total} bolag finns i katalogen. Betalda placeringar märks alltid som betald placering.</p>
   <p class="mt-4 max-w-2xl text-sm text-slate-500 border-l-4 border-sky-200 pl-4">Sajten är i ett tidigt skede och trafiken är
   fortfarande liten. Vi lovar därför ingen volym av besökare eller leads, utan en tydlig placering och en rapport
   över vad den faktiskt ger.</p>
 </header>
+
+<section class="max-w-5xl mx-auto px-6 py-10">
+  <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-8 relative">
+    <span class="absolute -top-4 left-8 bg-amber-500 text-white text-sm font-bold px-4 py-1 rounded-full">Introduktionspris – 10 platser kvar</span>
+    <div class="flex flex-col md:flex-row md:items-center gap-6">
+      <div class="flex-grow">
+        <h2 class="text-2xl font-extrabold mb-1">Partnerplats – 990 kr/mån <span class="text-sm font-normal text-slate-500">exkl. moms</span></h2>
+        <p class="text-slate-600 mb-3">6 månaders bindning. Sorteras överst i din kategori, märkt "Partner (betald placering)", utökad profil med logotyp, USP:ar, kundcase och följbar länk. Matchade BRF-leads och kvartalsrapport.</p>
+        <ul class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Överst i kategorin</li>
+          <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Logotyp &amp; profil</li>
+          <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Matchade leads</li>
+          <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Kvartalsrapport</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-3 shrink-0">
+        <a href="#ansok" class="text-center bg-amber-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-amber-700 transition shadow">Ansök nu</a>
+        <p class="text-xs text-center text-slate-500">Eller mejla <a href="mailto:sales@adviseo.se" class="text-sky-600 hover:underline">sales@adviseo.se</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="max-w-5xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
   <div class="bg-white rounded-2xl border border-slate-200 p-6">
@@ -665,12 +688,12 @@ def build_partner_page(companies, guides):
         "Följbar (dofollow) länk",
         "Ni äger och uppdaterar er egen text",
     ], highlight=True)}
-    {tier_card("Partnerplacering", "Från 5 900 kr/mån", "Bindningstid 12 mån", [
-        "Topplacering under &quot;Utvalda partners&quot;",
-        "Logotyp och framhävd kort-design",
+    {tier_card("Partnerplats", "990 kr/mån", "Exkl. moms · Bindningstid 6 mån", [
+        "Sorteras överst i er kategori",
+        "Märkt &quot;Partner (betald placering)&quot;",
+        "Utökad profil: logotyp, USP:ar, kundcase",
         "Följbar länk från katalog och profilsida",
-        "Placering på relevanta målgruppssidor",
-        "Får matchade leads i er kategori",
+        "Matchade BRF-leads (receives_leads)",
         "Kvartalsrapport med trafik och leads",
     ])}
   </div>

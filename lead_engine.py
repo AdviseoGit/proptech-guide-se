@@ -360,6 +360,7 @@ def user_email_html(lead: Lead, partners) -> str:
 # --------------------------------------------------------------------------
 
 PRODUCTS = {
+    "partner_990": "Partnerplats 990 kr/mån",
     "verifierad": "Verifierad profil",
     "partner": "Partnerplacering",
     "leads": "Kvalificerade leads",
@@ -423,12 +424,79 @@ def process_partner_application(app: PartnerApplication) -> dict:
     return {"status": "received"}
 
 
+def _push_to_core_leads(lead: "Lead", scoring: dict) -> None:
+    """Best-effort sync till core.leads via AGENT_DB_URL_SITE_UPDATER.
+
+    Anropas bara när lead.source börjar med 'digital-trapphustavla'.
+    Källsajten är 'proptech-guide-se', owner_agent 'site-updater'.
+    Inga exceptions propageras — lokalt lead är redan sparat.
+    """
+    agent_db_url = os.environ.get("AGENT_DB_URL_SITE_UPDATER")
+    if not agent_db_url:
+        return
+    email = lead.email
+    name = lead.name or email
+    brf = lead.company or ""
+    trapphus = lead.units or 0
+    score = scoring.get("score", 0)
+    why = f"score={score} brf={brf} trapphus={trapphus}".strip()
+    try:
+        import psycopg2
+        import psycopg2.extras
+
+        conn = psycopg2.connect(agent_db_url)
+        conn.autocommit = True
+        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as c:
+            domain = email.lower()
+            c.execute(
+                "SELECT id FROM core.companies WHERE lower(domain) = %s",
+                (domain,),
+            )
+            row = c.fetchone()
+            if row:
+                company_id = row["id"]
+            else:
+                c.execute(
+                    "INSERT INTO core.companies (name, domain, source, created_by, meta)"
+                    " VALUES (%s,%s,%s,'site-updater','{}') RETURNING id",
+                    (name, domain, lead.source),
+                )
+                company_id = c.fetchone()["id"]
+
+            c.execute(
+                "SELECT id FROM core.leads WHERE company_id = %s AND source_site = 'proptech-guide-se'",
+                (company_id,),
+            )
+            if c.fetchone():
+                conn.close()
+                return
+
+            c.execute(
+                "INSERT INTO core.leads"
+                " (company_id, source, source_site, owner_agent, score, created_by, meta)"
+                " VALUES (%s,%s,'proptech-guide-se','site-updater',%s,'site-updater',%s::jsonb)",
+                (company_id, lead.source, score,
+                 json.dumps({"why": why, "email": email, "brf": brf, "trapphus": trapphus})),
+            )
+            c.execute(
+                "INSERT INTO core.contacts (company_id, name, email, role, created_by)"
+                " VALUES (%s,%s,%s,'brf-styrelse','site-updater')",
+                (company_id, name, email),
+            )
+        conn.close()
+    except Exception:
+        pass
+
+
 def process_lead(lead: Lead) -> dict:
     """Hela kedjan: poängsätt, värdera, matcha, spara, notifiera."""
     scoring = score_lead(lead)
     value = estimate_deal_value(lead)
     partners = match_partners(lead)
     save_lead(lead, scoring, value)
+
+    if lead.source.startswith("digital-trapphustavla"):
+        _push_to_core_leads(lead, scoring)
 
     try:
         import mailer

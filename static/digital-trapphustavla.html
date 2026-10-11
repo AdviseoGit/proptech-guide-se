@@ -109,9 +109,9 @@
 
 <!-- Hero -->
 <div class="text-center mb-10">
-  <h1 class="text-4xl font-extrabold mb-3"><span class="gradient-text">Digital Trapphustavla</span> för BRF</h1>
+  <h1 class="text-4xl font-extrabold mb-3"><span class="gradient-text">Digital trapphustavla</span> – jämför för BRF</h1>
   <p class="text-xl text-slate-600">Jämförelse av tre lösningar: Notiz, Delas och Signcast SOLID – pris, vad som ingår och för vem.</p>
-  <p class="text-sm text-slate-400 mt-2">Uppdaterad 2026-10-04</p>
+  <p class="text-sm text-slate-400 mt-2">Uppdaterad 2026-10-11</p>
 </div>
 
 <!-- Product comparison table -->
@@ -172,10 +172,101 @@
   </div>
 </div>
 
-<!-- Lead widget (top placement) -->
-<div class="mb-12">
-  <div data-intro="Beskriv er förening så återkommer vi med förslag på leverantörer att jämföra pris mot samma underlag." data-lead-form="" data-need="boende" data-segment="brf" data-source="digital-trapphustavla" data-title="Få förslag på digital trapphustavla"></div>
+<!-- BRF Offertformulär -->
+<div class="mb-12 bg-sky-50 rounded-2xl p-8 border border-sky-100" id="offert">
+  <h2 class="text-2xl font-bold mb-2">Begär offert för er BRF</h2>
+  <p class="text-slate-600 mb-6">Fyll i formuläret så kontaktar de leverantörer som listas här er förening med en offert anpassad efter er storlek.</p>
+  <form id="offert-form" class="space-y-4" novalidate>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1" for="brf-namn">BRF-namn *</label>
+        <input id="brf-namn" type="text" required
+          class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none" placeholder="BRF Solrosen">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1" for="trapphus-antal">Antal trapphus *</label>
+        <input id="trapphus-antal" type="number" min="1" required
+          class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none" placeholder="4">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1" for="offert-email">E-post *</label>
+        <input id="offert-email" type="email" required
+          class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none" placeholder="styrelsen@brfsolrosen.se">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1" for="offert-kontakt">Kontaktperson</label>
+        <input id="offert-kontakt" type="text"
+          class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none" placeholder="Förnamn Efternamn">
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <input id="offert-gdpr" type="checkbox" required
+        class="mt-1 h-4 w-4 rounded border-slate-300">
+      <label class="text-sm text-slate-600" for="offert-gdpr">Jag samtycker till att Proptechguiden lagrar mina uppgifter och delar dem med de leverantörer av digitala trapphustavlor som listas här, så att de kan skicka offert.
+        <a href="/privacy-policy" class="text-sky-600 hover:underline">Läs vår integritetspolicy</a>.
+      </label>
+    </div>
+    <p id="offert-error" class="text-sm text-red-600 hidden"></p>
+    <button type="submit" id="offert-btn"
+      class="bg-sky-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-sky-700 transition w-full md:w-auto">
+      Begär offert →
+    </button>
+  </form>
+  <div id="offert-tack" class="hidden text-center py-6">
+    <p class="text-xl font-bold text-emerald-700 mb-2">Tack för er förfrågan!</p>
+    <p class="text-slate-600">Leverantörerna kontaktar er inom en arbetsdag med en offert anpassad för er förening.</p>
+  </div>
 </div>
+<script>
+(function() {
+  var form = document.getElementById('offert-form');
+  var err = document.getElementById('offert-error');
+  var btn = document.getElementById('offert-btn');
+  var tack = document.getElementById('offert-tack');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var brfNamn = document.getElementById('brf-namn').value.trim();
+    var antal = parseInt(document.getElementById('trapphus-antal').value, 10);
+    var email = document.getElementById('offert-email').value.trim();
+    var kontakt = document.getElementById('offert-kontakt').value.trim();
+    var consent = document.getElementById('offert-gdpr').checked;
+    if (!brfNamn || !antal || !email || !consent) {
+      err.textContent = 'Fyll i BRF-namn, antal trapphus, e-post och kryssa för GDPR-samtycke.';
+      err.classList.remove('hidden');
+      return;
+    }
+    err.classList.add('hidden');
+    btn.disabled = true;
+    btn.textContent = 'Skickar\u2026';
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        name: kontakt || null,
+        company: brfNamn,
+        units: antal,
+        segment: 'brf',
+        need: 'boende',
+        consent: consent,
+        source: 'digital-trapphustavla-offert'
+      })
+    }).then(function(r) {
+      if (!r.ok) throw new Error('http ' + r.status);
+      form.classList.add('hidden');
+      tack.classList.remove('hidden');
+      if (typeof gtag === 'function') {
+        gtag('event', 'trapphustavla_offert', { brf: brfNamn, trapphus: antal });
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Beg\xe4r offert \u2192';
+      err.textContent = 'N\xe5got gick fel. F\xf6rs\xf6k igen eller mejla info@proptechguiden.se.';
+      err.classList.remove('hidden');
+    });
+  });
+})();
+</script>
 
 <!-- Calculator -->
 <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-100 mb-12">
@@ -271,6 +362,19 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- GEO-content: frågesektioner -->
+<div class="mt-10 space-y-8">
+  <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200">
+    <h2 class="text-2xl font-bold mb-3">Vad kostar en digital trapphustavla för en BRF?</h2>
+    <p class="text-slate-600">Kostnaden beror på om ni väljer en mjukvara-only-lösning eller ett komplett paket med skärm och service. Delas kostar från 89 kr/mån för mjukvaran, medan ni köper skärmen separat för 10 000–20 000 kr. Räkna generellt med 200–500 kr per trapphus och månad allt inkluderat. En förening med fyra trapphus kan alltså budgetera 800–2 000 kr/mån för hela lösningen.</p>
+  </section>
+  <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200">
+    <h2 class="text-2xl font-bold mb-3">Vilken digital trapphustavla passar vår förening?</h2>
+    <p class="text-slate-600">En liten BRF med upp till 25 lägenheter gör bäst i att börja med Delas – lägst månadskostnad och ni äger skärmen själva. En medelstor förening som vill ha ett komplett paket utan teknisk administration väljer Notiz, som tillhandahåller hårdvara och sköter drift. Signcast SOLID passar bäst när föreningen också behöver en bokningsmodul för tvättstuga och lokaler. Använd <a href="#roi-form" class="text-sky-600 hover:underline">kalkylatorn ovan</a> för att se vilket alternativ som ger bäst ekonomi för just er.</p>
+    <p class="text-slate-600 text-sm mt-4">Boverket reglerar vilken information en BRF är skyldig att hålla tillgänglig för boende – en digital anslagstavla i varje trapphus underlättar uppfyllandet av dessa informationskrav. Se <a href="https://www.boverket.se/" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Boverkets webbplats</a> för gällande regler.</p>
+  </section>
 </div>
 
 </main>
