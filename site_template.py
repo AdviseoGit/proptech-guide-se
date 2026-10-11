@@ -85,6 +85,267 @@ CATEGORY_LABELS = {
     "plattform": "Öppen Plattform",
 }
 
+# Indexerbara kategorisidor under /kategori/<slug>. Katalogens filter
+# (/directory?kategori=…) renderas i webbläsaren och ger Google en enda URL för
+# alla 117 bolag. Varje kategori behöver en egen sida för att kunna ranka på
+# sökningar som "passersystem brf" eller "bästa fastighetssystemet".
+#
+# Inga profilsidor per bolag här: de är en betald produkt (se STRUKTUR.md).
+# Kategorier med färre än CATEGORY_PAGE_MIN bolag får ingen sida – en tunn
+# sida hjälper inte indexeringen, den drar ner den.
+CATEGORY_PAGE_MIN = 5
+
+CATEGORY_PAGES = {
+    "energi": {
+        "slug": "energioptimering",
+        "title": "Energioptimering för fastigheter – leverantörer",
+        "h1": "Energioptimering och hållbarhet för fastigheter",
+        "intro": "Värme, kyla och el är den största påverkbara driftkostnaden i de flesta "
+                 "fastigheter. Leverantörerna här styr värmesystem efter prognos och "
+                 "inomhusklimat, mäter förbrukning per lägenhet eller lokal, och tar fram "
+                 "underlaget som ESG-rapportering och gröna lån kräver.",
+        "consider": [
+            ("Vad styrs, och vad mäts bara?",
+             "En del lösningar styr värmen aktivt, andra visualiserar förbrukningen. "
+             "Mätning utan styrning ger insikt men sänker inte kostnaden av sig själv."),
+            ("Fungerar det med er befintliga undercentral?",
+             "Fråga vilka styrsystem och fjärrvärmeleverantörer lösningen är testad mot, "
+             "och vad som måste bytas innan den kan installeras."),
+            ("Hur räknas besparingen?",
+             "Be om normalårskorrigerad besparing mot ett referensår, inte en jämförelse "
+             "med förra vintern. Annars mäter ni vädret."),
+            ("Vem äger datan?",
+             "Kontrollera att mätdata går att exportera i ett öppet format, så att ni kan "
+             "byta leverantör utan att tappa historiken."),
+        ],
+        "faq": [
+            ("Vad är skillnaden mellan energioptimering och energiuppföljning?",
+             "Energioptimering styr aktivt värme, ventilation eller kyla för att sänka "
+             "förbrukningen. Energiuppföljning mäter och visualiserar förbrukningen men "
+             "ändrar inget i driften. Många leverantörer gör båda."),
+            ("Passar energioptimering för en BRF?",
+             "Ja, ofta. Värme är vanligtvis föreningens största rörliga kostnad, och flera "
+             "leverantörer i listan säljer specifikt till bostadsrättsföreningar."),
+            ("Hur jämför vi offerter?",
+             "Jämför vad som ingår i installationen, vilken löpande avgift som gäller och "
+             "hur besparingen verifieras. Vår ROI-kalkylator ger en första uppskattning "
+             "utifrån er yta och energikostnad."),
+        ],
+    },
+    "forvaltning": {
+        "slug": "fastighetssystem",
+        "title": "Fastighetssystem: leverantörer i Sverige",
+        "h1": "Fastighetssystem och digital förvaltning",
+        "intro": "Fastighetssystem samlar det förvaltningen gör varje dag: felanmälan, "
+                 "ronderingar, avtal, hyresavisering och ekonomisk uppföljning. Här finns "
+                 "både heltäckande affärssystem för stora bestånd och smalare verktyg för "
+                 "en enskild del av förvaltningen.",
+        "consider": [
+            ("Heltäckande system eller specialverktyg?",
+             "Ett affärssystem täcker mycket men är tungt att byta. Specialverktyg är "
+             "snabbare att införa men kräver integrationer för att inte bli egna öar."),
+            ("Integrationer mot ekonomi och teknik",
+             "Fråga vilka ekonomisystem, passersystem och mätsystem som har färdiga "
+             "integrationer, och vad en ny integration kostar."),
+            ("Hur ser det ut för hyresgästen?",
+             "Felanmälan och ärendestatus syns för hyresgästerna. Be om att få testa "
+             "deras vy, inte bara förvaltarens."),
+            ("Migrering från nuvarande system",
+             "Kontrollera vad som följer med vid flytt: objektsdata, avtal, "
+             "ärendehistorik. Det är där införanden oftast drar ut på tiden."),
+        ],
+        "faq": [
+            ("Vilket fastighetssystem är bäst?",
+             "Det beror på beståndets storlek och vem som förvaltar. Stora bestånd med "
+             "egen förvaltning behöver ofta ett heltäckande affärssystem, medan mindre "
+             "ägare och BRF:er klarar sig med enklare verktyg för felanmälan och ekonomi."),
+            ("Passar fastighetssystem för kommuner och allmännyttan?",
+             "Ja. Flera av leverantörerna i listan säljer till kommunala bostadsbolag. "
+             "Offentlig upphandling ställer dock egna krav på avtal och "
+             "dataskydd, så fråga efter referenser från offentlig sektor."),
+            ("Hur lång tid tar ett byte av fastighetssystem?",
+             "Det styrs mest av datamigreringen och antalet integrationer. Be leverantören "
+             "om en tidplan för ett bestånd av er storlek, med referenskund."),
+        ],
+    },
+    "plattform": {
+        "slug": "fastighetsplattform",
+        "title": "Fastighetsplattformar och integration",
+        "h1": "Öppna plattformar för fastighetsdata",
+        "intro": "När en fastighet har system för energi, passage, ventilation och "
+                 "felanmälan från olika leverantörer behövs något som binder ihop dem. "
+                 "Plattformarna här samlar data från flera system på ett ställe och gör "
+                 "den tillgänglig via öppna gränssnitt.",
+        "consider": [
+            ("Vilka system finns det färdiga kopplingar till?",
+             "Värdet av en plattform är kopplingarna. Begär listan över system som redan "
+             "är integrerade och jämför den med det ni har i dag."),
+            ("Öppet API och dataexport",
+             "Kontrollera att ni själva kan hämta ut data via API, utan att gå via "
+             "leverantören för varje ny användning."),
+            ("Vem driver plattformen efter installation?",
+             "Plattformar kräver förvaltning när nya system ansluts. Klargör vad som "
+             "ingår i avgiften och vad som debiteras per timme."),
+            ("Säkerhet i uppkopplade system",
+             "En plattform som når styrsystemen är också en angreppsyta. Fråga om "
+             "segmentering, behörigheter och hur uppdateringar hanteras."),
+        ],
+        "faq": [
+            ("Behöver vi en plattform om vi bara har några få system?",
+             "Inte nödvändigtvis. Med två eller tre system räcker ofta direkta "
+             "integrationer. En plattform lönar sig när antalet system och fastigheter "
+             "växer."),
+            ("Vad är ett \"operativsystem för byggnader\"?",
+             "Det är ett annat namn på samma idé: ett gemensamt lager som samlar data "
+             "från byggnadens tekniska system och gör den användbar för andra "
+             "tillämpningar."),
+            ("Hur hänger plattformar ihop med digitala tvillingar?",
+             "En digital tvilling bygger ofta på samma datainsamling. Plattformen är "
+             "grunden, tvillingen är en av sakerna man kan bygga ovanpå."),
+        ],
+    },
+    "iot": {
+        "slug": "iot-sensorer",
+        "title": "IoT och sensorer för fastigheter",
+        "h1": "IoT, sensorer och hårdvara för fastigheter",
+        "intro": "Sensorer för temperatur, fukt, vattenläckage, närvaro och luftkvalitet "
+                 "är grunden för det mesta annat i en smart byggnad. Leverantörerna här "
+                 "säljer hårdvaran, nätverket som bär datan, eller båda.",
+        "consider": [
+            ("Vilket nätverk använder sensorerna?",
+             "LoRaWAN, NB-IoT, Wi-Fi och trådbundet har olika räckvidd, batteritid och "
+             "löpande kostnad. Fråga vem som äger och driver nätet."),
+            ("Batteribyte och livslängd",
+             "Hundratals batteridrivna sensorer blir ett underhållsjobb. Be om förväntad "
+             "batteritid i er miljö, inte i labb."),
+            ("Låser hårdvaran fast er?",
+             "Kontrollera att sensordatan går att läsa av med andra system än "
+             "leverantörens egen app."),
+            ("Vad händer med datan?",
+             "Närvarosensorer i bostäder kan röra personuppgifter. Klargör vad som "
+             "lagras, var, och hur länge."),
+        ],
+        "faq": [
+            ("Vilka sensorer ger mest nytta först?",
+             "Vattenläckage- och fuktsensorer i riskutrymmen, och temperaturgivare som "
+             "underlag för värmestyrning, är vanliga första steg eftersom nyttan är "
+             "lätt att mäta."),
+            ("Kan vi installera sensorer själva?",
+             "Batteridrivna trådlösa sensorer går ofta att montera utan elektriker. "
+             "Nätverket och kopplingen till övriga system kräver däremot oftast "
+             "leverantörens hjälp."),
+            ("Hur hänger IoT ihop med energioptimering?",
+             "Temperatur- och närvarodata är det som gör att värmen kan styras efter "
+             "verkligt behov. Många energitjänster bygger på samma sensorer."),
+        ],
+    },
+    "boende": {
+        "slug": "boendeapp",
+        "title": "Boendeappar för BRF och hyresgäster",
+        "h1": "Boendeappar och kommunikation med hyresgäster",
+        "intro": "Boendeappar samlar felanmälan, bokning av tvättstuga och lokaler, "
+                 "information från styrelse eller förvaltare och ibland digitala nycklar "
+                 "på ett ställe. De ersätter anslagstavlan, mejlutskicken och en del av "
+                 "telefonsamtalen.",
+        "consider": [
+            ("Vad ska appen ersätta?",
+             "Lista vad som sköts manuellt i dag: bokningar, felanmälan, nyheter. Välj "
+             "efter det, inte efter längden på funktionslistan."),
+            ("Hur många kommer att använda den?",
+             "En app som bara halva huset laddar ner ger dubbelt arbete. Fråga hur "
+             "leverantören hjälper till att få igång användningen."),
+            ("Koppling till lås och bokning",
+             "Om bokningen ska styra låset till tvättstugan krävs integration mot "
+             "passersystemet. Kontrollera att just ert system stöds."),
+            ("Kostnad per lägenhet eller per fastighet",
+             "Prismodellerna skiljer sig. Räkna på hela avtalstiden för er storlek."),
+        ],
+        "faq": [
+            ("Behöver en BRF en boendeapp?",
+             "Inte alltid. För en mindre förening kan en digital trapphustavla och en "
+             "enkel bokningstjänst räcka. Appen blir intressant när flera tjänster ska "
+             "samlas på ett ställe."),
+            ("Vad är skillnaden mot en digital trapphustavla?",
+             "Trapphustavlan visar information i entrén. En boendeapp når de boende i "
+             "telefonen och kan också hantera bokningar och felanmälan."),
+            ("Kan äldre boende använda en boendeapp?",
+             "Det är en vanlig invändning. Fråga om appen kan kompletteras med "
+             "tavla i entrén eller information på papper för den som inte vill använda "
+             "telefonen."),
+        ],
+    },
+    "access": {
+        "slug": "passersystem",
+        "title": "Passersystem och digitala lås för BRF",
+        "h1": "Passersystem och digitala lås",
+        "intro": "Digitala passersystem ersätter mekaniska nycklar med taggar, kort eller "
+                 "mobilen. En borttappad tagg spärras i systemet i stället för att "
+                 "föreningen eller fastighetsägaren behöver byta lås, och behörigheter "
+                 "till tvättstuga, förråd och garage styrs centralt.",
+        "consider": [
+            ("Öppet eller slutet system?",
+             "Vissa system kräver att alla lås och läsare kommer från samma tillverkare. "
+             "Ett öppet system gör det möjligt att byta eller bygga ut med andra "
+             "komponenter."),
+            ("Hur hanteras behörigheterna i vardagen?",
+             "Någon ska lägga upp nya boende och spärra taggar. Kontrollera att det går "
+             "att göra utan att ringa leverantören."),
+            ("Integration med bokning och boendeapp",
+             "Fråga om bokningen av tvättstuga eller lokal kan styra låset direkt."),
+            ("Strömavbrott och reservläge",
+             "Kontrollera hur dörrar beter sig vid strömavbrott och nätverksfel, och "
+             "vilka krav räddningstjänsten har på utrymningsvägar."),
+        ],
+        "faq": [
+            ("Vad kostar ett passersystem för en BRF?",
+             "Det beror på antalet dörrar, om befintliga dörrar och elektriska slutbleck "
+             "kan behållas, och om systemet köps eller hyrs. Be om offert per dörr och "
+             "jämför den löpande avgiften över hela avtalstiden."),
+            ("Kan mobilen användas som nyckel?",
+             "Ja, flera system stöder mobilnyckel via app eller Bluetooth. De flesta "
+             "föreningar behåller ändå taggar för de boende som inte vill använda "
+             "telefonen."),
+            ("Vad händer om en tagg tappas bort?",
+             "Taggen spärras i systemet och en ny läggs upp. Inga lås behöver bytas, "
+             "vilket är den största skillnaden mot mekaniska nycklar."),
+        ],
+    },
+    "uthyrning": {
+        "slug": "digital-uthyrning",
+        "title": "Digital uthyrning av bostäder och lokaler",
+        "h1": "Digital uthyrning av bostäder och lokaler",
+        "intro": "Verktygen här hanterar uthyrningsprocessen: annonsering av lediga "
+                 "lokaler och lägenheter, intresseanmälan, kreditprövning, visningar och "
+                 "digitala avtal. Målet är kortare vakanser och mindre manuellt arbete per "
+                 "kontrakt.",
+        "consider": [
+            ("Bostäder eller lokaler?",
+             "Processerna skiljer sig mycket. Kontrollera att verktyget är byggt för den "
+             "typ av objekt ni hyr ut."),
+            ("Koppling till fastighetssystemet",
+             "Ett nytt kontrakt ska hamna i hyresaviseringen utan att knappas in igen. "
+             "Fråga vilka fastighetssystem som stöds."),
+            ("Kreditprövning och dokument",
+             "Klargör hur kreditupplysning, ID-kontroll och signering går till och vem "
+             "som är personuppgiftsansvarig."),
+            ("Vad mäts?",
+             "Be om att få se vilka siffror ni får ut: tid till uthyrning, antal "
+             "intresseanmälningar och var de kommer ifrån."),
+        ],
+        "faq": [
+            ("Vad är digital uthyrning?",
+             "Att hela kedjan från annons till signerat kontrakt sköts digitalt, med "
+             "intresseanmälan, kreditprövning och e-signering i samma flöde."),
+            ("Passar det för mindre fastighetsägare?",
+             "Ja, särskilt de verktyg som tar betalt per uthyrning i stället för en fast "
+             "licens. Räkna på hur många kontrakt ni skriver per år."),
+            ("Kan digital uthyrning kopplas till fastighetssystemet?",
+             "Ofta, men inte alltid. Fråga efter färdiga integrationer mot just ert "
+             "system innan ni väljer."),
+        ],
+    },
+}
+
 # Katalognivåer. Ordningen är också sorteringsordningen i katalogen.
 TIERS = {
     "partner": {

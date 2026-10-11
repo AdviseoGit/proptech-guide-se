@@ -4,6 +4,7 @@ Renderar allt som ska hänga ihop med katalogdatat och målgruppsindelningen:
 
     directory.html            leverantörskatalog, sorterad på tier
     leverantor/<slug>.html    profilsida per leverantör
+    kategori/<slug>.html      indexerbar sida per kategori
     fastighetsagare.html      segmenthubb
     forvaltare.html           segmenthubb
     brf.html                  segmenthubb
@@ -247,6 +248,12 @@ def build_directory(companies):
 
     cards = "".join(company_card(c) for c in ordered)
 
+    category_links = "".join(
+        f'<a href="/kategori/{p["slug"]}" class="bg-white border border-slate-200 rounded-full '
+        f'px-4 py-2 text-sm font-semibold hover:border-sky-300 hover:text-sky-600 transition">'
+        f'{T.CATEGORY_LABELS[cat]}</a>'
+        for cat, p in category_pages(companies).items())
+
     body = f"""
 <main class="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">
 {T.breadcrumbs([("Hem", "/"), ("Leverantörer", "/directory")])}
@@ -265,6 +272,10 @@ def build_directory(companies):
   <select id="segmentFilter" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-sky-500 outline-none">
     <option value="all">Alla målgrupper</option>{segment_options}
   </select>
+</div>
+
+<div class="flex flex-wrap items-center gap-3 mb-10">
+  <span class="text-sm font-bold text-slate-500">Per kategori:</span>{category_links}
 </div>
 
 {featured}
@@ -406,6 +417,147 @@ def build_company_pages(companies):
 
 
 # --------------------------------------------------------------------------
+# Kategorisidor
+# --------------------------------------------------------------------------
+
+def category_pages(companies):
+    """{kategori: sidinfo} för kategorier med tillräckligt många bolag."""
+    return {cat: page for cat, page in T.CATEGORY_PAGES.items()
+            if len([c for c in companies if c["category"] == cat]) >= T.CATEGORY_PAGE_MIN}
+
+
+def build_category_pages(companies, guides):
+    pages = category_pages(companies)
+
+    # Samma städning som för profilsidorna: en kategori som faller under
+    # minimigränsen eller byter slug ska inte lämna en gammal sida efter sig.
+    cat_dir = STATIC / "kategori"
+    if cat_dir.exists():
+        current = {f"{p['slug']}.html" for p in pages.values()}
+        for stale in cat_dir.glob("*.html"):
+            if stale.name not in current:
+                stale.unlink()
+                print(f"  tog bort {stale.relative_to(ROOT)}")
+
+    for cat, page in pages.items():
+        label = T.CATEGORY_LABELS[cat]
+        url = f"/kategori/{page['slug']}"
+        members = sort_companies([c for c in companies if c["category"] == cat])
+
+        segment_links = ""
+        for seg_slug, seg in T.SEGMENTS.items():
+            n = len([c for c in members if seg_slug in (c.get("segments") or [])])
+            if n:
+                segment_links += (
+                    f'<a href="/directory?segment={seg_slug}&kategori={cat}" '
+                    f'class="bg-white border border-slate-200 rounded-full px-4 py-2 text-sm '
+                    f'font-semibold hover:border-sky-300 hover:text-sky-600 transition">'
+                    f'{n} för {seg["label"].lower()}</a>')
+
+        consider = "".join(
+            f"""<div class="bg-white rounded-2xl border border-slate-200 p-6">
+  <h3 class="font-bold text-lg mb-2">{title}</h3>
+  <p class="text-slate-600">{text}</p>
+</div>""" for title, text in page["consider"])
+
+        cards = "".join(company_card(c) for c in members)
+
+        faq = "".join(
+            f"""<details class="bg-white rounded-2xl border border-slate-200 p-6 group">
+  <summary class="font-bold text-lg cursor-pointer list-none flex justify-between gap-4">{q}<span class="text-sky-600 group-open:rotate-45 transition-transform">+</span></summary>
+  <p class="text-slate-600 mt-3">{a}</p>
+</details>""" for q, a in page["faq"])
+
+        related = [g for g in guides if g.get("need") == cat][:3]
+        guide_block = ""
+        if related:
+            guide_cards = "".join(
+                f"""<a href="/{g['slug']}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition">
+  <h3 class="font-bold text-lg mb-1 group-hover:text-sky-600">{g['title']}</h3>
+  <p class="text-slate-500 text-sm">{g['summary']}</p>
+</a>""" for g in related)
+            guide_block = f"""
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-extrabold tracking-tight mb-6">Läs mer</h2>
+  <div class="grid md:grid-cols-3 gap-6">{guide_cards}</div>
+</section>"""
+
+        others = " · ".join(
+            f'<a href="/kategori/{p["slug"]}" class="text-sky-600 font-semibold hover:underline">'
+            f'{T.CATEGORY_LABELS[c]}</a>'
+            for c, p in pages.items() if c != cat)
+
+        body = f"""
+<main class="flex-grow w-full">
+<header class="max-w-6xl mx-auto px-6 pt-12 pb-4">
+  {T.breadcrumbs([("Hem", "/"), ("Kategorier", "/kategorier"), (label, "")])}
+  <p class="text-sky-600 font-bold uppercase tracking-wide text-sm mb-3">{label}</p>
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-5">{page['h1']}</h1>
+  <p class="text-xl text-slate-600 max-w-3xl">{page['intro']}</p>
+  <p class="text-slate-500 mt-6 mb-3">{len(members)} leverantörer i katalogen, varav</p>
+  <div class="flex flex-wrap gap-3">{segment_links}</div>
+</header>
+
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-extrabold tracking-tight mb-6">Det här ska ni titta efter</h2>
+  <div class="grid md:grid-cols-2 gap-6">{consider}</div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-extrabold tracking-tight mb-2">Leverantörer inom {label.lower()}</h2>
+  <p class="text-slate-500 mb-6">Betalda placeringar visas först och är märkta. Övriga i bokstavsordning.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{cards}</div>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-extrabold tracking-tight mb-6">Vanliga frågor</h2>
+  <div class="space-y-4">{faq}</div>
+</section>
+{guide_block}
+<section class="max-w-6xl mx-auto px-6 py-6">
+  <p class="text-slate-600"><span class="font-bold">Andra kategorier:</span> {others}</p>
+</section>
+
+{cta_band("kategori-" + page['slug'], need=cat,
+          heading="Vill ni ha förslag inom " + label.lower() + "?",
+          text="Beskriv er fastighet och vad ni vill lösa. Vi går igenom vilka leverantörer "
+               "som passar er storlek och återkommer med förslag.")}
+</main>"""
+
+        ld = json.dumps({"@context": "https://schema.org", "@graph": [
+            {"@type": "CollectionPage", "name": page["h1"], "url": T.BASE_URL + url,
+             "description": page["intro"], "inLanguage": "sv-SE",
+             "mainEntity": {"@type": "ItemList", "numberOfItems": len(members),
+                            "itemListElement": [
+                                {"@type": "ListItem", "position": i + 1, "name": c["name"]}
+                                for i, c in enumerate(members)]}},
+            {"@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in page["faq"]]},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Hem", "item": T.BASE_URL + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Kategorier",
+                 "item": T.BASE_URL + "/kategorier"},
+                {"@type": "ListItem", "position": 3, "name": label, "item": T.BASE_URL + url}]},
+        ]}, ensure_ascii=False)
+
+        description = f"{page['intro'].split('. ')[0]}. {len(members)} leverantörer i Sverige."
+        if len(description) > 160:
+            description = f"{page['h1']}: {len(members)} leverantörer i Sverige, och vad ni ska titta efter innan ni väljer."
+        html = (T.head(f"{page['title']} | Proptechguiden", _html.escape(description), url,
+                       extra_head=f'<script type="application/ld+json">{ld}</script>')
+                + T.nav("directory") + body + T.footer())
+        write(cat_dir / f"{page['slug']}.html", html)
+
+
+def category_href(companies, cat, fallback):
+    """Länk till kategorisidan om den finns, annars till det filtrerade katalogläget."""
+    page = category_pages(companies).get(cat)
+    return f"/kategori/{page['slug']}" if page else fallback
+
+
+# --------------------------------------------------------------------------
 # Segmenthubbar
 # --------------------------------------------------------------------------
 
@@ -423,8 +575,9 @@ def build_segment_pages(companies, guides):
         for need in seg["needs"]:
             matching = [c for c in companies
                         if c["category"] == need and slug in c.get("segments", [])]
+            href = category_href(companies, need, f"/directory?segment={slug}&kategori={need}")
             cat_cards += f"""
-<a href="/directory?segment={slug}&kategori={need}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition">
+<a href="{href}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition">
   <h3 class="font-bold text-lg mb-1 group-hover:text-sky-600">{T.CATEGORY_LABELS[need]}</h3>
   <p class="text-slate-500 text-sm">{len(matching)} leverantörer för {seg['label'].lower()}</p>
 </a>"""
@@ -884,6 +1037,7 @@ def build_sitemap(companies, guides):
     urls += [f"/{s}" for s in T.SEGMENTS]
     urls += [f"/{t}" for t in T.TOOLS]
     urls += [f"/{g['slug']}" for g in guides]
+    urls += [f"/kategori/{p['slug']}" for p in category_pages(companies).values()]
     urls += [f"/leverantor/{c['slug']}" for c in companies
              if c.get("tier") in ("partner", "verifierad")]
 
@@ -991,6 +1145,7 @@ def main():
     build_index(companies, guides)
     build_directory(companies)
     build_company_pages(companies)
+    build_category_pages(companies, guides)
     build_segment_pages(companies, guides)
     build_tools_page()
     build_guides_page(guides)

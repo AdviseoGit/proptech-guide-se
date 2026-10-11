@@ -11,6 +11,7 @@ Sajten är byggd kring två saker: att **sortera besökaren på målgrupp** dire
 ├── /forvaltare            Segmenthubb: kommersiella förvaltare
 ├── /brf                   Segmenthubb: BRF-styrelser
 ├── /directory             Leverantörskatalog (filtrerbar på kategori + målgrupp)
+│   ├── /kategori/<slug>   Indexerbar sida per kategori med minst 5 bolag (CATEGORY_PAGES)
 │   └── /leverantor/<slug> Profilsida (endast tier verifierad/partner)
 ├── /verktyg               Kalkylatoröversikt
 │   ├── /roi-kalkylator
