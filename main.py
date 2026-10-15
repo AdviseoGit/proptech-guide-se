@@ -287,7 +287,7 @@ async def stats_leads():
 
 # Gamla adresser som slagits ihop med en annan sida. En hop, även för .html-formen.
 MOVED = {
-    "digital-trapphustavla-kalkylator": "/digital-trapphustavla",
+    "digital-trapphustavla": "/digital-trapphustavla-kalkylator",
 }
 
 

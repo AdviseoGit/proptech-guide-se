@@ -15,7 +15,7 @@ Sajten är byggd kring två saker: att **sortera besökaren på målgrupp** dire
 │   └── /leverantor/<slug> Profilsida (endast tier verifierad/partner)
 ├── /verktyg               Kalkylatoröversikt
 │   ├── /roi-kalkylator
-│   └── /digital-trapphustavla
+│   └── /digital-trapphustavla-kalkylator
 ├── /guider                Guidehubb, grupperad per målgrupp, med sponsorplatser
 └── /for-leverantorer      Säljsidan för de tre intäktsströmmarna
 ```

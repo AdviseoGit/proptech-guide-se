@@ -9,14 +9,14 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-PAGE_FILE = "static/digital-trapphustavla.html"
+PAGE_FILE = "static/digital-trapphustavla-kalkylator.html"
 SITEMAP_FILE = "static/sitemap.xml"
 INDEXED_PAGES = [
     "static/verktyg.html",
     "static/brf.html",
     "static/index.html",
 ]
-TARGET_URL = "https://proptechguiden.se/digital-trapphustavla"
+TARGET_URL = "https://proptechguiden.se/digital-trapphustavla-kalkylator"
 
 
 def check_file_exists() -> tuple[bool, str]:
