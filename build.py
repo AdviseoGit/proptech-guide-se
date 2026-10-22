@@ -462,6 +462,13 @@ def build_category_pages(companies, guides):
 
         cards = "".join(company_card(c) for c in members)
 
+        extra_sections = "".join(
+            f"""
+<section class="max-w-4xl mx-auto px-6 py-8">
+  <h2 class="text-3xl font-extrabold tracking-tight mb-4">{h2}</h2>
+  <div class="space-y-4 text-slate-600">{"".join(p if p.startswith("<ul") else f"<p>{p}</p>" for p in paras)}</div>
+</section>""" for h2, paras in page.get("sections", []))
+
         faq = "".join(
             f"""<details class="bg-white rounded-2xl border border-slate-200 p-6 group">
   <summary class="font-bold text-lg cursor-pointer list-none flex justify-between gap-4">{q}<span class="text-sky-600 group-open:rotate-45 transition-transform">+</span></summary>
@@ -497,7 +504,7 @@ def build_category_pages(companies, guides):
   <p class="text-slate-500 mt-6 mb-3">{len(members)} leverantörer i katalogen, varav</p>
   <div class="flex flex-wrap gap-3">{segment_links}</div>
 </header>
-
+{extra_sections}
 <section class="max-w-6xl mx-auto px-6 py-10">
   <h2 class="text-3xl font-extrabold tracking-tight mb-6">Det här ska ni titta efter</h2>
   <div class="grid md:grid-cols-2 gap-6">{consider}</div>
@@ -524,9 +531,12 @@ def build_category_pages(companies, guides):
                "som passar er storlek och återkommer med förslag.")}
 </main>"""
 
+        collection = {"@type": "CollectionPage", "name": page["h1"], "url": T.BASE_URL + url,
+                      "description": page["intro"], "inLanguage": "sv-SE"}
+        if page.get("date_modified"):
+            collection["dateModified"] = page["date_modified"]
         ld = json.dumps({"@context": "https://schema.org", "@graph": [
-            {"@type": "CollectionPage", "name": page["h1"], "url": T.BASE_URL + url,
-             "description": page["intro"], "inLanguage": "sv-SE",
+            {**collection,
              "mainEntity": {"@type": "ItemList", "numberOfItems": len(members),
                             "itemListElement": [
                                 {"@type": "ListItem", "position": i + 1, "name": c["name"]}
@@ -543,7 +553,9 @@ def build_category_pages(companies, guides):
         ]}, ensure_ascii=False)
 
         description = f"{page['intro'].split('. ')[0]}. {len(members)} leverantörer i Sverige."
-        if len(description) > 160:
+        if page.get("description"):
+            description = page["description"]
+        elif len(description) > 160:
             description = f"{page['h1']}: {len(members)} leverantörer i Sverige, och vad ni ska titta efter innan ni väljer."
         html = (T.head(f"{page['title']} | Proptechguiden", _html.escape(description), url,
                        extra_head=f'<script type="application/ld+json">{ld}</script>')
@@ -576,9 +588,11 @@ def build_segment_pages(companies, guides):
             matching = [c for c in companies
                         if c["category"] == need and slug in c.get("segments", [])]
             href = category_href(companies, need, f"/directory?segment={slug}&kategori={need}")
+            card_title = (T.CATEGORY_PAGES.get(need, {}).get("segment_titles", {}).get(slug)
+                          or T.CATEGORY_LABELS[need])
             cat_cards += f"""
 <a href="{href}" class="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-sky-300 hover:shadow-md transition">
-  <h3 class="font-bold text-lg mb-1 group-hover:text-sky-600">{T.CATEGORY_LABELS[need]}</h3>
+  <h3 class="font-bold text-lg mb-1 group-hover:text-sky-600">{card_title}</h3>
   <p class="text-slate-500 text-sm">{len(matching)} leverantörer för {seg['label'].lower()}</p>
 </a>"""
 

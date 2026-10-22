@@ -276,13 +276,81 @@ CATEGORY_PAGES = {
     },
     "access": {
         "slug": "passersystem",
-        "title": "Passersystem och digitala lås för BRF",
-        "h1": "Passersystem och digitala lås",
-        "intro": "Digitala passersystem ersätter mekaniska nycklar med taggar, kort eller "
-                 "mobilen. En borttappad tagg spärras i systemet i stället för att "
-                 "föreningen eller fastighetsägaren behöver byta lås, och behörigheter "
-                 "till tvättstuga, förråd och garage styrs centralt.",
-        "consider": [
+        "title": "Passersystem BRF – accesssystem, kostnad och nyckelfritt",
+        "h1": "Passersystem för BRF – accesssystem och digitala lås",
+        "date_modified": "2026-10-22",
+        "description": "Passersystem och accesssystem för BRF: vad som styr kostnaden, hur nyckelfritt fungerar och om mobil eller tagg passar. 7 leverantörer i Sverige.",
+        "segment_titles": {"brf": "Passersystem för BRF"},
+        "intro": "Ett passersystem, även kallat accesssystem, styr vem som kommer in "
+                 "genom vilka dörrar och när, med taggar, kort eller mobil i stället för "
+                 "mekaniska nycklar. En BRF bör jämföra antal dörrar och läsare, om "
+                 "befintliga elslutbleck och kablage kan behållas, och den totala "
+                 "löpande kostnaden över avtalstiden.",
+        "sections": [
+            ("Vad kostar ett passersystem för en BRF?", [
+                "Det finns inget rimligt pris att utgå från utan att veta vad föreningen "
+                "har i dag. Kostnaden styrs av några få faktorer:",
+                "<ul class=\"list-disc pl-6 space-y-1\">"
+                "<li><strong>Antal dörrar och läsare.</strong> Varje dörr som ska "
+                "styras behöver en läsare och ett lås eller slutbleck.</li>"
+                "<li><strong>Befintlig utrustning.</strong> Om elslutbleck och kablage "
+                "går att behålla blir installationen enklare än när dörrar och kablage "
+                "måste bytas.</li>"
+                "<li><strong>Köp eller hyra.</strong> Vissa system köps och andra hyrs, "
+                "ofta med licens per lägenhet eller per dörr.</li>"
+                "<li><strong>Installation och taggar.</strong> Arbetet på plats och "
+                "taggar eller kort till alla boende är oftast separata poster.</li>"
+                "<li><strong>Service- och molnavgift.</strong> Många system har en "
+                "löpande avgift för drift, support och uppdateringar.</li>"
+                "<li><strong>Avtalstid.</strong> Bindningstid och villkor för "
+                "uppsägning påverkar totalkostnaden lika mycket som startpriset.</li>"
+                "</ul>",
+                "Begär offert per dörr och be om den totala löpande kostnaden över hela "
+                "avtalstiden. Jämför minst tre leverantörer på samma underlag, så att "
+                "offerterna omfattar samma dörrar och samma tjänster.",
+            ]),
+            ("Nyckelfri BRF – hur fungerar det?", [
+                "I en nyckelfri förening ersätts de mekaniska nycklarna till "
+                "gemensamma utrymmen av taggar, kort eller mobilen. Behörigheterna läggs "
+                "in per person och per dörr: ett hushåll kan till exempel ha tillgång "
+                "till entré, tvättstuga och det egna förrådet men inte till garaget "
+                "eller soprummet.",
+                "Går en tagg förlorad spärras den i systemet och en ny läggs upp, utan "
+                "att något lås behöver bytas. De flesta system sparar dessutom en logg "
+                "över vilka dörrar som öppnats, vilket underlättar vid skadegörelse "
+                "eller stölder. Loggen innehåller personuppgifter, så fråga hur länge "
+                "den sparas och vem som kan se den.",
+                "Systemet kan ofta kopplas till bokningen av tvättstuga eller lokal, så "
+                "att dörren bara öppnas under den bokade tiden. Det varierar mellan "
+                "leverantörer, så fråga efter just den kopplingen.",
+                "Lägenhetsdörren är ofta medlemmens eget ansvar. Kontrollera i "
+                "föreningens stadgar och med en jurist eller förvaltare vad som gäller "
+                "hos er innan lägenhetsdörrarna ingår i en offert.",
+            ]),
+            ("Mobil som nyckel eller tagg?", [
+                "<strong>Mobil (Bluetooth, NFC eller app).</strong> Inga taggar att "
+                "dela ut eller samla in, och nya boende kan få behörighet på distans. "
+                "Nackdelarna är att den boende måste ha en smartphone, att batteriet "
+                "måste räcka och att appen behöver uppdateras och installeras.",
+                "<strong>Tagg eller kort.</strong> Enkelt, fungerar för alla oavsett "
+                "telefon och kräver inget batteri hos användaren. Taggar kan tappas "
+                "bort eller delas vidare, och de kostar per styck.",
+                "Många föreningar kör en kombination: mobilnyckel för dem som vill ha "
+                "det och tagg för övriga. Kontrollera att systemet stöder båda från "
+                "start och vad varje typ av nyckel kostar.",
+            ]),
+            ("Accesssystem för företag och fastighetsägare", [
+                "Den som söker efter bästa passersystem för företag har delvis andra "
+                "behov än en BRF. I kommersiella fastigheter finns ofta många "
+                "hyresgäster med egna behörighetsgrupper, besökare och leverantörer som "
+                "behöver tillfällig tillgång, och krav på att systemet samverkar med "
+                "larm, bokning av lokaler och ibland receptionens besöksregistrering. "
+                "Fråga därför hur flera hyresgäster administreras i samma system, om "
+                "hyresgästerna kan sköta sina egna användare och vilka integrationer som "
+                "finns. Använd målgruppsfilter i katalogen för att se vilka leverantörer som säljer till kommersiella fastigheter.",
+            ]),
+        ],
+"consider": [
             ("Öppet eller slutet system?",
              "Vissa system kräver att alla lås och läsare kommer från samma tillverkare. "
              "Ett öppet system gör det möjligt att byta eller bygga ut med andra "
@@ -301,6 +369,19 @@ CATEGORY_PAGES = {
              "Det beror på antalet dörrar, om befintliga dörrar och elektriska slutbleck "
              "kan behållas, och om systemet köps eller hyrs. Be om offert per dörr och "
              "jämför den löpande avgiften över hela avtalstiden."),
+            ("Vad är skillnaden på passersystem och accesssystem?",
+             "Ingen praktisk skillnad: båda orden används om system som styr vem som "
+             "får passera vilka dörrar. Passersystem är det vanligaste ordet i Sverige "
+             "och accesssystem det som många leverantörer använder. Jämför funktioner "
+             "och villkor i stället för benämningen."),
+            ("Behöver styrelsen ett stämmobeslut för passersystem?",
+             "Det beror på föreningens stadgar och på om åtgärden räknas som underhåll, "
+             "förbättring eller ändring av den gemensamma egendomen. Kontrollera stadgarna "
+             "och fråga er förvaltare eller jurist innan ni skriver under ett avtal."),
+            ("Kan passersystemet kopplas till tvättstugebokningen?",
+             "Ja, vissa system gör det: dörren till tvättstugan eller lokalen öppnas "
+             "bara för den som har bokat tiden. Det varierar mellan leverantörer, så "
+             "fråga efter just den integrationen och vilket bokningssystem den gäller."),
             ("Kan mobilen användas som nyckel?",
              "Ja, flera system stöder mobilnyckel via app eller Bluetooth. De flesta "
              "föreningar behåller ändå taggar för de boende som inte vill använda "
